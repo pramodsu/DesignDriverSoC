@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-cc sim8051_rom.v -Wno-fatal"
+S   5577456 12516756  1461871852 "/usr/local/bin/verilator_bin"
+T      8837 12518969  1461950180 "obj_dir/Vsim8051_rom.cpp"
+T      3260 12518968  1461950180 "obj_dir/Vsim8051_rom.h"
+T      1663 12518971  1461950180 "obj_dir/Vsim8051_rom.mk"
+T       604 12518967  1461950180 "obj_dir/Vsim8051_rom__Syms.cpp"
+T       998 12518966  1461950180 "obj_dir/Vsim8051_rom__Syms.h"
+T       270 12518972  1461950180 "obj_dir/Vsim8051_rom__ver.d"
+T         0        0  1461950180 "obj_dir/Vsim8051_rom__verFiles.dat"
+T      1103 12518970  1461950180 "obj_dir/Vsim8051_rom_classes.mk"
+S      1773 12533275  1461950139 "sim8051_rom.v"

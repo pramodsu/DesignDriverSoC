@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "--cc -Mdir rmw_cutout oc8051_rmw_cutout.v"
+S   3396664  3933409  1396648488 "/usr/bin/verilator_bin"
+S     19230 14156766  1429921825 "oc8051_defines.v"
+S     23233 14161886  1429924252 "oc8051_rmw_cutout.v"
+T     43926 14288969  1429924253 "rmw_cutout/Voc8051_rmw_cutout.cpp"
+T      3056 14288968  1429924253 "rmw_cutout/Voc8051_rmw_cutout.h"
+T      1687 14288987  1429924253 "rmw_cutout/Voc8051_rmw_cutout.mk"
+T       634 14288961  1429924253 "rmw_cutout/Voc8051_rmw_cutout__Syms.cpp"
+T      1040 14288953  1429924253 "rmw_cutout/Voc8051_rmw_cutout__Syms.h"
+T       344 14288988  1429924253 "rmw_cutout/Voc8051_rmw_cutout__ver.d"
+T         0        0  1429924253 "rmw_cutout/Voc8051_rmw_cutout__verFiles.dat"
+T      1121 14288971  1429924253 "rmw_cutout/Voc8051_rmw_cutout_classes.mk"

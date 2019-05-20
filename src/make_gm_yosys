@@ -1,0 +1,5 @@
+iverilog -o oc8051_gm                           \
+-D OC8051_SIMULATION                            \
+oc8051_gm_tb.v                                  \
+../synthesis/netlist/oc8051_gm_top_yosys_all_sim.v \
+../synthesis/yosyslib.v
