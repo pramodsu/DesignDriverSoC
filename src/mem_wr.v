@@ -209,10 +209,10 @@ reg loaded;
 always @(posedge clk)
 begin
     if (rst) begin
-      	if(loaded===1'bx || !loaded) begin
-          $readmemh("../asm/prog.hex", block);
-	  loaded <= 1'b1;
-	end
+      	//if(loaded===1'bx || !loaded) begin
+          //$readmemh("../asm/prog.hex", block);
+	  //loaded <= 1'b1;
+	//end
         memwr_reg_state   <= STATE_IDLE;
         reg_bytes_written <= 16'b0;
 	reg_bytes_read    <= 16'b0;

@@ -280,8 +280,10 @@ oc8051_xiommu oc8051_xiommu1 (.clk(clk), .rst(rst),
   .proc0_ack(ignore), 
   .proc1_stb(stb_o), 
   .proc0_stb(1'b0), 
-  .priv_lvl(priv_lvl),
-  .dpc_ot(dpc_ot)
+  .priv_lvl0(priv_lvl),
+  .priv_lvl1(1'b0),
+  .dpc_ot0(dpc_ot),
+  .dpc_ot1(16'b0)
 );
 
 defparam oc8051_xiommu1.oc8051_xram_i.DELAY = 2;

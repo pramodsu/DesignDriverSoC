@@ -1,7 +1,7 @@
 iverilog -o oc8051              \
 -Wno-timescale                  \
 -D OC8051_SIMULATION            \
-oc8051_tb_dc.v                  \
+oc8051_tb.v                     \
 oc8051_xram.v                   \
 oc8051_uart_test.v              \
 oc8051_top.v                    \
@@ -29,7 +29,6 @@ oc8051_icache.v                 \
 oc8051_wb_iinterface.v          \
 oc8051_sfr.v                    \
 oc8051_cxrom.v                  \
-oc8051_cxrom_copy.v             \
 oc8051_rom.v                    \
 oc8051_cache_ram.v              \
 oc8051_ram_256x8_two_bist.v     \
