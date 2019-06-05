@@ -1,0 +1,33 @@
+iverilog -o oc8051_fv -Wall -Wno-timescale -D OC8051_SIMULATION    \
+oc8051_fv_tb.v                  \
+oc8051_fv_top.v                 \
+oc8051_top.v                    \
+oc8051_alu_src_sel.v            \
+oc8051_alu.v                    \
+oc8051_decoder.v                \
+oc8051_divide.v                 \
+oc8051_multiply.v               \
+oc8051_memory_interface.v       \
+oc8051_ram_top.v                \
+oc8051_acc.v                    \
+oc8051_comp.v                   \
+oc8051_sp.v                     \
+oc8051_dptr.v                   \
+oc8051_cy_select.v              \
+oc8051_psw.v                    \
+oc8051_indi_addr.v              \
+oc8051_ports.v                  \
+oc8051_b_register.v             \
+oc8051_uart.v                   \
+oc8051_int.v                    \
+oc8051_tc.v                     \
+oc8051_tc2.v                    \
+oc8051_icache.v                 \
+oc8051_wb_iinterface.v          \
+oc8051_sfr.v                    \
+oc8051_rom.v                    \
+oc8051_cache_ram.v              \
+oc8051_ram_256x8_two_bist.v     \
+oc8051_ram_64x32_dual_bist.v    \
+oc8051_symbolic_cxrom.v         \
+oc8051_debug_cxrom.v
