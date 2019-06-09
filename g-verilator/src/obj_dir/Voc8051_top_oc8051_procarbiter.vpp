@@ -1,0 +1,817 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_procarbiter.v" 1
+
+
+`line 5 "oc8051_procarbiter.v" 0
+
+`line 5 "oc8051_procarbiter.v" 0
+
+`line 5 "oc8051_procarbiter.v" 0
+ 
+
+
+`line 8 "oc8051_procarbiter.v" 0
+ 
+`line 8 "oc8051_procarbiter.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 8 "oc8051_procarbiter.v" 0
+
+
+`line 10 "oc8051_procarbiter.v" 0
+ 
+`line 10 "oc8051_procarbiter.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 10 "oc8051_procarbiter.v" 0
+
+
+
+`line 13 "oc8051_procarbiter.v" 0
+module oc8051_procarbiter(
+	clk,
+	rst,
+	selected_proc,
+	 
+	stb_A,
+	wr_A,
+	addr_A,
+	data_in_A,
+	data_out_A,
+	priv_lvl_A,
+	dpc_ot_A,
+	 
+	stb_B,
+	wr_B,
+	addr_B,
+	data_in_B,
+	data_out_B,
+	priv_lvl_B,
+	dpc_ot_B,
+	 
+	stb,
+	wr,
+	ack,
+	addr,
+	data_in,
+	data_out,
+	priv_lvl,
+	dpc_ot
+);
+
+`line 44 "oc8051_procarbiter.v" 0
+input            clk;
+input            rst;
+output           selected_proc;
+
+`line 48 "oc8051_procarbiter.v" 0
+ 
+input            stb_A;
+input            wr_A;
+output           ack_A;
+input [15:0]     addr_A;
+input [7:0]      data_in_A;
+output [7:0]     data_out_A;
+input            priv_lvl_A;
+input [15:0]     dpc_ot_A;
+
+`line 58 "oc8051_procarbiter.v" 0
+ 
+input            stb_B;
+input            wr_B;
+output           ack_B;
+input [15:0]     addr_B;
+input [7:0]      data_in_B;
+output [7:0]     data_out_B;
+input            priv_lvl_B;
+input [15:0]     dpc_ot_B;
+
+`line 68 "oc8051_procarbiter.v" 0
+ 
+output           stb;
+output           wr;
+input            ack;
+output [15:0]    addr;
+output [7:0]     data_in;
+input [7:0]      data_out;
+output           priv_lvl;
+output [15:0]    dpc_ot;
+
+`line 78 "oc8051_procarbiter.v" 0
+localparam PROC_A = 1'b1;
+localparam PROC_B = 1'b0;
+
+`line 81 "oc8051_procarbiter.v" 0
+ 
+reg arbiter_state;
+
+`line 84 "oc8051_procarbiter.v" 0
+ 
+reg arbit_holder;
+
+`line 87 "oc8051_procarbiter.v" 0
+wire stb = (selected_proc == PROC_A) ? stb_A : stb_B;
+
+`line 89 "oc8051_procarbiter.v" 0
+wire wr = (selected_proc == PROC_A) ? wr_A : wr_B;
+
+`line 91 "oc8051_procarbiter.v" 0
+wire [15:0] addr = (selected_proc == PROC_A) ? addr_A : addr_B;
+
+`line 93 "oc8051_procarbiter.v" 0
+wire data_in = (selected_proc == PROC_A) ? data_in_A : data_in_B;
+
+`line 95 "oc8051_procarbiter.v" 0
+wire ack_A = (selected_proc == PROC_A) ? ack : 1'b0;
+wire ack_B = (selected_proc == PROC_B) ? ack : 1'b0;
+
+`line 98 "oc8051_procarbiter.v" 0
+wire [7:0] data_out_A = data_out;
+wire [7:0] data_out_B = data_out;
+
+`line 101 "oc8051_procarbiter.v" 0
+wire priv_lvl = (selected_proc == PROC_A) ? priv_lvl_A : priv_lvl_B;
+
+`line 103 "oc8051_procarbiter.v" 0
+wire [15:0] dpc_ot = (selected_proc == PROC_A) ? dpc_ot_A : dpc_ot_B;
+
+`line 105 "oc8051_procarbiter.v" 0
+localparam STATE_INUSE = 1'b1;
+localparam STATE_IDLE  = 1'b0;
+
+`line 108 "oc8051_procarbiter.v" 0
+ 
+wire arbiter_state_inuse_next = ack ? STATE_IDLE : STATE_INUSE;
+
+`line 111 "oc8051_procarbiter.v" 0
+ 
+wire arbiter_state_idle_next  = 
+        ((stb_A || stb_B) && !ack) ? STATE_INUSE : STATE_IDLE;
+
+`line 115 "oc8051_procarbiter.v" 0
+ 
+wire arbiter_state_next = 
+        (arbiter_state == STATE_IDLE)  ? arbiter_state_idle_next  :
+        (arbiter_state == STATE_INUSE) ? arbiter_state_inuse_next : 1'bX;
+
+`line 120 "oc8051_procarbiter.v" 0
+ 
+wire arbit_select_winner = (arbiter_state == STATE_IDLE) && (arbiter_state_next == STATE_INUSE);
+
+`line 123 "oc8051_procarbiter.v" 0
+ 
+ 
+	 
+	wire arbit_winner = (stb_A && stb_B && (arbit_holder == PROC_A)) || (!stb_A && stb_B) ? PROC_B : PROC_A;
+
+
+`line 129 "oc8051_procarbiter.v" 0
+ 
+	
+	         
+
+
+
+`line 135 "oc8051_procarbiter.v" 0
+ 
+wire arbit_holder_next = arbit_select_winner ? arbit_winner : arbit_holder;
+
+`line 138 "oc8051_procarbiter.v" 0
+ 
+ 
+assign #1 selected_proc = (arbiter_state == STATE_IDLE) ? arbit_winner : arbit_holder;
+
+`line 142 "oc8051_procarbiter.v" 0
+ 
+always @(posedge clk)
+begin
+    if (rst) begin
+        arbiter_state   <= STATE_IDLE;
+        arbit_holder    <= PROC_A;
+    end
+    else begin
+        arbiter_state   <= arbiter_state_next;
+        arbit_holder    <= arbit_holder_next;
+    end
+end
+
+`line 155 "oc8051_procarbiter.v" 0
+endmodule
+
+`line 157 "oc8051_procarbiter.v" 2

@@ -1,0 +1,917 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_tc2.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 44 "oc8051_tc2.v" 0
+ 
+
+`line 46 "oc8051_tc2.v" 0
+ 
+ 
+ 
+
+`line 50 "oc8051_tc2.v" 0
+ 
+ 
+
+
+
+
+`line 56 "oc8051_tc2.v" 0
+ 
+`line 56 "oc8051_tc2.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 56 "oc8051_tc2.v" 0
+
+
+`line 58 "oc8051_tc2.v" 0
+ 
+ 
+`line 59 "oc8051_tc2.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 59 "oc8051_tc2.v" 0
+
+`line 60 "oc8051_tc2.v" 0
+ 
+
+
+
+`line 64 "oc8051_tc2.v" 0
+module oc8051_tc2 (clk, rst,
+            wr_addr,
+	    data_in, bit_in,
+	    wr, wr_bit,
+	    t2, t2ex,
+            rclk, tclk,
+	    brate2, tc2_int,
+	    pres_ow,
+ 
+	    t2con, tl2, th2, rcap2l, rcap2h);
+
+`line 75 "oc8051_tc2.v" 0
+input [7:0]  wr_addr,
+             data_in;
+input        clk,
+             rst,
+	     wr,
+	     wr_bit,
+	     t2,
+	     t2ex,
+	     bit_in,
+	     pres_ow;	 
+output [7:0] t2con,
+             tl2,
+	     th2,
+	     rcap2l,
+	     rcap2h;
+output       tc2_int,
+	     rclk,
+	     tclk,
+	     brate2;
+
+
+`line 96 "oc8051_tc2.v" 0
+reg brate2;
+reg [7:0] t2con, tl2, th2, rcap2l, rcap2h;
+
+`line 99 "oc8051_tc2.v" 0
+reg neg_trans, t2ex_r, t2_r, tc2_event, tf2_set;
+
+`line 101 "oc8051_tc2.v" 0
+wire run;
+
+
+`line 104 "oc8051_tc2.v" 0
+ 
+wire tf2, exf2, exen2, tr2, ct2, cprl2;
+
+`line 107 "oc8051_tc2.v" 0
+assign tc2_int = tf2 | exf2;
+assign tf2   = t2con[7];
+assign exf2  = t2con[6];
+assign rclk  = t2con[5];
+assign tclk  = t2con[4];
+assign exen2 = t2con[3];
+assign tr2   = t2con[2];
+assign ct2   = t2con[1];
+assign cprl2 = t2con[0];
+
+`line 117 "oc8051_tc2.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    t2con <= #1 8'h00;
+  end else if ((wr) & !(wr_bit) & (wr_addr==8'hc8)) begin
+    t2con <= #1 data_in;
+  end else if ((wr) & (wr_bit) & (wr_addr[7:3]==5'b11001)) begin
+    t2con[wr_addr[2:0]] <= #1 bit_in;
+  end else if (tf2_set) begin
+    t2con[7] <= #1 1'b1;
+  end else if (exen2 & neg_trans) begin
+    t2con[6] <= #1 1'b1;
+  end
+end
+
+
+
+`line 134 "oc8051_tc2.v" 0
+ 
+assign run = tr2 & ((!ct2 & pres_ow) | (ct2 & tc2_event));
+
+`line 137 "oc8051_tc2.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+
+`line 141 "oc8051_tc2.v" 0
+ 
+
+`line 143 "oc8051_tc2.v" 0
+    tl2 <= #1 8'h00;
+    th2 <= #1 8'h00;
+    brate2 <= #1 1'b0;
+    tf2_set <= #1 1'b0;
+  end else if ((wr) & !(wr_bit) & (wr_addr==8'hcd)) begin
+
+`line 149 "oc8051_tc2.v" 0
+ 
+
+`line 151 "oc8051_tc2.v" 0
+    th2 <= #1 data_in;
+  end else if ((wr) & !(wr_bit) & (wr_addr==8'hcc)) begin
+
+`line 154 "oc8051_tc2.v" 0
+ 
+
+`line 156 "oc8051_tc2.v" 0
+    tl2 <= #1 data_in;
+  end else if (!(rclk | tclk) & !cprl2 & exen2 & neg_trans) begin
+
+`line 159 "oc8051_tc2.v" 0
+ 
+
+`line 161 "oc8051_tc2.v" 0
+    th2 <= #1 rcap2h;
+    tl2 <= #1 rcap2l;
+    tf2_set <= #1 1'b0;
+  end else if (run) begin
+    if (rclk | tclk) begin
+
+`line 167 "oc8051_tc2.v" 0
+ 
+
+`line 169 "oc8051_tc2.v" 0
+      if (&{th2, tl2}) begin
+        th2 <= #1 rcap2h;
+        tl2 <= #1 rcap2l;
+        brate2 <= #1 1'b1;
+      end else begin
+        {brate2, th2, tl2}  <= #1 {1'b0, th2, tl2} + 17'h1;
+      end
+      tf2_set <= #1 1'b0;
+    end else if (cprl2) begin
+
+`line 179 "oc8051_tc2.v" 0
+ 
+
+`line 181 "oc8051_tc2.v" 0
+      {tf2_set, th2, tl2}  <= #1 {1'b0, th2, tl2} + 17'h1;
+    end else begin
+
+`line 184 "oc8051_tc2.v" 0
+ 
+
+`line 186 "oc8051_tc2.v" 0
+      if (&{th2, tl2}) begin
+        th2 <= #1 rcap2h;
+        tl2 <= #1 rcap2l;
+        tf2_set <= #1 1'b1;
+      end else begin
+        {tf2_set, th2, tl2} <= #1 {1'b0, th2, tl2} + 17'h1;
+      end
+    end
+  end else tf2_set <= #1 1'b0;
+end
+
+
+
+`line 199 "oc8051_tc2.v" 0
+ 
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    rcap2l <= #1 8'h00;
+    rcap2h <= #1 8'h00;
+  end else if ((wr) & !(wr_bit) & (wr_addr==8'hcb)) begin
+    rcap2h <= #1 data_in;
+  end else if ((wr) & !(wr_bit) & (wr_addr==8'hca)) begin
+    rcap2l <= #1 data_in;
+  end else if (!(rclk | tclk) & exen2 & cprl2 & neg_trans) begin
+    rcap2l <= #1 tl2;
+    rcap2h <= #1 th2;
+  end
+end
+
+
+
+
+`line 218 "oc8051_tc2.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    neg_trans <= #1 1'b0;
+    t2ex_r <= #1 1'b0;
+  end else if (t2ex) begin
+    neg_trans <= #1 1'b0;
+    t2ex_r <= #1 1'b1;
+  end else if (t2ex_r) begin
+    neg_trans <= #1 1'b1;
+    t2ex_r <= #1 1'b0;
+  end else begin
+    neg_trans <= #1 1'b0;
+    t2ex_r <= #1 t2ex_r;
+  end
+end
+
+
+
+`line 237 "oc8051_tc2.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    tc2_event <= #1 1'b0;
+    t2_r <= #1 1'b0;
+  end else if (t2) begin
+    tc2_event <= #1 1'b0;
+    t2_r <= #1 1'b1;
+  end else if (!t2 & t2_r) begin
+    tc2_event <= #1 1'b1;
+    t2_r <= #1 1'b0;
+  end else begin
+    tc2_event <= #1 1'b0;
+  end
+end
+
+`line 253 "oc8051_tc2.v" 0
+endmodule
+
+`line 255 "oc8051_tc2.v" 2

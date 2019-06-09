@@ -1,0 +1,1033 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_icache.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 44 "oc8051_icache.v" 0
+ 
+
+`line 46 "oc8051_icache.v" 0
+ 
+ 
+ 
+
+`line 50 "oc8051_icache.v" 0
+ 
+ 
+
+`line 53 "oc8051_icache.v" 0
+ 
+ 
+
+`line 56 "oc8051_icache.v" 0
+ 
+ 
+
+`line 59 "oc8051_icache.v" 0
+ 
+ 
+
+`line 62 "oc8051_icache.v" 0
+ 
+ 
+
+`line 65 "oc8051_icache.v" 0
+ 
+ 
+
+`line 68 "oc8051_icache.v" 0
+ 
+ 
+
+
+
+`line 73 "oc8051_icache.v" 0
+ 
+ 
+`line 74 "oc8051_icache.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 74 "oc8051_icache.v" 0
+
+`line 75 "oc8051_icache.v" 0
+ 
+
+`line 77 "oc8051_icache.v" 0
+ 
+`line 77 "oc8051_icache.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 77 "oc8051_icache.v" 0
+
+
+`line 79 "oc8051_icache.v" 0
+module oc8051_icache (rst, clk, 
+             adr_i, dat_o, stb_i, ack_o, cyc_i,
+             adr_o, dat_i, stb_o, ack_i, cyc_o
+ 
+         
+         
+         
+         
+         
+         
+
+`line 90 "oc8051_icache.v" 0
+	     );
+
+`line 92 "oc8051_icache.v" 0
+ 
+ 
+input rst, clk;
+
+
+`line 97 "oc8051_icache.v" 0
+ 
+
+`line 99 "oc8051_icache.v" 0
+ 
+ 
+ 
+ 
+ 
+input         stb_i,
+              cyc_i;
+input  [15:0] adr_i;
+output        ack_o;
+output [31:0] dat_o;
+reg    [31:0] dat_o;
+
+
+`line 112 "oc8051_icache.v" 0
+ 
+
+`line 114 "oc8051_icache.v" 0
+ 
+ 
+ 
+ 
+ 
+input         ack_i;
+input  [31:0] dat_i;
+output        stb_o, 
+              cyc_o;
+output [15:0] adr_o;
+reg           stb_o,
+              cyc_o;
+
+`line 127 "oc8051_icache.v" 0
+ 
+   
+   
+   
+  
+   
+
+
+`line 135 "oc8051_icache.v" 0
+parameter ADR_WIDTH = 6;  
+parameter LINE_WIDTH = 2;  
+parameter BL_WIDTH = ADR_WIDTH - LINE_WIDTH;  
+parameter BL_NUM = 15;  
+parameter CACHE_RAM = 64;  
+
+
+`line 142 "oc8051_icache.v" 0
+ 
+
+`line 144 "oc8051_icache.v" 0
+ 
+reg [13-ADR_WIDTH:0] con_buf [BL_NUM:0];
+ 
+reg [BL_NUM:0] valid;
+ 
+ 
+reg [13-ADR_WIDTH:0] con0, con2;
+ 
+reg [13-ADR_WIDTH:0] cadr0, cadr2;
+reg stb_b;
+ 
+reg [1:0] byte_sel;
+ 
+reg [LINE_WIDTH-1:0] cyc;
+ 
+reg [31:0] data1_i;
+ 
+reg [15:0] tmp_data1;
+reg wr1, wr1_t, stb_it;
+
+`line 164 "oc8051_icache.v" 0
+ 
+
+`line 166 "oc8051_icache.v" 0
+reg vaild_h, vaild_l;
+
+
+`line 169 "oc8051_icache.v" 0
+wire [31:0] data0, data1_o;
+wire cy, cy1;
+wire [BL_WIDTH-1:0] adr_i2;
+wire hit, hit_l, hit_h;
+wire [ADR_WIDTH-1:0] adr_r, addr1;
+reg [ADR_WIDTH-1:0] adr_w;
+reg [15:0] mis_adr;
+wire [15:0] data1;
+wire [LINE_WIDTH-1:0] adr_r1;
+
+
+`line 180 "oc8051_icache.v" 0
+assign cy = &adr_i[LINE_WIDTH+1:1];
+assign {cy1, adr_i2} = {1'b0, adr_i[ADR_WIDTH+1:LINE_WIDTH+2]}+cy;
+assign hit_l = (con0==cadr0) & vaild_l;
+assign hit_h = (con2==cadr2) & vaild_h;
+assign hit = hit_l && hit_h;
+
+`line 186 "oc8051_icache.v" 0
+assign adr_r = adr_i[ADR_WIDTH+1:2] + adr_i[1];
+assign addr1 = wr1 ? adr_w : adr_r;
+assign adr_r1 = adr_r[LINE_WIDTH-1:0] + 2'b01;
+assign ack_o = hit && stb_it;
+
+`line 191 "oc8051_icache.v" 0
+assign data1 = wr1_t ? tmp_data1 : data1_o[15:0];
+
+`line 193 "oc8051_icache.v" 0
+assign adr_o = {mis_adr[15:LINE_WIDTH+2], cyc, 2'b00};
+
+
+`line 196 "oc8051_icache.v" 0
+oc8051_ram_64x32_dual_bist oc8051_cache_ram(
+                           .clk     ( clk        ),
+                           .rst     ( rst        ),
+			   .adr0    ( adr_i[ADR_WIDTH+1:2] ),
+			   .dat0_o  ( data0         ),
+			   .en0     ( 1'b1          ),
+			   .adr1    ( addr1         ),
+			   .dat1_o  ( data1_o       ),
+			   .dat1_i  ( data1_i       ),
+			   .en1     ( 1'b1          ),
+			   .wr1     ( wr1           )
+ 
+         
+         
+         
+         
+         
+         
+
+`line 215 "oc8051_icache.v" 0
+			   );
+
+`line 217 "oc8051_icache.v" 0
+defparam oc8051_cache_ram.ADR_WIDTH = ADR_WIDTH;
+
+
+`line 220 "oc8051_icache.v" 0
+always @(stb_b or data0 or data1 or byte_sel)
+begin
+  if (stb_b) begin
+    case (byte_sel) 
+      2'b00  : dat_o = data0;
+      2'b01  : dat_o = {data1[7:0],   data0[31:8]};
+      2'b10  : dat_o = {data1[15:0],  data0[31:16]};
+      2'b11  : dat_o = {8'h00, data1, data0[31:24]};
+    endcase
+  end else begin
+    dat_o = 32'h0;
+  end
+end
+
+`line 234 "oc8051_icache.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+    begin
+        con0 <= #1 9'h0;
+        con2 <= #1 9'h0;
+        vaild_h <= #1 1'b0;
+	vaild_l <= #1 1'b0;
+    end
+  else
+    begin
+        con0 <= #1 {con_buf[adr_i[ADR_WIDTH+1:LINE_WIDTH+2]]};
+        con2 <= #1 {con_buf[adr_i2]};
+	vaild_l <= #1 valid[adr_i[ADR_WIDTH+1:LINE_WIDTH+2]];
+	vaild_h <= #1 valid[adr_i2];
+    end
+end
+
+`line 252 "oc8051_icache.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    cadr0 <= #1 8'h00;
+    cadr2 <= #1 8'h00;
+  end else begin
+    cadr0 <= #1 adr_i[15:ADR_WIDTH+2];
+    cadr2 <= #1 adr_i[15:ADR_WIDTH+2]+ cy1;
+  end
+end
+
+`line 263 "oc8051_icache.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    stb_b <= #1 1'b0;
+    byte_sel <= #1 2'b00;
+  end else begin
+    stb_b <= #1 stb_i;
+    byte_sel <= #1 adr_i[1:0];
+  end
+end
+
+`line 274 "oc8051_icache.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+    begin
+        cyc    <= #1 2'b00;
+        cyc_o  <= #1 1'b0;
+        stb_o  <= #1 1'b0;
+        data1_i<= #1 32'h0;
+        wr1    <= #1 1'b0;
+        adr_w  <= #1 6'h0;
+        valid  <= #1 16'h0;
+    end
+  else if (stb_b && !hit && !stb_o && !wr1)
+    begin
+        cyc     <= #1 2'b00;
+        cyc_o   <= #1 1'b1;
+        stb_o   <= #1 1'b1;
+        data1_i <= #1 32'h0;
+        wr1     <= #1 1'b0;
+    end
+  else if (stb_o && ack_i)
+    begin
+        data1_i<= #1 dat_i;  
+        wr1    <= #1 1'b1;
+        adr_w  <= #1 adr_o[ADR_WIDTH+1:2];
+
+`line 300 "oc8051_icache.v" 0
+        if (&cyc)
+          begin
+              cyc   <= #1 2'b00;
+              cyc_o <= #1 1'b0;
+              stb_o <= #1 1'b0;
+              valid[mis_adr[ADR_WIDTH+1:LINE_WIDTH+2]] <= #1 1'b1;
+          end
+        else
+          begin
+              cyc   <= #1 cyc + 1'b1;
+              cyc_o <= #1 1'b1;
+              stb_o <= #1 1'b1;
+              valid[mis_adr[ADR_WIDTH+1:LINE_WIDTH+2]] <= #1 1'b0;
+          end
+    end
+  else
+    wr1 <= #1 1'b0;
+end
+
+`line 319 "oc8051_icache.v" 0
+ 
+always @(posedge clk)
+  if ( ~(stb_b && !hit && !stb_o && !wr1) & (stb_o && ack_i && cyc) )
+    con_buf[mis_adr[ADR_WIDTH+1:LINE_WIDTH+2]] <= #1 mis_adr[15:ADR_WIDTH+2];
+
+
+`line 325 "oc8051_icache.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+    mis_adr <= #1 1'b0;
+  else if (!hit_l)
+    mis_adr <= #1 adr_i;
+  else if (!hit_h)
+    mis_adr <= #1 adr_i+'d2;
+end
+
+`line 335 "oc8051_icache.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+    tmp_data1 <= #1 1'b0;
+  else if (!hit_h && wr1 && (cyc==adr_r1))
+ 
+    tmp_data1 <= #1 dat_i[15:0];  
+  else if (!hit_l && hit_h && wr1)
+ 
+    tmp_data1 <= #1 data1_o[15:0];  
+end
+
+`line 347 "oc8051_icache.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    wr1_t <= #1 1'b0;
+    stb_it <= #1 1'b0;
+  end else begin
+    wr1_t <= #1 wr1;
+    stb_it <= #1 stb_i;
+  end
+end
+
+`line 358 "oc8051_icache.v" 0
+endmodule
+
+
+`line 361 "oc8051_icache.v" 2

@@ -1,0 +1,1043 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_int.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 46 "oc8051_int.v" 0
+ 
+
+`line 48 "oc8051_int.v" 0
+ 
+ 
+ 
+
+`line 52 "oc8051_int.v" 0
+ 
+ 
+
+`line 55 "oc8051_int.v" 0
+ 
+ 
+
+`line 58 "oc8051_int.v" 0
+ 
+ 
+
+`line 61 "oc8051_int.v" 0
+ 
+ 
+
+
+
+
+`line 67 "oc8051_int.v" 0
+ 
+`line 67 "oc8051_int.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 67 "oc8051_int.v" 0
+
+
+`line 69 "oc8051_int.v" 0
+ 
+ 
+`line 70 "oc8051_int.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 70 "oc8051_int.v" 0
+
+`line 71 "oc8051_int.v" 0
+ 
+
+
+
+`line 75 "oc8051_int.v" 0
+module oc8051_int (clk, rst, 
+        wr_addr,  
+	data_in, bit_in, 
+	wr, wr_bit,
+ 
+        tf0, tf1, t2_int,
+	tr0, tr1,
+ 
+        ie0, ie1,
+ 
+        uart_int,
+ 
+        intr, reti, int_vec, ack,
+ 
+	ie, tcon, ip);
+
+`line 91 "oc8051_int.v" 0
+input [7:0] wr_addr, data_in;
+input wr, tf0, tf1, t2_int, ie0, ie1, clk, rst, reti, wr_bit, bit_in, ack, uart_int;
+
+`line 94 "oc8051_int.v" 0
+output tr0, tr1, intr;
+output [7:0] int_vec,
+             ie,
+	     tcon,
+	     ip;
+
+
+`line 101 "oc8051_int.v" 0
+ 
+
+`line 103 "oc8051_int.v" 0
+    
+  
+    
+
+
+
+
+`line 110 "oc8051_int.v" 0
+  
+   
+  
+  
+ 
+   
+ 
+
+`line 118 "oc8051_int.v" 0
+       
+     
+   
+
+
+
+
+
+
+
+
+
+`line 130 "oc8051_int.v" 0
+   
+   
+  
+  
+
+
+`line 136 "oc8051_int.v" 0
+    
+
+
+
+`line 140 "oc8051_int.v" 0
+   
+   
+
+`line 143 "oc8051_int.v" 0
+        
+
+
+
+`line 147 "oc8051_int.v" 0
+       
+       
+   
+   
+
+
+
+`line 154 "oc8051_int.v" 0
+          
+   
+   
+   
+
+
+
+
+`line 162 "oc8051_int.v" 0
+     
+
+`line 164 "oc8051_int.v" 0
+   
+     
+         
+      
+        
+      
+
+
+
+
+`line 174 "oc8051_int.v" 0
+     
+
+`line 176 "oc8051_int.v" 0
+   
+     
+         
+      
+        
+      
+
+
+
+
+
+`line 187 "oc8051_int.v" 0
+     
+
+`line 189 "oc8051_int.v" 0
+   
+     
+         
+         
+         
+     
+         
+         
+         
+         
+   
+ 
+
+
+
+
+
+`line 206 "oc8051_int.v" 0
+     
+
+`line 208 "oc8051_int.v" 0
+   
+     
+         
+      
+          
+      
+       
+      
+       
+      
+ 
+
+
+
+
+
+`line 224 "oc8051_int.v" 0
+     
+
+`line 226 "oc8051_int.v" 0
+   
+     
+         
+      
+          
+      
+       
+      
+       
+      
+ 
+
+
+
+
+
+
+`line 243 "oc8051_int.v" 0
+     
+
+`line 245 "oc8051_int.v" 0
+   
+     
+         
+      
+          
+      
+             
+      
+         
+      
+       
+      
+ 
+
+
+
+
+
+
+`line 264 "oc8051_int.v" 0
+     
+
+`line 266 "oc8051_int.v" 0
+   
+     
+         
+      
+          
+      
+             
+      
+         
+      
+       
+      
+ 
+
+
+
+
+`line 283 "oc8051_int.v" 0
+     
+
+`line 285 "oc8051_int.v" 0
+    
+       
+       
+       
+       
+       
+       
+       
+          
+    
+        
+        
+              
+      
+      
+        
+     
+        
+        
+       
+        
+        
+       
+        
+        
+       
+        
+        
+       
+        
+        
+       
+        
+        
+   
+
+`line 321 "oc8051_int.v" 0
+           
+      
+      
+      
+     
+        
+        
+       
+        
+        
+       
+        
+        
+       
+        
+        
+       
+        
+        
+       
+        
+        
+   
+   
+      
+ 
+
+
+
+`line 350 "oc8051_int.v" 0
+     
+    
+       
+       
+       
+       
+    
+       
+       
+       
+       
+  
+
+`line 363 "oc8051_int.v" 0
+    wire tr0  = 1'b0;
+    wire tr1  = 1'b0;
+    wire intr = 1'b0;
+    reg [7:0] int_vec = 8'b0;
+    wire [7:0] ie = 8'b0;
+    wire [7:0] ip = 8'b0;
+    wire [7:0] tcon = 8'b0;
+
+`line 371 "oc8051_int.v" 0
+endmodule
+
+`line 373 "oc8051_int.v" 2

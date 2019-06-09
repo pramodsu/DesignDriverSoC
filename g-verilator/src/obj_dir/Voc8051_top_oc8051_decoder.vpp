@@ -1,0 +1,3559 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_decoder.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_decoder.v" 0
+ 
+
+`line 47 "oc8051_decoder.v" 0
+ 
+ 
+ 
+
+`line 51 "oc8051_decoder.v" 0
+ 
+ 
+
+`line 54 "oc8051_decoder.v" 0
+ 
+ 
+
+`line 57 "oc8051_decoder.v" 0
+ 
+ 
+
+`line 60 "oc8051_decoder.v" 0
+ 
+ 
+
+`line 63 "oc8051_decoder.v" 0
+ 
+ 
+
+`line 66 "oc8051_decoder.v" 0
+ 
+ 
+
+`line 69 "oc8051_decoder.v" 0
+ 
+ 
+
+`line 72 "oc8051_decoder.v" 0
+ 
+ 
+
+`line 75 "oc8051_decoder.v" 0
+ 
+ 
+
+`line 78 "oc8051_decoder.v" 0
+ 
+ 
+
+
+
+`line 83 "oc8051_decoder.v" 0
+ 
+ 
+`line 84 "oc8051_decoder.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 84 "oc8051_decoder.v" 0
+
+`line 85 "oc8051_decoder.v" 0
+ 
+
+`line 87 "oc8051_decoder.v" 0
+ 
+`line 87 "oc8051_decoder.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 87 "oc8051_decoder.v" 0
+
+
+
+`line 90 "oc8051_decoder.v" 0
+module oc8051_decoder (clk, rst, 
+  irom_out_of_rst, new_valid_pc,
+  op_cur,
+  op_in, op1_c,
+  ram_rd_sel_o, ram_wr_sel_o,
+  bit_addr, wr_o, wr_sfr_o,
+  src_sel1, src_sel2, src_sel3,
+  alu_op_o, psw_set, eq, cy_sel, comp_sel,
+  pc_wr, pc_sel, rd, rmw, istb, mem_act, mem_wait,
+  wait_data, state, 
+  enter_su_mode, leave_su_mode, su_en,
+  pc, mem_pc);
+
+
+`line 104 "oc8051_decoder.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 130 "oc8051_decoder.v" 0
+input clk, rst, eq, mem_wait, wait_data;
+input su_en;
+input  [7:0] op_in;
+input  [15:0] pc;
+output [15:0] mem_pc;
+
+`line 136 "oc8051_decoder.v" 0
+input irom_out_of_rst;
+output new_valid_pc;
+output [7:0] op_cur;
+output [1:0] state;
+
+
+`line 142 "oc8051_decoder.v" 0
+output wr_o, bit_addr, pc_wr, rmw, istb, src_sel3;
+output [1:0] psw_set, cy_sel, wr_sfr_o, src_sel2, comp_sel;
+output [2:0] mem_act, src_sel1, ram_rd_sel_o, ram_wr_sel_o, pc_sel, op1_c;
+output [3:0] alu_op_o;
+output rd;
+
+`line 148 "oc8051_decoder.v" 0
+output enter_su_mode, leave_su_mode;
+
+`line 150 "oc8051_decoder.v" 0
+reg rmw;
+reg src_sel3, wr,  bit_addr, pc_wr;
+reg [3:0] alu_op;
+reg [1:0] src_sel2, comp_sel, psw_set, cy_sel, wr_sfr;
+reg [2:0] mem_act, src_sel1, ram_wr_sel, ram_rd_sel, pc_sel;
+reg [15:0] mem_pc;
+
+
+`line 158 "oc8051_decoder.v" 0
+ 
+ 
+reg  [1:0] state;
+wire [1:0] state_dec;
+reg  [7:0] op;
+wire [7:0] op_cur;
+reg  [2:0] ram_rd_sel_r;
+
+`line 166 "oc8051_decoder.v" 0
+reg stb_i;
+
+`line 168 "oc8051_decoder.v" 0
+assign rd = !state[0] && !state[1] && !wait_data; 
+
+`line 170 "oc8051_decoder.v" 0
+assign istb = (!state[1]) && stb_i;
+
+`line 172 "oc8051_decoder.v" 0
+assign state_dec = wait_data ? 2'b00 : state;
+
+`line 174 "oc8051_decoder.v" 0
+assign op_cur = mem_wait ? 8'h00
+                : (state[0] || state[1] || mem_wait || wait_data) ? op : op_in;
+ 
+
+`line 178 "oc8051_decoder.v" 0
+wire new_valid_pc = (!mem_wait && !(state[0] || state[1] || mem_wait || wait_data)) && irom_out_of_rst;
+
+`line 180 "oc8051_decoder.v" 0
+assign op1_c = op_cur[2:0];
+
+`line 182 "oc8051_decoder.v" 0
+assign alu_op_o     = wait_data ? 4'b0000 : alu_op;
+assign wr_sfr_o     = wait_data ? 2'b00   : wr_sfr;
+assign ram_rd_sel_o = wait_data ? ram_rd_sel_r    : ram_rd_sel;
+assign ram_wr_sel_o = wait_data ? 3'b000  : ram_wr_sel;
+assign wr_o         = wait_data ? 1'b0            : wr;
+
+`line 188 "oc8051_decoder.v" 0
+reg enter_su_mode;
+reg leave_su_mode;
+
+
+`line 192 "oc8051_decoder.v" 0
+ 
+ 
+always @(op_cur or eq or state_dec or mem_wait)
+begin
+    enter_su_mode = 1'b0;
+    leave_su_mode = 1'b0;
+    case (state_dec) 
+      2'b01: begin
+        casex (op_cur) 
+          8'b1000_0100 : begin
+              ram_rd_sel = 3'b100;
+            end
+          8'b1010_0100 : begin
+              ram_rd_sel = 3'b100;
+            end
+          default begin
+              ram_rd_sel = 3'b000;
+          end
+        endcase
+        stb_i = 1'b1;
+        bit_addr = 1'b0;
+        pc_wr = 1'b0;
+        pc_sel = 3'b000;
+        comp_sel =  2'b01;
+        rmw = 1'b0;
+      end
+      2'b10: begin
+        casex (op_cur) 
+          8'b1000_0000 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b1;
+              pc_sel = 3'b010;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b0100_0000 : begin
+              ram_rd_sel = 3'b110;
+              pc_wr = eq;
+              pc_sel = 3'b010;
+              comp_sel =  2'b10;
+              bit_addr = 1'b0;
+            end
+          8'b0101_0000 : begin
+              ram_rd_sel = 3'b110;
+              pc_wr = !eq;
+              pc_sel = 3'b010;
+              comp_sel =  2'b10;
+              bit_addr = 1'b0;
+            end
+          8'b0111_0000 : begin
+              ram_rd_sel = 3'b111;
+              pc_wr = !eq;
+              pc_sel = 3'b010;
+              comp_sel =  2'b00;
+              bit_addr = 1'b0;
+            end
+          8'b0110_0000 : begin
+              ram_rd_sel = 3'b111;
+              pc_wr = eq;
+              pc_sel = 3'b010;
+              comp_sel =  2'b00;
+              bit_addr = 1'b0;
+            end
+
+`line 256 "oc8051_decoder.v" 0
+          8'b0010_0010 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b1;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b0011_0010 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b1;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b1011_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = !eq;
+              pc_sel = 3'b011;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b1011_011x : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = !eq;
+              pc_sel = 3'b011;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b1011_0101 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = !eq;
+              pc_sel = 3'b011;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b1011_0100 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = !eq;
+              pc_sel = 3'b011;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b1101_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = !eq;
+              pc_sel = 3'b010;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b1101_0101 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = !eq;
+              pc_sel = 3'b011;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b0010_0000 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = eq;
+              pc_sel = 3'b011;
+              comp_sel =  2'b11;
+              bit_addr = 1'b0;
+            end
+          8'b0001_0000 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = eq;
+              pc_sel = 3'b011;
+              comp_sel =  2'b11;
+              bit_addr = 1'b1;
+            end
+          8'b0111_0011 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b1;
+              pc_sel = 3'b110;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b0011_0000 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = !eq;
+              pc_sel = 3'b011;
+              comp_sel =  2'b11;
+              bit_addr = 1'b1;
+            end
+          8'b1000_0100 : begin
+              ram_rd_sel = 3'b100;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          8'b1010_0100 : begin
+              ram_rd_sel = 3'b100;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+            end
+          default begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              bit_addr = 1'b0;
+          end
+        endcase
+        rmw = 1'b0;
+        stb_i = 1'b1;
+      end
+      2'b11: begin
+        casex (op_cur) 
+          8'b1011_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+            end
+          8'b1011_011x : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+            end
+          8'b1011_0101 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+            end
+          8'b1011_0100 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+            end
+          8'b1101_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+            end
+          8'b1101_0101 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+            end
+          8'b0010_0010 : begin
+              ram_rd_sel = 3'b011;
+              pc_wr = 1'b1;
+              pc_sel = 3'b001;
+            end
+          8'b0011_0010 : begin
+              ram_rd_sel = 3'b011;
+              pc_wr = 1'b1;
+              pc_sel = 3'b001;
+              leave_su_mode = 1'b1;
+            end
+          8'b1000_0100 : begin
+              ram_rd_sel = 3'b100;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+            end
+          8'b1010_0100 : begin
+              ram_rd_sel = 3'b100;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+            end
+         default begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+          end
+        endcase
+        comp_sel =  2'b01;
+        rmw = 1'b0;
+        stb_i = 1'b1;
+        bit_addr = 1'b0;
+      end
+      2'b00: begin
+        casex (op_cur) 
+          8'bxxx1_0001 :begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b1;
+              pc_sel = 3'b100;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'bxxx0_0001 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b1;
+              pc_sel = 3'b100;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b0010_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0011_1xxx : begin
+             ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0101_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1011_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b0001_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1101_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b0000_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1110_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1010_1xxx : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1000_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0100_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1001_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1100_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0110_1xxx : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+    
+     
+          8'b0010_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0011_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0101_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1011_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b0001_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0000_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1110_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1000_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1010_011x : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1110_001x : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1111_001x :begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b0100_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1001_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1100_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1101_011x :begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0110_011x : begin
+              ram_rd_sel = 3'b001;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+    
+     
+          8'b0010_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0011_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0101_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0101_0100 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0101_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0101_0011 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1000_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b1;
+            end
+          8'b1011_0000 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b1;
+            end
+          8'b1011_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1011_0100 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1100_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b1;
+            end
+          8'b1011_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b1;
+            end
+          8'b0001_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1000_0100 : begin
+              ram_rd_sel = 3'b100;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1101_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b0000_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1010_0011 : begin
+              ram_rd_sel = 3'b101;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0010_0000 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b011;
+              comp_sel =  2'b11;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b1;
+            end
+          8'b0001_0000 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b11;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b1;
+            end
+
+`line 902 "oc8051_decoder.v" 0
+
+`line 902 "oc8051_decoder.v" 0
+
+`line 902 "oc8051_decoder.v" 0
+
+`line 902 "oc8051_decoder.v" 0
+
+`line 902 "oc8051_decoder.v" 0
+
+`line 902 "oc8051_decoder.v" 0
+
+`line 902 "oc8051_decoder.v" 0
+
+`line 902 "oc8051_decoder.v" 0
+ 
+          8'b0111_0011 : begin
+              ram_rd_sel = 3'b101;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+    
+          8'b0011_0000 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b011;
+              comp_sel =  2'b11;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b1;
+            end
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+
+`line 948 "oc8051_decoder.v" 0
+ 
+          8'b0001_0010 :begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b1;
+              pc_sel = 3'b101;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+             
+          8'b1010_0101 :begin
+              if (su_en) begin
+                ram_rd_sel = 3'b000;
+                pc_wr = 1'b1;
+                pc_sel = 3'b111;
+                comp_sel =  2'b01;
+                rmw = 1'b0;
+                stb_i = 1'b0;
+                bit_addr = 1'b0;
+                enter_su_mode = 1'b1;
+              end else begin
+                ram_rd_sel = 3'b000;
+                pc_wr = 1'b1;
+                pc_sel = 3'b101;
+                comp_sel =  2'b01;
+                rmw = 1'b0;
+                stb_i = 1'b0;
+                bit_addr = 1'b0;
+              end
+            end
+             
+          8'b0000_0010 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b1;
+              pc_sel = 3'b101;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1110_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1000_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1010_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b1;
+            end
+          8'b1001_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b1;
+            end
+          8'b1001_0011 :begin
+              ram_rd_sel = 3'b101;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1000_0011 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1110_0000 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1111_0000 : begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1010_0100 : begin
+              ram_rd_sel = 3'b100;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b0100_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0100_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0100_0011 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0111_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b1;
+            end
+          8'b1010_0000 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b1;
+            end
+          8'b1101_0000 : begin
+              ram_rd_sel = 3'b011;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1100_0000 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0010_0010 : begin
+              ram_rd_sel = 3'b011;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b0011_0010 : begin
+              ram_rd_sel = 3'b011;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b0;
+              bit_addr = 1'b0;
+            end
+          8'b1101_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b1;
+            end
+
+`line 1168 "oc8051_decoder.v" 0
+
+`line 1168 "oc8051_decoder.v" 0
+
+`line 1168 "oc8051_decoder.v" 0
+
+`line 1168 "oc8051_decoder.v" 0
+
+`line 1168 "oc8051_decoder.v" 0
+
+`line 1168 "oc8051_decoder.v" 0
+
+`line 1168 "oc8051_decoder.v" 0
+
+`line 1168 "oc8051_decoder.v" 0
+ 
+          8'b1001_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b1100_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0110_0101 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0110_0010 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          8'b0110_0011 : begin
+              ram_rd_sel = 3'b010;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b1;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+            end
+          default: begin
+              ram_rd_sel = 3'b000;
+              pc_wr = 1'b0;
+              pc_sel = 3'b000;
+              comp_sel =  2'b01;
+              rmw = 1'b0;
+              stb_i = 1'b1;
+              bit_addr = 1'b0;
+           end
+        endcase
+      end
+    endcase
+end
+
+
+
+
+
+
+
+
+
+
+
+
+`line 1239 "oc8051_decoder.v" 0
+ 
+
+`line 1241 "oc8051_decoder.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    ram_wr_sel <= #1 3'b000;
+    src_sel1 <= #1 3'b000;
+    src_sel2 <= #1 3'b00;
+    alu_op <= #1 4'b0000;
+    wr <= #1 1'b0;
+    psw_set <= #1 2'b00;
+    cy_sel <= #1 2'b00;
+    src_sel3 <= #1 1'b0;
+    wr_sfr <= #1 2'b00;
+  end else if (!wait_data) begin
+    case (state_dec) 
+      2'b01: begin
+        casex (op_cur) 
+          8'b1001_0011 :begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b111;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1000_0011 :begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b111;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1110_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b111;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1110_001x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b111;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              wr_sfr <= #1 2'b01;
+            end
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+
+`line 1319 "oc8051_decoder.v" 0
+ 
+          8'b1000_0100 : begin
+              ram_wr_sel <= #1 3'b111;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0100;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b10;
+              wr_sfr <= #1 2'b10;
+            end
+          8'b1010_0100 : begin
+              ram_wr_sel <= #1 3'b111;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0011;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b10;
+              wr_sfr <= #1 2'b10;
+            end
+          default begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              wr_sfr <= #1 2'b00;
+          end
+        endcase
+        cy_sel <= #1 2'b00;
+        src_sel3 <= #1 1'b0;
+      end
+      2'b10: begin
+        casex (op_cur) 
+          8'bxxx1_0001 :begin
+              ram_wr_sel <= #1 3'b011;
+              src_sel1 <= #1 3'b100;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+            end
+          8'b0001_0010 :begin
+              ram_wr_sel <= #1 3'b011;
+              src_sel1 <= #1 3'b100;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+            end
+             
+            8'b1010_0101 :begin
+              ram_wr_sel <= #1 3'b011;
+              src_sel1 <= #1 3'b100;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+            end
+             
+          8'b0001_0000 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+            end
+          8'b1000_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0100;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b10;
+            end
+          8'b1010_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0011;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b10;
+            end
+          default begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+          end
+        endcase
+        cy_sel <= #1 2'b00;
+        src_sel3 <= #1 1'b0;
+        wr_sfr <= #1 2'b00;
+      end
+
+`line 1417 "oc8051_decoder.v" 0
+      2'b11: begin
+        casex (op_cur) 
+          8'b0010_0010 : begin
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              psw_set <= #1 2'b00;
+            end
+          8'b0011_0010 : begin
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              psw_set <= #1 2'b00;
+            end
+          8'b1000_0100 : begin
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0100;
+              psw_set <= #1 2'b10;
+            end
+          8'b1010_0100 : begin
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0011;
+              psw_set <= #1 2'b10;
+            end
+         default begin
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              psw_set <= #1 2'b00;
+          end
+        endcase
+        ram_wr_sel <= #1 3'b000;
+        wr <= #1 1'b0;
+        cy_sel <= #1 2'b00;
+        src_sel3 <= #1 1'b0;
+        wr_sfr <= #1 2'b00;
+      end
+      default: begin
+        casex (op_cur) 
+          8'bxxx1_0001 :begin
+              ram_wr_sel <= #1 3'b011;
+              src_sel1 <= #1 3'b101;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'bxxx0_0001 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0010_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0011_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0101_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0111;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1011_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b11;
+              alu_op <= #1 4'b0010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0001_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1101_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0000_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1110_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1111_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1010_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0111_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b001;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1000_1xxx : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0100_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1001_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1100_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1111;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b10;
+            end
+          8'b0110_1xxx : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+    
+     
+          8'b0010_011x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0011_011x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0101_011x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0111;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1011_011x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b11;
+              alu_op <= #1 4'b0010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0001_011x : begin
+              ram_wr_sel <= #1 3'b010;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0000_011x : begin
+              ram_wr_sel <= #1 3'b010;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1110_011x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1000_011x : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1111_011x : begin
+              ram_wr_sel <= #1 3'b010;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1010_011x : begin
+              ram_wr_sel <= #1 3'b010;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0111_011x : begin
+              ram_wr_sel <= #1 3'b010;
+              src_sel1 <= #1 3'b001;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1110_001x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1111_001x :begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0100_011x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1001_011x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1100_011x : begin
+              ram_wr_sel <= #1 3'b010;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1111;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b10;
+            end
+          8'b1101_011x :begin
+              ram_wr_sel <= #1 3'b010;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1111;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b10;
+            end
+          8'b0110_011x : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+    
+     
+          8'b0010_0101 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0010_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b001;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0011_0101 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0011_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b001;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0101_0101 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0111;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0101_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b001;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b0111;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0101_0010 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0111;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0101_0011 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b010;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0111;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1000_0010 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0111;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1011_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1100;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1011_0101 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1011_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b11;
+              alu_op <= #1 4'b0010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1110_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b0010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1100_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1100_0010 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1111_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0110;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1011_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0110;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1011_0010 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0110;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b10;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1101_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0101;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0001_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0001_0101 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1000_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0100;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b10;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1101_0101 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0000_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0000_0101 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b1110;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1010_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b10;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b11;
+            end
+          8'b0010_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0001_0000 :begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0100_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0111_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0011_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0101_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0111_0000 :begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0110_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0001_0010 :begin
+              ram_wr_sel <= #1 3'b011;
+              src_sel1 <= #1 3'b101;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+             
+            8'b1010_0101 :begin
+              ram_wr_sel <= #1 3'b011;
+              src_sel1 <= #1 3'b101;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+             
+          8'b0000_0010 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1110_0101 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0111_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b001;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1111_0101 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1000_0101 : begin
+              ram_wr_sel <= #1 3'b101;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0111_0101 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b010;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1010_0010 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b10;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1001_0010 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1001_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b010;
+              src_sel2 <= #1 3'b11;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b11;
+            end
+          8'b1001_0011 :begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1000_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b101;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b0001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1110_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1111_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1010_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0011;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b10;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0100_0101 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0100_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b001;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0100_0010 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1001;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0100_0011 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b010;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1001;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0111_0010 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1001;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1010_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1101_0000 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1100_0000 : begin
+              ram_wr_sel <= #1 3'b011;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0010_0010 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0011_0010 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0010_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0011_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1011;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0000_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1100;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0001_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1101;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1101_0011 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b01;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1101_0010 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1000_0000 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b1;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b1001_0101 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1001_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b11;
+              alu_op <= #1 4'b0010;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b11;
+              cy_sel <= #1 2'b01;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b1100_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b011;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1011;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b10;
+            end
+          8'b1100_0101 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1111;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b11;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b10;
+            end
+          8'b0110_0101 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0110_0100 : begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b001;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b01;
+            end
+          8'b0110_0010 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b01;
+              alu_op <= #1 4'b1000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          8'b0110_0011 : begin
+              ram_wr_sel <= #1 3'b001;
+              src_sel1 <= #1 3'b010;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b1000;
+              wr <= #1 1'b1;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+            end
+          default: begin
+              ram_wr_sel <= #1 3'b000;
+              src_sel1 <= #1 3'b000;
+              src_sel2 <= #1 3'b00;
+              alu_op <= #1 4'b0000;
+              wr <= #1 1'b0;
+              psw_set <= #1 2'b00;
+              cy_sel <= #1 2'b00;
+              src_sel3 <= #1 1'b0;
+              wr_sfr <= #1 2'b00;
+           end
+        endcase
+      end
+      endcase
+  end
+end
+
+
+
+`line 2704 "oc8051_decoder.v" 0
+ 
+always @(posedge clk or posedge rst)
+  if (rst) op <= #1 2'b00;
+  else if (state==2'b00) op <= #1 op_in;
+
+
+`line 2710 "oc8051_decoder.v" 0
+ 
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+    state <= #1 2'b11;
+  else if  (!mem_wait & !wait_data) begin
+    case (state) 
+      2'b10: state <= #1 2'b01;
+      2'b11: state <= #1 2'b10;
+      2'b00:
+          casex (op_in) 
+            8'bxxx1_0001   : state <= #1 2'b10;
+            8'bxxx0_0001    : state <= #1 2'b10;
+            8'b1011_1xxx  : state <= #1 2'b10;
+            8'b1011_011x  : state <= #1 2'b10;
+            8'b1011_0101  : state <= #1 2'b10;
+            8'b1011_0100  : state <= #1 2'b10;
+            8'b0000_0010    : state <= #1 2'b10;
+            8'b1101_1xxx  : state <= #1 2'b10;
+            8'b1101_0101  : state <= #1 2'b10;
+            8'b0001_0010   : state <= #1 2'b10;
+            8'b1010_0101   : state <= #1 2'b10;  
+            8'b1001_0011 : state <= #1 2'b11;
+            8'b1000_0011 : state <= #1 2'b11;
+            8'b1110_001x : state <= #1 2'b10;
+            8'b1111_001x : state <= #1 2'b10;
+            8'b1110_0000 : state <= #1 2'b10;
+            8'b1111_0000 : state <= #1 2'b10;
+            8'b0010_0010     : state <= #1 2'b11;
+            8'b0011_0010    : state <= #1 2'b11;
+            8'b1000_0000    : state <= #1 2'b10;
+            8'b0010_0000      : state <= #1 2'b10;
+            8'b0001_0000     : state <= #1 2'b10;
+            8'b0100_0000      : state <= #1 2'b10;
+            8'b0111_0011   : state <= #1 2'b10;
+            8'b0101_0000     : state <= #1 2'b10;
+            8'b0011_0000     : state <= #1 2'b10;
+            8'b0111_0000     : state <= #1 2'b10;
+            8'b0110_0000      : state <= #1 2'b10;
+            8'b1000_0100     : state <= #1 2'b11;
+            8'b1010_0100     : state <= #1 2'b11;
+ 
+          endcase
+      default: state <= #1 2'b00;
+    endcase
+  end
+end
+
+`line 2758 "oc8051_decoder.v" 0
+ 
+always @(posedge clk or posedge rst) begin
+  if (rst) begin
+    mem_pc <= #1 16'h00;
+  end
+  else begin
+    mem_pc <= #1 pc;
+  end
+end
+
+
+`line 2769 "oc8051_decoder.v" 0
+ 
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    mem_act <= #1 3'b111;
+  end else if (!rd) begin
+    mem_act <= #1 3'b111;
+  end else
+    casex (op_cur) 
+      8'b1111_001x : mem_act <= #1 3'b011;
+      8'b1111_0000 : mem_act <= #1 3'b001;
+      8'b1110_001x : mem_act <= #1 3'b010;
+      8'b1110_0000 : mem_act <= #1 3'b000;
+      8'b1001_0011 : mem_act <= #1 3'b100;
+      8'b1000_0011 : mem_act <= #1 3'b100;
+      default : mem_act <= #1 3'b111;
+    endcase
+end
+
+`line 2788 "oc8051_decoder.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    ram_rd_sel_r <= #1 3'h0;
+  end else begin
+    ram_rd_sel_r <= #1 ram_rd_sel;
+  end
+end
+
+
+
+`line 2799 "oc8051_decoder.v" 0
+ 
+
+`line 2801 "oc8051_decoder.v" 0
+ 
+    
+     
+
+
+
+
+
+
+
+
+`line 2812 "oc8051_decoder.v" 0
+endmodule
+
+
+
+`line 2816 "oc8051_decoder.v" 2

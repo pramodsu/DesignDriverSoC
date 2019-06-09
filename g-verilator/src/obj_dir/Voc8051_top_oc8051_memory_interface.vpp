@@ -1,0 +1,2230 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_memory_interface.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 44 "oc8051_memory_interface.v" 0
+ 
+
+`line 46 "oc8051_memory_interface.v" 0
+ 
+ 
+ 
+
+`line 50 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 53 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 56 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 59 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 62 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 65 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 68 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 71 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 74 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 77 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 80 "oc8051_memory_interface.v" 0
+ 
+ 
+
+
+
+`line 85 "oc8051_memory_interface.v" 0
+ 
+ 
+`line 86 "oc8051_memory_interface.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 86 "oc8051_memory_interface.v" 0
+
+`line 87 "oc8051_memory_interface.v" 0
+ 
+
+`line 89 "oc8051_memory_interface.v" 0
+ 
+`line 89 "oc8051_memory_interface.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 89 "oc8051_memory_interface.v" 0
+
+
+
+`line 92 "oc8051_memory_interface.v" 0
+module oc8051_memory_interface (clk, rst,
+
+`line 94 "oc8051_memory_interface.v" 0
+ 
+     wr_i,
+     wr_bit_i,
+     rd_sel,
+     wr_sel,
+     pc_wr_sel,
+     pc_wr,
+     pc,
+     rd,
+     mem_wait,
+     mem_act,
+     istb,
+     mem_pc,
+     dpc_ot,
+
+`line 109 "oc8051_memory_interface.v" 0
+ 
+     wr_o, 
+     wr_bit_o, 
+     rd_addr, 
+     wr_addr, 
+     rd_ind, 
+     wr_ind, 
+     wr_dat,
+
+`line 118 "oc8051_memory_interface.v" 0
+     bit_in, 
+     in_ram, 
+     sfr, 
+     sfr_bit, 
+     bit_out, 
+     iram_out,
+
+`line 125 "oc8051_memory_interface.v" 0
+ 
+     iadr_o, 
+     ea, 
+     ea_int,
+     op1_out,  op1,
+     op2_out,  op2,
+     op3_out,  op3,
+     out_of_rst,
+     decoder_new_valid_pc,
+     pc_log,
+     pc_log_prev,
+
+`line 137 "oc8051_memory_interface.v" 0
+ 
+     idat_onchip,
+
+`line 140 "oc8051_memory_interface.v" 0
+ 
+     iack_i, 
+     istb_o, 
+     idat_i,
+
+`line 145 "oc8051_memory_interface.v" 0
+ 
+     dadr_o, 
+     dwe_o, 
+     dstb_o, 
+     dack_i,
+     ddat_i, 
+     ddat_o,
+
+`line 153 "oc8051_memory_interface.v" 0
+ 
+     intr, 
+     int_v, 
+     int_ack,
+
+`line 158 "oc8051_memory_interface.v" 0
+ 
+     des_acc, 
+     des1, 
+     des2,
+
+`line 163 "oc8051_memory_interface.v" 0
+ 
+     dptr, 
+     ri, 
+     sp,  
+     sp_w, 
+     rn, 
+     acc, 
+     reti,
+     etr
+   );
+
+
+`line 175 "oc8051_memory_interface.v" 0
+input         clk,
+              rst,
+              wr_i,
+              wr_bit_i;
+
+`line 180 "oc8051_memory_interface.v" 0
+input         bit_in,
+              sfr_bit,
+              dack_i;
+input [2:0]   mem_act;
+input [7:0]   in_ram,
+              sfr,
+              acc,
+              sp_w;
+input [31:0]  idat_i;
+
+`line 190 "oc8051_memory_interface.v" 0
+output        bit_out,
+              mem_wait,
+              reti;
+output [7:0]  iram_out,
+              wr_dat;
+output        out_of_rst;
+input         decoder_new_valid_pc;
+output [15:0] pc_log;
+output [15:0] pc_log_prev;
+input  [15:0] etr;
+
+`line 201 "oc8051_memory_interface.v" 0
+input  [15:0] mem_pc;
+output [15:0] dpc_ot;
+
+`line 204 "oc8051_memory_interface.v" 0
+reg           bit_out,
+              reti;
+reg [7:0]     iram_out,
+              sp_r;
+reg           rd_addr_r;
+output        wr_o,
+              wr_bit_o;
+
+`line 212 "oc8051_memory_interface.v" 0
+ 
+reg           dack_ir;
+reg [7:0]     ddat_ir;
+reg [23:0]    idat_ir;
+
+`line 217 "oc8051_memory_interface.v" 0
+ 
+
+`line 219 "oc8051_memory_interface.v" 0
+ 
+
+`line 221 "oc8051_memory_interface.v" 0
+ 
+input         iack_i;
+input [7:0]   des_acc,
+              des1,
+              des2;
+output [15:0] iadr_o;
+
+`line 228 "oc8051_memory_interface.v" 0
+wire          ea_rom_sel;
+
+`line 230 "oc8051_memory_interface.v" 0
+ 
+
+`line 232 "oc8051_memory_interface.v" 0
+ 
+
+`line 234 "oc8051_memory_interface.v" 0
+ 
+input [7:0]   ri,
+              ddat_i;
+input [15:0]  dptr;
+
+`line 239 "oc8051_memory_interface.v" 0
+output        dstb_o,
+              dwe_o;
+output [7:0]  ddat_o;
+output [15:0] dadr_o;
+
+`line 244 "oc8051_memory_interface.v" 0
+ 
+
+`line 246 "oc8051_memory_interface.v" 0
+ 
+
+`line 248 "oc8051_memory_interface.v" 0
+ 
+
+`line 250 "oc8051_memory_interface.v" 0
+input [2:0]   rd_sel,
+              wr_sel;
+input [4:0]   rn;
+input [7:0]   sp;
+
+`line 255 "oc8051_memory_interface.v" 0
+output        rd_ind,
+              wr_ind;
+output [7:0]  wr_addr,
+              rd_addr;
+reg           rd_ind,
+              wr_ind;
+reg [7:0]     wr_addr,
+              rd_addr;
+
+`line 264 "oc8051_memory_interface.v" 0
+reg [4:0]     rn_r;
+reg [7:0]     ri_r,
+              imm_r,
+              imm2_r,
+              op1_r;
+wire [7:0]    imm,
+              imm2;
+
+`line 272 "oc8051_memory_interface.v" 0
+ 
+
+`line 274 "oc8051_memory_interface.v" 0
+ 
+
+`line 276 "oc8051_memory_interface.v" 0
+ 
+
+`line 278 "oc8051_memory_interface.v" 0
+input         intr,
+              rd,
+              ea, 
+              ea_int, 
+              istb;
+
+`line 284 "oc8051_memory_interface.v" 0
+input  [7:0]  int_v;
+
+`line 286 "oc8051_memory_interface.v" 0
+input  [31:0] idat_onchip;
+
+`line 288 "oc8051_memory_interface.v" 0
+output        int_ack,
+              istb_o;
+
+`line 291 "oc8051_memory_interface.v" 0
+output  [7:0] op1_out, op1,
+              op3_out, op2,
+              op2_out, op3;
+
+`line 295 "oc8051_memory_interface.v" 0
+reg           int_ack_t,
+              int_ack,
+              int_ack_buff;
+
+`line 299 "oc8051_memory_interface.v" 0
+reg [7:0]     int_vec_buff;
+reg [7:0]     op1_out,
+              op2_buff,
+              op3_buff;
+reg [7:0]     op1_o,
+              op2_o,
+              op3_o;
+
+`line 307 "oc8051_memory_interface.v" 0
+reg [7:0]     op1_xt, 
+              op2_xt, 
+              op3_xt;
+
+`line 311 "oc8051_memory_interface.v" 0
+reg [7:0]     op1,
+              op2,
+              op3;
+wire [7:0]    op2_direct;
+
+`line 316 "oc8051_memory_interface.v" 0
+input [2:0]   pc_wr_sel;
+
+`line 318 "oc8051_memory_interface.v" 0
+input         pc_wr;
+output [15:0] pc;
+
+`line 321 "oc8051_memory_interface.v" 0
+reg [15:0]    pc;
+
+`line 323 "oc8051_memory_interface.v" 0
+reg [15:0]    dpc_ot;
+
+`line 325 "oc8051_memory_interface.v" 0
+ 
+reg [15:0]    pc_buf;
+wire [15:0]   alu;
+wire [15:0]   etr;
+
+
+`line 331 "oc8051_memory_interface.v" 0
+reg           int_buff,
+              int_buff1;  
+
+
+
+
+`line 337 "oc8051_memory_interface.v" 0
+ 
+reg           istb_t,
+              imem_wait,
+              dstb_o,
+              dwe_o;
+
+`line 343 "oc8051_memory_interface.v" 0
+reg [7:0]     ddat_o;
+reg [15:0]    iadr_t,
+              dadr_ot;
+reg           dmem_wait;
+wire          pc_wait;
+wire [1:0]    bank;
+wire [7:0]    isr_call;
+
+`line 351 "oc8051_memory_interface.v" 0
+reg [1:0]     op_length;
+reg [2:0]     op_pos;
+wire          inc_pc;
+
+`line 355 "oc8051_memory_interface.v" 0
+reg           pc_wr_r;
+
+`line 357 "oc8051_memory_interface.v" 0
+wire [15:0]   pc_out;
+
+`line 359 "oc8051_memory_interface.v" 0
+reg [31:0]    idat_cur,
+              idat_old;
+
+`line 362 "oc8051_memory_interface.v" 0
+reg           inc_pc_r,
+              pc_wr_r2;
+
+`line 365 "oc8051_memory_interface.v" 0
+reg [7:0]     cdata;
+reg           cdone;
+
+
+`line 369 "oc8051_memory_interface.v" 0
+assign bank       = rn[4:3];
+assign imm        = op2_out;
+assign imm2       = op3_out;
+assign alu        = {des2, des_acc};
+assign ea_rom_sel = ea && ea_int;
+assign wr_o       = wr_i;
+assign wr_bit_o   = wr_bit_i;
+
+`line 377 "oc8051_memory_interface.v" 0
+ 
+assign mem_wait   = dmem_wait || imem_wait || pc_wr_r2;
+ 
+assign istb_o     = (istb || (istb_t & !iack_i)) && !dstb_o && !ea_rom_sel;
+
+`line 382 "oc8051_memory_interface.v" 0
+assign pc_wait    = rd && (ea_rom_sel || (!istb_t && iack_i));
+
+`line 384 "oc8051_memory_interface.v" 0
+assign wr_dat     = des1;
+
+
+`line 387 "oc8051_memory_interface.v" 0
+ 
+
+`line 389 "oc8051_memory_interface.v" 0
+ 
+
+`line 391 "oc8051_memory_interface.v" 0
+ 
+always @(rd_addr_r or in_ram or sfr or bit_in or sfr_bit or rd_ind)
+begin
+  if (rd_addr_r && !rd_ind) begin
+    iram_out = sfr;
+    bit_out = sfr_bit;
+  end else begin
+    iram_out = in_ram;
+    bit_out = bit_in;
+  end
+end
+
+`line 403 "oc8051_memory_interface.v" 0
+ 
+
+`line 405 "oc8051_memory_interface.v" 0
+ 
+
+`line 407 "oc8051_memory_interface.v" 0
+ 
+
+`line 409 "oc8051_memory_interface.v" 0
+always @(rd_sel or sp or ri or rn or imm or dadr_o[15:0] or bank)
+begin
+  case (rd_sel) 
+    3'b000   : rd_addr = {3'h0, rn};
+    3'b001    : rd_addr = ri;
+    3'b010    : rd_addr = imm;
+    3'b011   : rd_addr = sp;
+
+`line 417 "oc8051_memory_interface.v" 0
+    3'b100    : rd_addr = 8'hf0;
+    3'b101 : rd_addr = 8'h82;
+    3'b110  : rd_addr = 8'hd0;
+    3'b111  : rd_addr = 8'he0;
+ 
+  endcase
+
+`line 424 "oc8051_memory_interface.v" 0
+end
+
+
+
+
+`line 429 "oc8051_memory_interface.v" 0
+always @(wr_sel or sp_w or rn_r or imm_r or ri_r or imm2_r or op1_r or dadr_o[15:0])
+begin
+  case (wr_sel) 
+    3'b000 : wr_addr = {3'h0, rn_r};
+    3'b010  : wr_addr = ri_r;
+    3'b001  : wr_addr = imm_r;
+    3'b011 : wr_addr = sp_w;
+    3'b101 : wr_addr = imm2_r;
+    3'b111  : wr_addr = 8'hf0;
+     
+    default        : wr_addr = 2'bxx;
+  endcase
+end
+
+`line 443 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+  if (rst)
+    rd_ind <= #1 1'b0;
+  else if ((rd_sel==3'b001) || (rd_sel==3'b011))
+    rd_ind <= #1 1'b1;
+  else
+    rd_ind <= #1 1'b0;
+
+`line 451 "oc8051_memory_interface.v" 0
+always @(wr_sel)
+  if ((wr_sel==3'b010) || (wr_sel==3'b011))
+    wr_ind = 1'b1;
+  else
+    wr_ind = 1'b0;
+
+
+`line 458 "oc8051_memory_interface.v" 0
+ 
+
+`line 460 "oc8051_memory_interface.v" 0
+ 
+
+`line 462 "oc8051_memory_interface.v" 0
+ 
+
+`line 464 "oc8051_memory_interface.v" 0
+ 
+ 
+
+`line 467 "oc8051_memory_interface.v" 0
+ 
+assign iadr_o = (istb_t) ? iadr_t : pc_out;
+
+
+`line 471 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    iadr_t <= #1 23'h0;
+    istb_t <= #1 1'b0;
+    imem_wait <= #1 1'b0;
+    idat_ir <= #1 24'h0;
+  end else if (mem_act==3'b100) begin
+    iadr_t <= #1 alu;
+    istb_t <= #1 1'b1;
+    imem_wait <= #1 1'b1;
+  end else if (ea_rom_sel && imem_wait) begin
+    imem_wait <= #1 1'b0;
+  end else if (!imem_wait && istb_t) begin
+    istb_t <= #1 1'b0;
+  end else if (iack_i) begin
+    imem_wait <= #1 1'b0;
+    idat_ir <= #1 idat_i [23:0];
+  end
+end
+
+`line 492 "oc8051_memory_interface.v" 0
+ 
+
+`line 494 "oc8051_memory_interface.v" 0
+ 
+
+`line 496 "oc8051_memory_interface.v" 0
+ 
+
+`line 498 "oc8051_memory_interface.v" 0
+assign dadr_o = dadr_ot;
+
+`line 500 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    dwe_o <= #1 1'b0;
+    dmem_wait <= #1 1'b0;
+    dstb_o <= #1 1'b0;
+    ddat_o <= #1 8'h00;
+    dadr_ot <= #1 23'h0;
+    dpc_ot  <= #1 16'h0;
+  end else if (dack_i) begin
+    dwe_o <= #1 1'b0;
+    dstb_o <= #1 1'b0;
+    dmem_wait <= #1 1'b0;
+  end else begin
+    case (mem_act) 
+      3'b000: begin   
+        dwe_o <= #1 1'b0;
+        dstb_o <= #1 1'b1;
+        ddat_o <= #1 8'h00;
+        dadr_ot <= #1 {7'h0, dptr};
+        dmem_wait <= #1 1'b1;
+        dpc_ot <= #1 mem_pc;
+      end
+      3'b001: begin   
+        dwe_o <= #1 1'b1;
+        dstb_o <= #1 1'b1;
+        ddat_o <= #1 acc;
+        dadr_ot <= #1 {7'h0, dptr};
+        dmem_wait <= #1 1'b1;
+        dpc_ot <= #1 mem_pc;
+      end
+      3'b010:   begin   
+        dwe_o <= #1 1'b0;
+        dstb_o <= #1 1'b1;
+        ddat_o <= #1 8'h00;
+        dadr_ot <= #1 {15'h0, ri};
+        dmem_wait <= #1 1'b1;
+        dpc_ot <= #1 mem_pc;
+      end
+      3'b011: begin     
+        dwe_o <= #1 1'b1;
+        dstb_o <= #1 1'b1;
+        ddat_o <= #1 acc;
+        dadr_ot <= #1 {15'h0, ri};
+        dmem_wait <= #1 1'b1;
+        dpc_ot <= #1 mem_pc;
+      end
+    endcase
+  end
+end
+
+`line 551 "oc8051_memory_interface.v" 0
+ 
+
+`line 553 "oc8051_memory_interface.v" 0
+ 
+
+`line 555 "oc8051_memory_interface.v" 0
+ 
+
+
+
+`line 559 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    idat_cur            <= #1 32'h0;
+    idat_old            <= #1 32'h0;
+  end else if ((iack_i | ea_rom_sel) & (inc_pc | pc_wr_r2)) begin
+    idat_cur            <= #1 ea_rom_sel ? idat_onchip : idat_i;
+    idat_old            <= #1 idat_cur;
+  end
+end
+
+`line 570 "oc8051_memory_interface.v" 0
+reg [3:0] out_of_rst_cycles;
+reg out_of_rst;
+
+`line 573 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    out_of_rst         <= 0;
+    out_of_rst_cycles   = 0;
+  end
+  else begin
+    out_of_rst_cycles = out_of_rst_cycles < 4'd12 ? out_of_rst_cycles + 1 : out_of_rst_cycles;
+    out_of_rst       <= out_of_rst_cycles == 4'd12;
+  end 
+end
+
+`line 585 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    cdata <= #1 8'h00;
+    cdone <= #1 1'b0;
+  end else if (istb_t) begin
+    cdata <= #1 ea_rom_sel ? idat_onchip[7:0] : idat_i[7:0];
+    cdone <= #1 1'b1;
+  end else begin
+    cdone <= #1 1'b0;
+  end
+end
+
+`line 598 "oc8051_memory_interface.v" 0
+always @(op_pos or idat_cur or idat_old)
+begin
+  case (op_pos)  
+    3'b000: begin
+       op1 = idat_old[7:0]  ;
+       op2 = idat_old[15:8] ;
+       op3 = idat_old[23:16];
+      end
+    3'b001: begin
+       op1 = idat_old[15:8] ;
+       op2 = idat_old[23:16];
+       op3 = idat_old[31:24];
+      end
+    3'b010: begin
+       op1 = idat_old[23:16];
+       op2 = idat_old[31:24];
+       op3 = idat_cur[7:0]  ;
+      end
+    3'b011: begin
+       op1 = idat_old[31:24];
+       op2 = idat_cur[7:0]  ;
+       op3 = idat_cur[15:8] ;
+      end
+    3'b100: begin
+       op1 = idat_cur[7:0]  ;
+       op2 = idat_cur[15:8] ;
+       op3 = idat_cur[23:16];
+      end
+    default: begin
+       op1 = idat_cur[15:8] ;
+       op2 = idat_cur[23:16];
+       op3 = idat_cur[31:24];
+      end
+  endcase
+end
+
+
+`line 636 "oc8051_memory_interface.v" 0
+
+`line 636 "oc8051_memory_interface.v" 0
+ 
+
+
+`line 639 "oc8051_memory_interface.v" 0
+always @(dack_ir or ddat_ir or op1_o or iram_out or cdone or cdata)
+  if (dack_ir)
+    op1_out = ddat_ir;
+  else if (cdone)
+    op1_out = cdata;
+  else
+    op1_out = op1_o;
+
+`line 647 "oc8051_memory_interface.v" 0
+assign op3_out = (rd) ? op3_o : op3_buff;
+assign op2_out = (rd) ? op2_o : op2_buff;
+
+`line 650 "oc8051_memory_interface.v" 0
+always @(idat_i or iack_i or idat_ir or rd)
+begin
+  if (iack_i) begin
+    op1_xt = idat_i[7:0];
+    op2_xt = idat_i[15:8];
+    op3_xt = idat_i[23:16];
+  end else if (!rd) begin
+    op1_xt = idat_ir[7:0];
+    op2_xt = idat_ir[15:8];
+    op3_xt = idat_ir[23:16];
+  end else begin
+    op1_xt = 8'h00;
+    op2_xt = 8'h00;
+    op3_xt = 8'h00;
+  end
+end
+
+
+
+`line 669 "oc8051_memory_interface.v" 0
+ 
+always @(op1 or op2 or op3 or int_ack_t or int_vec_buff or iack_i or ea_rom_sel)
+begin
+  if (int_ack_t && (iack_i || ea_rom_sel)) begin
+    op1_o = 8'b0001_0010;
+    op2_o = 8'h00;
+    op3_o = int_vec_buff;
+  end else begin
+    op1_o = op1;
+    op2_o = op2;
+    op3_o = op3;
+  end
+end
+
+
+`line 684 "oc8051_memory_interface.v" 0
+ 
+always @(posedge clk or posedge rst)
+  if (rst) reti <= #1 1'b0;
+  else if ((op1_o==8'b0011_0010) & rd & !mem_wait) reti <= #1 1'b1;
+  else reti <= #1 1'b0;
+
+
+`line 691 "oc8051_memory_interface.v" 0
+ 
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    op2_buff <= #1 8'h0;
+    op3_buff <= #1 8'h0;
+  end else if (rd) begin
+    op2_buff <= #1 op2_o;
+    op3_buff <= #1 op3_o;
+  end
+end
+
+`line 703 "oc8051_memory_interface.v" 0
+ 
+
+`line 705 "oc8051_memory_interface.v" 0
+ 
+
+`line 707 "oc8051_memory_interface.v" 0
+ 
+
+`line 709 "oc8051_memory_interface.v" 0
+always @(op1_out)
+begin
+        casex (op1_out) 
+          8'bxxx1_0001 :  op_length = 2'h2;
+          8'bxxx0_0001 :   op_length = 2'h2;
+
+`line 715 "oc8051_memory_interface.v" 0
+         
+          8'b1011_1xxx : op_length = 2'h3;
+          8'b1101_1xxx : op_length = 2'h2;
+          8'b1010_1xxx : op_length = 2'h2;
+          8'b0111_1xxx : op_length = 2'h2;
+          8'b1000_1xxx : op_length = 2'h2;
+
+`line 722 "oc8051_memory_interface.v" 0
+         
+          8'b1011_011x : op_length = 2'h3;
+          8'b1000_011x : op_length = 2'h2;
+          8'b1010_011x : op_length = 2'h2;
+          8'b0111_011x : op_length = 2'h2;
+
+`line 728 "oc8051_memory_interface.v" 0
+         
+          8'b0010_0101 :  op_length = 2'h2;
+          8'b0010_0100 :  op_length = 2'h2;
+          8'b0011_0101 : op_length = 2'h2;
+          8'b0011_0100 : op_length = 2'h2;
+          8'b0101_0101 :  op_length = 2'h2;
+          8'b0101_0100 :  op_length = 2'h2;
+          8'b0101_0010 : op_length = 2'h2;
+          8'b0101_0011 : op_length = 2'h3;
+          8'b1000_0010 :  op_length = 2'h2;
+          8'b1011_0000 : op_length = 2'h2;
+          8'b1011_0101 : op_length = 2'h3;
+          8'b1011_0100 : op_length = 2'h3;
+          8'b1100_0010 :  op_length = 2'h2;
+          8'b1011_0010 :  op_length = 2'h2;
+          8'b0001_0101 :  op_length = 2'h2;
+          8'b1101_0101 : op_length = 2'h3;
+          8'b0000_0101 :  op_length = 2'h2;
+          8'b0010_0000 :     op_length = 2'h3;
+          8'b0001_0000 :    op_length = 2'h3;
+          8'b0100_0000 :     op_length = 2'h2;
+          8'b0011_0000 :    op_length = 2'h3;
+          8'b0101_0000 :    op_length = 2'h2;
+          8'b0111_0000 :    op_length = 2'h2;
+          8'b0110_0000 :     op_length = 2'h2;
+          8'b0001_0010 :  op_length = 2'h3;
+          8'b1010_0101 :  op_length = 2'h3;
+          8'b0000_0010 :   op_length = 2'h3;
+          8'b1110_0101 :  op_length = 2'h2;
+          8'b0111_0100 :  op_length = 2'h2;
+          8'b1111_0101 : op_length = 2'h2;
+          8'b1000_0101 : op_length = 2'h3;
+          8'b0111_0101 : op_length = 2'h3;
+          8'b1010_0010 : op_length = 2'h2;
+          8'b1001_0010 : op_length = 2'h2;
+          8'b1001_0000 : op_length = 2'h3;
+          8'b0100_0101 :  op_length = 2'h2;
+          8'b0100_0100 :  op_length = 2'h2;
+          8'b0100_0010 : op_length = 2'h2;
+          8'b0100_0011 : op_length = 2'h3;
+          8'b0111_0010 :  op_length = 2'h2;
+          8'b1010_0000 : op_length = 2'h2;
+          8'b1101_0000 :    op_length = 2'h2;
+          8'b1100_0000 :   op_length = 2'h2;
+          8'b1101_0010 : op_length = 2'h2;
+          8'b1000_0000 :   op_length = 2'h2;
+          8'b1001_0101 : op_length = 2'h2;
+          8'b1001_0100 : op_length = 2'h2;
+          8'b1100_0101 :  op_length = 2'h2;
+          8'b0110_0101 :  op_length = 2'h2;
+          8'b0110_0100 :  op_length = 2'h2;
+          8'b0110_0010 : op_length = 2'h2;
+          8'b0110_0011 : op_length = 2'h3;
+          default:         op_length = 2'h1;
+        endcase
+end
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+
+`line 869 "oc8051_memory_interface.v" 0
+ 
+
+`line 871 "oc8051_memory_interface.v" 0
+assign inc_pc = ((op_pos[2] | (&op_pos[1:0])) & rd) | pc_wr_r2;
+
+`line 873 "oc8051_memory_interface.v" 0
+always @(posedge rst or posedge clk)
+begin
+  if (rst) begin
+    op_pos <= #1 3'h0;
+  end else if (pc_wr_r2) begin
+    op_pos <= #1 3'h4; 
+
+`line 885 "oc8051_memory_interface.v" 0
+
+`line 885 "oc8051_memory_interface.v" 0
+
+`line 885 "oc8051_memory_interface.v" 0
+
+`line 885 "oc8051_memory_interface.v" 0
+
+`line 885 "oc8051_memory_interface.v" 0
+
+`line 885 "oc8051_memory_interface.v" 0
+ 
+  end else if (inc_pc & rd) begin
+    op_pos[2]   <= #1 op_pos[2] & !op_pos[1] & op_pos[0] & (&op_length);
+    op_pos[1:0] <= #1 op_pos[1:0] + op_length;
+ 
+ 
+  end else if (rd) begin
+    op_pos <= #1 op_pos + {1'b0, op_length};
+  end
+end
+
+
+`line 897 "oc8051_memory_interface.v" 0
+ 
+ 
+always @(posedge clk or posedge rst)
+ if (rst) begin
+   int_ack_t <= #1 1'b0;
+   int_vec_buff <= #1 8'h00;
+ end else if (intr) begin
+   int_ack_t <= #1 1'b1;
+   int_vec_buff <= #1 int_v;
+ end else if (rd && (ea_rom_sel || iack_i) && !pc_wr_r2) int_ack_t <= #1 1'b0;
+
+`line 908 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+  if (rst) int_ack_buff <= #1 1'b0;
+  else int_ack_buff <= #1 int_ack_t;
+
+`line 912 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+  if (rst) int_ack <= #1 1'b0;
+  else begin
+    if ((int_ack_buff) & !(int_ack_t))
+      int_ack <= #1 1'b1;
+    else int_ack <= #1 1'b0;
+  end
+
+
+
+`line 922 "oc8051_memory_interface.v" 0
+ 
+always @(posedge clk or posedge rst)
+  if (rst) begin
+    int_buff1 <= #1 1'b0;
+  end else begin
+    int_buff1 <= #1 int_buff;
+  end
+
+`line 930 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+  if (rst) begin
+    int_buff <= #1 1'b0;
+  end else if (intr) begin
+    int_buff <= #1 1'b1;
+  end else if (pc_wait)
+    int_buff <= #1 1'b0;
+
+`line 938 "oc8051_memory_interface.v" 0
+wire [7:0]  pcs_source;
+reg  [15:0] pcs_result;
+reg         pcs_cy;
+
+`line 942 "oc8051_memory_interface.v" 0
+assign pcs_source = pc_wr_sel[0] ? op3_out : op2_out;
+
+`line 944 "oc8051_memory_interface.v" 0
+always @(pcs_source or pc or pcs_cy)
+begin
+  if (pcs_source[7]) begin
+    {pcs_cy, pcs_result[7:0]} = {1'b0, pc[7:0]} + {1'b0, pcs_source};
+    pcs_result[15:8] = pc[15:8] - {7'h0, !pcs_cy};
+  end else pcs_result = pc + {8'h00, pcs_source};
+end
+
+`line 952 "oc8051_memory_interface.v" 0
+ 
+ 
+ 
+
+`line 956 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+    pc <= #1 16'h0;
+  else if (pc_wr_r2)
+    pc <= #1 pc_buf;
+  else if (rd & !int_ack_t)
+    pc <= #1 pc_buf - 16'h8 + {13'h0, op_pos} + {14'h0, op_length};
+end
+
+
+`line 967 "oc8051_memory_interface.v" 0
+ 
+wire [15:0] pc_for_ajmp = pc + 2;
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    pc_buf <= #1 23'h0;
+  end else if (pc_wr) begin
+
+`line 975 "oc8051_memory_interface.v" 0
+ 
+      case (pc_wr_sel) 
+        3'b110:   pc_buf        <= #1 alu;
+        3'b000:    pc_buf[7:0]   <= #1 alu[7:0];
+        3'b001:    pc_buf[15:8]  <= #1 alu[7:0];
+         
+        3'b100:   pc_buf        <= #1 {pc_for_ajmp[15:11], op1_out[7:5], op2_out};
+        3'b101:   pc_buf        <= #1 {op2_out, op3_out};
+        3'b010:   pc_buf        <= #1 pcs_result;
+        3'b011:   pc_buf        <= #1 pcs_result;
+        3'b111: pc_buf        <= #1 etr;
+      endcase
+ 
+  end else begin
+
+`line 990 "oc8051_memory_interface.v" 0
+ 
+      pc_buf <= #1 pc_out;
+  end
+end
+
+
+`line 996 "oc8051_memory_interface.v" 0
+assign pc_out = inc_pc ? pc_buf + 16'h4
+                       : pc_buf ;
+
+
+
+
+
+`line 1003 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+  if (rst)
+    ddat_ir <= #1 8'h00;
+  else if (dack_i)
+    ddat_ir <= #1 ddat_i;
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+
+`line 1161 "oc8051_memory_interface.v" 0
+ 
+
+`line 1163 "oc8051_memory_interface.v" 0
+ 
+always @(posedge clk or posedge rst)
+  if (rst) begin
+    rn_r      <= #1 5'd0;
+    ri_r      <= #1 8'h00;
+    imm_r     <= #1 8'h00;
+    imm2_r    <= #1 8'h00;
+    rd_addr_r <= #1 1'b0;
+    op1_r     <= #1 8'h0;
+    dack_ir   <= #1 1'b0;
+    sp_r      <= #1 1'b0;
+    pc_wr_r   <= #1 1'b0;
+    pc_wr_r2  <= #1 1'b0;
+  end else begin
+    rn_r      <= #1 rn;
+    ri_r      <= #1 ri;
+    imm_r     <= #1 imm;
+    imm2_r    <= #1 imm2;
+    rd_addr_r <= #1 rd_addr[7];
+    op1_r     <= #1 op1_out;
+    dack_ir   <= #1 dack_i;
+    sp_r      <= #1 sp;
+    pc_wr_r   <= #1 pc_wr && (pc_wr_sel != 3'b001);
+    pc_wr_r2  <= #1 pc_wr_r;
+  end
+
+`line 1189 "oc8051_memory_interface.v" 0
+always @(posedge clk or posedge rst)
+  if (rst) begin
+    inc_pc_r  <= #1 1'b1;
+  end else if (istb) begin
+    inc_pc_r  <= #1 inc_pc;
+  end
+
+`line 1196 "oc8051_memory_interface.v" 0
+reg [15:0] pc_log;
+reg [15:0] pc_log_prev;
+always @(posedge clk)
+begin
+    if (rst) begin
+        pc_log      <= 0;
+        pc_log_prev <= 0;
+    end
+    else begin
+        if (decoder_new_valid_pc) begin
+            pc_log  <= pc;
+            pc_log_prev <= pc_log;
+        end
+    end
+end
+
+`line 1212 "oc8051_memory_interface.v" 0
+endmodule
+
+`line 1214 "oc8051_memory_interface.v" 2

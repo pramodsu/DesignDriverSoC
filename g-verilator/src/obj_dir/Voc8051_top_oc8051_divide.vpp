@@ -1,0 +1,161 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_divide.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_divide.v" 0
+ 
+
+`line 47 "oc8051_divide.v" 0
+ 
+ 
+ 
+
+
+
+`line 53 "oc8051_divide.v" 0
+ 
+ 
+`line 54 "oc8051_divide.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 54 "oc8051_divide.v" 0
+
+`line 55 "oc8051_divide.v" 0
+ 
+
+`line 57 "oc8051_divide.v" 0
+module oc8051_divide (clk, rst, enable, src1, src2, des1, des2, desOv);
+
+`line 59 "oc8051_divide.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 70 "oc8051_divide.v" 0
+input clk, rst, enable;
+input [7:0] src1, src2;
+output desOv;
+output [7:0] des1, des2;
+
+`line 75 "oc8051_divide.v" 0
+ 
+wire desOv;
+wire div0, div1;
+wire [7:0] rem0, rem1, rem2;
+wire [8:0] sub0, sub1;
+wire [15:0] cmp0, cmp1;
+wire [7:0] div_out, rem_out;
+
+`line 83 "oc8051_divide.v" 0
+ 
+reg [1:0] cycle;
+reg [5:0] tmp_div;
+reg [7:0] tmp_rem;
+
+`line 88 "oc8051_divide.v" 0
+ 
+assign cmp1 = src2 << ({2'h3 - cycle, 1'b0} + 3'h1);
+assign cmp0 = src2 << ({2'h3 - cycle, 1'b0} + 3'h0);
+
+`line 92 "oc8051_divide.v" 0
+assign rem2 = cycle != 0 ? tmp_rem : src1;
+
+`line 94 "oc8051_divide.v" 0
+assign sub1 = {1'b0, rem2} - {1'b0, cmp1[7:0]};
+assign div1 = |cmp1[15:8] ? 1'b0 : !sub1[8];
+assign rem1 = div1 ? sub1[7:0] : rem2[7:0];
+
+`line 98 "oc8051_divide.v" 0
+assign sub0 = {1'b0, rem1} - {1'b0, cmp0[7:0]};
+assign div0 = |cmp0[15:8] ? 1'b0 : !sub0[8];
+assign rem0 = div0 ? sub0[7:0] : rem1[7:0];
+
+
+`line 103 "oc8051_divide.v" 0
+ 
+ 
+assign div_out = {tmp_div, div1, div0};
+assign rem_out = rem0;
+assign desOv = src2 == 8'h0;
+
+
+`line 110 "oc8051_divide.v" 0
+ 
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    cycle <= #1 2'b0;
+    tmp_div <= #1 6'h0;
+    tmp_rem <= #1 8'h0;
+  end else begin
+    if (enable) cycle <= #1 cycle + 2'b1;
+    tmp_div <= #1 div_out[5:0];
+    tmp_rem <= #1 rem_out;
+  end
+end
+
+
+`line 125 "oc8051_divide.v" 0
+ 
+assign des1 = rem_out;
+assign des2 = div_out;
+
+`line 129 "oc8051_divide.v" 0
+endmodule
+
+`line 131 "oc8051_divide.v" 2

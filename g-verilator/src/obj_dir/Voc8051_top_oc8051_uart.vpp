@@ -1,0 +1,1035 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_uart.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 44 "oc8051_uart.v" 0
+ 
+
+`line 46 "oc8051_uart.v" 0
+ 
+ 
+ 
+
+`line 50 "oc8051_uart.v" 0
+ 
+ 
+
+`line 53 "oc8051_uart.v" 0
+ 
+ 
+
+`line 56 "oc8051_uart.v" 0
+ 
+ 
+
+`line 59 "oc8051_uart.v" 0
+ 
+ 
+
+`line 62 "oc8051_uart.v" 0
+ 
+ 
+
+
+
+`line 67 "oc8051_uart.v" 0
+ 
+ 
+`line 68 "oc8051_uart.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 68 "oc8051_uart.v" 0
+
+`line 69 "oc8051_uart.v" 0
+ 
+
+`line 71 "oc8051_uart.v" 0
+ 
+`line 71 "oc8051_uart.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 71 "oc8051_uart.v" 0
+
+
+`line 73 "oc8051_uart.v" 0
+module oc8051_uart (rst, clk, 
+             bit_in, data_in,
+	     wr_addr,
+	     wr, wr_bit,
+             rxd, txd,
+	     intr,
+             brate2, t1_ow, pres_ow,
+	     rclk, tclk,
+ 
+	     scon, pcon, sbuf);
+
+`line 84 "oc8051_uart.v" 0
+input        rst,
+             clk,
+	     bit_in,
+	     wr,
+	     rxd,
+	     wr_bit,
+	     t1_ow,
+	     brate2,
+	     pres_ow,
+	     rclk,
+	     tclk;
+input [7:0]  data_in,
+	     wr_addr;
+
+`line 98 "oc8051_uart.v" 0
+output       txd,
+             intr;
+output [7:0] scon,
+             pcon,
+	     sbuf;
+
+
+`line 105 "oc8051_uart.v" 0
+reg t1_ow_buf;
+
+`line 107 "oc8051_uart.v" 0
+reg [7:0] scon, pcon;
+
+
+`line 110 "oc8051_uart.v" 0
+reg        txd,
+           trans,
+           receive,
+           tx_done,
+	   rx_done,
+	   rxd_r,
+	   shift_tr,
+	   shift_re;
+reg [1:0]  rx_sam;
+reg [3:0]  tr_count,
+           re_count;
+reg [7:0]  sbuf_rxd;
+reg [11:0] sbuf_rxd_tmp;
+reg [10:0] sbuf_txd;
+
+`line 125 "oc8051_uart.v" 0
+assign sbuf = sbuf_rxd;
+assign intr = scon[1] | scon [0];
+
+
+`line 129 "oc8051_uart.v" 0
+ 
+
+`line 131 "oc8051_uart.v" 0
+wire ren, tb8, rb8, ri;
+assign ren = scon[4];
+assign tb8 = scon[3];
+assign rb8 = scon[2];
+assign ri  = scon[0];
+
+`line 137 "oc8051_uart.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+    scon <= #1 8'b0000_0000;
+  else if ((wr) & !(wr_bit) & (wr_addr==8'h98))
+    scon <= #1 data_in;
+  else if ((wr) & (wr_bit) & (wr_addr[7:3]==5'b10011))
+    scon[wr_addr[2:0]] <= #1 bit_in;
+  else if (tx_done)
+    scon[1] <= #1 1'b1;
+  else if (!rx_done) begin
+    if (scon[7:6]==2'b00) begin
+      scon[0] <= #1 1'b1;
+    end else if ((sbuf_rxd_tmp[11]) | !(scon[5])) begin
+      scon[0] <= #1 1'b1;
+      scon[2] <= #1 sbuf_rxd_tmp[11];
+    end else
+      scon[2] <= #1 sbuf_rxd_tmp[11];
+  end
+end
+
+
+`line 159 "oc8051_uart.v" 0
+ 
+
+`line 161 "oc8051_uart.v" 0
+wire smod;
+assign smod = pcon[7];
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+  begin
+    pcon <= #1 8'b0000_0000;
+  end else if ((wr_addr==8'h87) & (wr) & !(wr_bit))
+    pcon <= #1 data_in;
+end
+
+
+
+`line 174 "oc8051_uart.v" 0
+ 
+
+
+`line 177 "oc8051_uart.v" 0
+wire wr_sbuf;
+assign wr_sbuf = (wr_addr==8'h99) & (wr) & !(wr_bit);
+
+`line 180 "oc8051_uart.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    txd      <= #1 1'b1;
+    tr_count <= #1 4'd0;
+    trans    <= #1 1'b0;
+    sbuf_txd <= #1 11'h00;
+    tx_done  <= #1 1'b0;
+
+`line 189 "oc8051_uart.v" 0
+ 
+
+`line 191 "oc8051_uart.v" 0
+  end else if (wr_sbuf) begin
+    case (scon[7:6]) 
+      2'b00: begin   
+        sbuf_txd <= #1 {3'b001, data_in};
+      end
+      2'b01: begin  
+        sbuf_txd <= #1 {2'b01, data_in, 1'b0};
+      end
+      default: begin   
+        sbuf_txd <= #1 {1'b1, tb8, data_in, 1'b0};
+      end
+    endcase
+    trans    <= #1 1'b1;
+    tr_count <= #1 4'd0;
+    tx_done  <= #1 1'b0;
+
+`line 207 "oc8051_uart.v" 0
+ 
+
+`line 209 "oc8051_uart.v" 0
+  end else if (trans & (scon[7:6] == 2'b00) & pres_ow)  
+  begin
+    if (~|sbuf_txd[10:1]) begin
+      trans   <= #1 1'b0;
+      tx_done <= #1 1'b1;
+    end else begin
+      {sbuf_txd, txd} <= #1 {1'b0, sbuf_txd};
+      tx_done         <= #1 1'b0;
+    end
+  end else if (trans & (scon[7:6] != 2'b00) & shift_tr) begin  
+    tr_count <= #1 tr_count + 4'd1;
+    if (~|tr_count) begin
+      if (~|sbuf_txd[10:0]) begin
+        trans   <= #1 1'b0;
+        tx_done <= #1 1'b1;
+        txd <= #1 1'b1;
+      end else begin
+        {sbuf_txd, txd} <= #1 {1'b0, sbuf_txd};
+        tx_done         <= #1 1'b0;
+      end
+    end
+  end else if (!trans) begin
+    txd     <= #1 1'b1;
+    tx_done <= #1 1'b0;
+  end
+end
+
+
+
+`line 238 "oc8051_uart.v" 0
+reg sc_clk_tr, smod_clk_tr;
+always @(brate2 or t1_ow or t1_ow_buf or scon[7:6] or tclk)
+begin
+  if (scon[7:6]==8'b10) begin  
+    sc_clk_tr = 1'b1;
+  end else if (tclk) begin 
+    sc_clk_tr = brate2;
+  end else begin 
+    sc_clk_tr = !t1_ow_buf & t1_ow;
+  end
+end
+
+`line 250 "oc8051_uart.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    smod_clk_tr <= #1 1'b0;
+    shift_tr    <= #1 1'b0;
+  end else if (sc_clk_tr) begin
+    if (smod) begin
+      shift_tr <= #1 1'b1;
+    end else begin
+      shift_tr    <= #1  smod_clk_tr;
+      smod_clk_tr <= #1 !smod_clk_tr;
+    end
+  end else begin
+    shift_tr <= #1 1'b0;
+  end
+end
+
+
+
+`line 269 "oc8051_uart.v" 0
+ 
+
+`line 271 "oc8051_uart.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    re_count     <= #1 4'd0;
+    receive      <= #1 1'b0;
+    sbuf_rxd     <= #1 8'h00;
+    sbuf_rxd_tmp <= #1 12'd0;
+    rx_done      <= #1 1'b1;
+    rxd_r        <= #1 1'b1;
+    rx_sam       <= #1 2'b00;
+  end else if (!rx_done) begin
+    receive <= #1 1'b0;
+    rx_done <= #1 1'b1;
+    sbuf_rxd <= #1 sbuf_rxd_tmp[10:3];
+  end else if (receive & (scon[7:6]==2'b00) & pres_ow) begin  
+    {sbuf_rxd_tmp, rx_done} <= #1 {rxd, sbuf_rxd_tmp};
+  end else if (receive & (scon[7:6]!=2'b00) & shift_re) begin  
+    re_count <= #1 re_count + 4'd1;
+    case (re_count) 
+      4'h7: rx_sam[0] <= #1 rxd;
+      4'h8: rx_sam[1] <= #1 rxd;
+      4'h9: begin
+        {sbuf_rxd_tmp, rx_done} <= #1 {(rxd==rx_sam[0] ? rxd : rx_sam[1]), sbuf_rxd_tmp};
+      end
+    endcase
+
+`line 297 "oc8051_uart.v" 0
+ 
+
+`line 299 "oc8051_uart.v" 0
+  end else if (scon[7:6]==2'b00) begin  
+    rx_done <= #1 1'b1;
+    if (ren && !ri && !receive) begin
+      receive      <= #1 1'b1;
+      sbuf_rxd_tmp <= #1 10'h0ff;
+    end
+  end else if (ren & shift_re) begin
+    rxd_r <= #1 rxd;
+    rx_done <= #1 1'b1;
+    re_count <= #1 4'h0;
+    receive <= #1 (rxd_r & !rxd);
+    sbuf_rxd_tmp <= #1 10'h1ff;
+  end else if (!ren) begin
+    rxd_r <= #1 rxd;
+  end else
+    rx_done <= #1 1'b1;
+end
+
+
+
+`line 319 "oc8051_uart.v" 0
+reg sc_clk_re, smod_clk_re;
+always @(brate2 or t1_ow or t1_ow_buf or scon[7:6] or rclk)
+begin
+  if (scon[7:6]==8'b10) begin  
+    sc_clk_re = 1'b1;
+  end else if (rclk) begin 
+    sc_clk_re = brate2;
+  end else begin 
+    sc_clk_re = !t1_ow_buf & t1_ow;
+  end
+end
+
+`line 331 "oc8051_uart.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    smod_clk_re <= #1 1'b0;
+    shift_re    <= #1 1'b0;
+  end else if (sc_clk_re) begin
+    if (smod) begin
+      shift_re <= #1 1'b1;
+    end else begin
+      shift_re    <= #1  smod_clk_re;
+      smod_clk_re <= #1 !smod_clk_re;
+    end
+  end else begin
+    shift_re <= #1 1'b0;
+  end
+end
+
+
+
+
+
+
+
+`line 354 "oc8051_uart.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    t1_ow_buf <= #1 1'b0;
+  end else begin
+    t1_ow_buf <= #1 t1_ow;
+  end
+end
+
+
+
+`line 365 "oc8051_uart.v" 0
+endmodule
+
+
+`line 368 "oc8051_uart.v" 2

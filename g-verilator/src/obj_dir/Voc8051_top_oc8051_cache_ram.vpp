@@ -1,0 +1,171 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_cache_ram.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 44 "oc8051_cache_ram.v" 0
+ 
+
+`line 46 "oc8051_cache_ram.v" 0
+ 
+ 
+ 
+
+`line 50 "oc8051_cache_ram.v" 0
+ 
+ 
+
+
+
+`line 55 "oc8051_cache_ram.v" 0
+ 
+ 
+`line 56 "oc8051_cache_ram.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 56 "oc8051_cache_ram.v" 0
+
+`line 57 "oc8051_cache_ram.v" 0
+ 
+
+
+`line 60 "oc8051_cache_ram.v" 0
+module oc8051_cache_ram (clk, rst, addr0, data0, addr1, data1_i, data1_o, wr1);
+
+`line 62 "oc8051_cache_ram.v" 0
+ 
+ 
+
+`line 65 "oc8051_cache_ram.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 74 "oc8051_cache_ram.v" 0
+parameter ADR_WIDTH = 7;  
+parameter CACHE_RAM = 128;  
+
+`line 77 "oc8051_cache_ram.v" 0
+input clk, wr1, rst;
+input [ADR_WIDTH-1:0] addr0, addr1;
+input [31:0] data1_i;
+output [31:0] data0, data1_o;
+
+`line 82 "oc8051_cache_ram.v" 0
+ 
+
+`line 84 "oc8051_cache_ram.v" 0
+          
+                       
+
+`line 87 "oc8051_cache_ram.v" 0
+          
+                       
+
+`line 90 "oc8051_cache_ram.v" 0
+          
+                       
+
+`line 93 "oc8051_cache_ram.v" 0
+          
+                       
+
+
+
+`line 98 "oc8051_cache_ram.v" 0
+reg [31:0] data0, data1_o;
+
+
+`line 101 "oc8051_cache_ram.v" 0
+ 
+reg [31:0] buff [0:CACHE_RAM];
+
+
+`line 105 "oc8051_cache_ram.v" 0
+ 
+
+`line 107 "oc8051_cache_ram.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+    data1_o <= #1 32'h0;
+  else if (wr1) begin
+    buff[addr1] <= #1 data1_i;
+    data1_o <= #1 data1_i;
+  end else
+    data1_o <= #1 buff[addr1];
+end
+
+
+`line 119 "oc8051_cache_ram.v" 0
+ 
+
+`line 121 "oc8051_cache_ram.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst)
+    data0 <= #1 32'h0;
+  else if ((addr0==addr1) & wr1)
+    data0 <= #1 data1_i;
+  else
+    data0 <= #1 buff[addr0];
+end
+
+
+
+
+`line 134 "oc8051_cache_ram.v" 0
+endmodule
+
+`line 136 "oc8051_cache_ram.v" 2

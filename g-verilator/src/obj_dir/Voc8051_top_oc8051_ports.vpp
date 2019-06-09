@@ -1,0 +1,890 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_ports.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 44 "oc8051_ports.v" 0
+ 
+
+`line 46 "oc8051_ports.v" 0
+ 
+ 
+ 
+
+`line 50 "oc8051_ports.v" 0
+ 
+ 
+
+`line 53 "oc8051_ports.v" 0
+ 
+ 
+
+`line 56 "oc8051_ports.v" 0
+ 
+ 
+
+
+
+
+`line 62 "oc8051_ports.v" 0
+ 
+ 
+`line 63 "oc8051_ports.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 63 "oc8051_ports.v" 0
+
+`line 64 "oc8051_ports.v" 0
+ 
+
+`line 66 "oc8051_ports.v" 0
+ 
+`line 66 "oc8051_ports.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 66 "oc8051_ports.v" 0
+
+
+
+`line 69 "oc8051_ports.v" 0
+module oc8051_ports (clk, 
+                    rst,
+                    bit_in, 
+		    data_in,
+		    wr, 
+		    wr_bit,
+		    wr_addr, 
+
+`line 77 "oc8051_ports.v" 0
+	 
+		    p0_out,
+                    p0_in,
+		    p0_data,
+	
+
+`line 83 "oc8051_ports.v" 0
+	 
+		    p1_out,
+		    p1_in,
+		    p1_data,
+
+`line 88 "oc8051_ports.v" 0
+	
+
+`line 90 "oc8051_ports.v" 0
+	 
+		    p2_out,
+		    p2_in,
+		    p2_data,
+	
+
+`line 96 "oc8051_ports.v" 0
+	 
+		    p3_out,
+		    p3_in,
+		    p3_data,
+	
+
+`line 102 "oc8051_ports.v" 0
+		    rmw);
+
+`line 104 "oc8051_ports.v" 0
+input        clk,	 
+             rst,	 
+	     wr,	 
+	     wr_bit,	 
+	     bit_in,	 
+	     rmw;	 
+input [7:0]  wr_addr,	 
+             data_in; 	 
+
+`line 113 "oc8051_ports.v" 0
+ 
+  input  [7:0] p0_in;
+  output [7:0] p0_out,
+               p0_data;
+  reg    [7:0] p0_out;
+
+`line 119 "oc8051_ports.v" 0
+  assign p0_data = rmw ? p0_out : p0_in;
+
+
+
+`line 123 "oc8051_ports.v" 0
+ 
+  input  [7:0] p1_in;
+  output [7:0] p1_out,
+               p1_data;
+  reg    [7:0] p1_out;
+
+`line 129 "oc8051_ports.v" 0
+  assign p1_data = rmw ? p1_out : p1_in;
+
+
+
+`line 133 "oc8051_ports.v" 0
+ 
+  input  [7:0] p2_in;
+  output [7:0] p2_out,
+	       p2_data;
+  reg    [7:0] p2_out;
+
+`line 139 "oc8051_ports.v" 0
+  assign p2_data = rmw ? p2_out : p2_in;
+
+
+
+`line 143 "oc8051_ports.v" 0
+ 
+  input  [7:0] p3_in;
+  output [7:0] p3_out,
+	       p3_data;
+  reg    [7:0] p3_out;
+
+`line 149 "oc8051_ports.v" 0
+  assign p3_data = rmw ? p3_out : p3_in;
+
+
+
+`line 153 "oc8051_ports.v" 0
+ 
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+ 
+    p0_out <= #1 8'b1111_1111;
+
+
+`line 161 "oc8051_ports.v" 0
+ 
+    p1_out <= #1 8'b1111_1111;
+
+
+`line 165 "oc8051_ports.v" 0
+ 
+    p2_out <= #1 8'b1111_1111;
+
+
+`line 169 "oc8051_ports.v" 0
+ 
+    p3_out <= #1 8'b1111_1111;
+
+`line 172 "oc8051_ports.v" 0
+  end else if (wr) begin
+    if (!wr_bit) begin
+      case (wr_addr) 
+
+`line 176 "oc8051_ports.v" 0
+ 
+ 
+        8'h80: p0_out <= #1 data_in;
+
+
+`line 181 "oc8051_ports.v" 0
+ 
+        8'h90: p1_out <= #1 data_in;
+
+
+`line 185 "oc8051_ports.v" 0
+ 
+        8'ha0: p2_out <= #1 data_in;
+
+
+`line 189 "oc8051_ports.v" 0
+ 
+        8'hb0: p3_out <= #1 data_in;
+
+`line 192 "oc8051_ports.v" 0
+      endcase
+    end else begin
+      case (wr_addr[7:3]) 
+
+
+`line 197 "oc8051_ports.v" 0
+ 
+ 
+        5'b10000: p0_out[wr_addr[2:0]] <= #1 bit_in;
+
+
+`line 202 "oc8051_ports.v" 0
+ 
+        5'b10010: p1_out[wr_addr[2:0]] <= #1 bit_in;
+
+
+`line 206 "oc8051_ports.v" 0
+ 
+        5'b10100: p2_out[wr_addr[2:0]] <= #1 bit_in;
+
+
+`line 210 "oc8051_ports.v" 0
+ 
+        5'b10110: p3_out[wr_addr[2:0]] <= #1 bit_in;
+
+`line 213 "oc8051_ports.v" 0
+      endcase
+    end
+  end
+end
+
+
+`line 219 "oc8051_ports.v" 0
+endmodule
+
+
+`line 222 "oc8051_ports.v" 2

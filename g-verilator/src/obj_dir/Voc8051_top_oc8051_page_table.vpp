@@ -1,0 +1,831 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_page_table.v" 1
+
+
+`line 6 "oc8051_page_table.v" 0
+
+`line 6 "oc8051_page_table.v" 0
+
+`line 6 "oc8051_page_table.v" 0
+
+`line 6 "oc8051_page_table.v" 0
+ 
+
+`line 8 "oc8051_page_table.v" 0
+ 
+`line 8 "oc8051_page_table.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 8 "oc8051_page_table.v" 0
+
+
+`line 10 "oc8051_page_table.v" 0
+ 
+`line 10 "oc8051_page_table.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 10 "oc8051_page_table.v" 0
+
+
+`line 12 "oc8051_page_table.v" 0
+module oc8051_page_table (clk, rst, dpc_ot,
+	selected_port,
+	selected_proc,
+	pt_wr,
+	xram_wr,
+	xram_stb,
+	wr_en, 
+	rd_en, 
+	pt_addr_range,
+	ia_addr_range, 
+	pt_stb,
+	pt_ack,
+	ia_stb,
+	ia_ack,
+	xram_addr, 
+	xram_data_in, 
+	pt_data_out,
+	ia_data_out,
+	priv_lvl
+);
+
+`line 33 "oc8051_page_table.v" 0
+input wire clk, rst, pt_wr, xram_wr, xram_stb, priv_lvl, pt_stb, ia_stb;
+input wire [15:0] dpc_ot;
+input wire [15:0] xram_addr;
+input wire [7:0] xram_data_in;
+input wire [2:0] selected_port;
+input wire selected_proc;
+
+`line 40 "oc8051_page_table.v" 0
+output wire wr_en, rd_en, pt_addr_range, ia_addr_range, pt_ack, ia_ack;
+output wire [7:0] pt_data_out, ia_data_out;
+
+`line 43 "oc8051_page_table.v" 0
+ 
+reg [7:0] wr_enabled [31:0];
+reg [7:0] rd_enabled [31:0];
+
+`line 47 "oc8051_page_table.v" 0
+ 
+wire pt_in_wr_range, pt_in_rd_range, pt_wr_reg_use, pt_rd_reg_use;
+wire ia_addr_rwn, ia_addr_hi, ia_addr_lo, ia_addr_src;
+wire [7:0] data_out_wr, data_out_rd;
+
+`line 52 "oc8051_page_table.v" 0
+ 
+localparam PT_WR_ADDR_START  = 16'hff80;
+localparam PT_WR_ADDR_END    = 16'hff9f;
+localparam PT_RD_ADDR_START  = 16'hffa0;
+localparam PT_RD_ADDR_END    = 16'hffbf;
+localparam IA_ADDR_RWN       = 16'hffc0;
+localparam IA_ADDR_HI		 = 16'hffc1;
+localparam IA_ADDR_LO		 = 16'hffc2;
+localparam IA_ADDR_SRC       = 16'hffc3;
+localparam IA_PC_HI          = 16'hffc4;
+localparam IA_PC_LO          = 16'hffc5;
+
+`line 64 "oc8051_page_table.v" 0
+ 
+assign pt_in_wr_range = ((xram_addr >= PT_WR_ADDR_START) && (xram_addr <= PT_WR_ADDR_END));
+assign pt_in_rd_range = ((xram_addr >= PT_RD_ADDR_START) && (xram_addr <= PT_RD_ADDR_END));
+assign pt_addr_range  = (pt_in_wr_range || pt_in_rd_range);
+
+`line 69 "oc8051_page_table.v" 0
+ 
+assign ia_addr_rwn = (xram_addr == IA_ADDR_RWN);
+assign ia_addr_hi  = (xram_addr == IA_ADDR_HI);
+assign ia_addr_lo  = (xram_addr == IA_ADDR_LO);
+assign ia_addr_src = (xram_addr == IA_ADDR_SRC);
+assign ia_pc_hi    = (xram_addr == IA_PC_HI);
+assign ia_pc_lo    = (xram_addr == IA_PC_LO);
+assign ia_addr_range = (ia_addr_rwn || ia_addr_hi || ia_addr_lo || ia_addr_src || ia_pc_hi || ia_pc_lo);
+
+`line 78 "oc8051_page_table.v" 0
+ 
+assign pt_wr_reg_use = priv_lvl && pt_stb && pt_in_wr_range;
+assign pt_rd_reg_use = priv_lvl && pt_stb && pt_in_rd_range;
+
+`line 82 "oc8051_page_table.v" 0
+ 
+assign pt_data_out = pt_in_wr_range ? data_out_wr :
+			  		 pt_in_rd_range ? data_out_rd : 8'h00;
+
+`line 86 "oc8051_page_table.v" 0
+ 
+assign wr_en = wr_enabled[xram_addr[15:11]][xram_addr[10:8]];
+assign rd_en = rd_enabled[xram_addr[15:11]][xram_addr[10:8]];
+assign pt_ack = pt_stb && pt_addr_range;
+
+`line 91 "oc8051_page_table.v" 0
+ 
+assign data_out_wr = pt_wr_reg_use ? wr_enabled[xram_addr[4:0]] : 8'h00;
+assign data_out_rd = pt_rd_reg_use ? rd_enabled[xram_addr[4:0]] : 8'h00;
+
+`line 95 "oc8051_page_table.v" 0
+ 
+integer i;
+always @(posedge clk)
+begin
+    if (rst) begin
+        for (i=0; i < 32; i+=1) begin
+            wr_enabled[i] <= 8'b0;
+            rd_enabled[i] <= 8'b0;
+        end
+    end
+    else begin
+        if (pt_wr && pt_wr_reg_use) begin
+            wr_enabled[xram_addr[4:0]] <= xram_data_in;
+        end
+        else if (pt_wr && pt_rd_reg_use) begin
+        	rd_enabled[xram_addr[4:0]] <= xram_data_in;
+        end
+    end
+end
+
+`line 115 "oc8051_page_table.v" 0
+ 
+localparam PROC0_IA = 3'd5;
+
+`line 118 "oc8051_page_table.v" 0
+ 
+reg [15:0]  ia_addr_reg;
+reg [1:0]   ia_rwn_reg;
+reg [2:0]   illegal_src;
+reg [15:0]  pc_ia_reg;
+
+`line 124 "oc8051_page_table.v" 0
+ 
+wire illegal_wr = (xram_stb && xram_wr && !wr_en);
+wire illegal_rd = (xram_stb && !xram_wr && !rd_en);
+
+`line 128 "oc8051_page_table.v" 0
+ 
+wire accesser = (selected_port != 3'b000) ? selected_port :
+                (selected_proc == 1'b0)   ? PROC0_IA      : selected_port;
+
+`line 132 "oc8051_page_table.v" 0
+wire [15:0] ia_reg_next = (illegal_wr || illegal_rd) ? xram_addr : ia_addr_reg;
+wire [2:0]  ia_src_next = (illegal_wr || illegal_rd) ? accesser  : illegal_src;
+
+`line 135 "oc8051_page_table.v" 0
+assign ia_data_out = ia_addr_rwn ? {6'b000000, ia_rwn_reg} :
+					 ia_addr_lo  ? ia_addr_reg[7:0]        : 
+                 	 ia_addr_hi  ? ia_addr_reg[15:8]       : 
+                   	 ia_addr_src ? {5'b00000, illegal_src} :
+                   	 ia_pc_lo    ? pc_ia_reg[7:0]          : pc_ia_reg[15:8];
+
+`line 141 "oc8051_page_table.v" 0
+assign ia_ack = (ia_stb && ia_addr_range);
+
+`line 143 "oc8051_page_table.v" 0
+ 
+always @(posedge clk)
+begin
+    if (rst) begin
+        ia_addr_reg          <= 16'h0000;
+        ia_rwn_reg           <= 2'b00;
+        illegal_src          <= 3'b000;
+        pc_ia_reg            <= 16'h0000;
+    end 
+    else begin
+        ia_addr_reg <= ia_reg_next;
+        illegal_src <= ia_src_next;
+
+`line 156 "oc8051_page_table.v" 0
+         
+        if ((illegal_wr || illegal_rd) && (accesser == 3'b000)) begin
+            pc_ia_reg <= dpc_ot;
+        end
+
+`line 161 "oc8051_page_table.v" 0
+         
+     	if (illegal_wr) begin
+     		ia_rwn_reg <= 2'b01;
+       	end 
+       	else if (illegal_rd) begin
+       		ia_rwn_reg <= 2'b10;
+       	end
+    end
+end
+
+`line 171 "oc8051_page_table.v" 0
+endmodule
+
+`line 173 "oc8051_page_table.v" 2

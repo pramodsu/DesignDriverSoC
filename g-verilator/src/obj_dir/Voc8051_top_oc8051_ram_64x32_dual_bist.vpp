@@ -1,0 +1,838 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_ram_64x32_dual_bist.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 44 "oc8051_ram_64x32_dual_bist.v" 0
+ 
+
+`line 46 "oc8051_ram_64x32_dual_bist.v" 0
+ 
+
+
+
+`line 50 "oc8051_ram_64x32_dual_bist.v" 0
+ 
+ 
+`line 51 "oc8051_ram_64x32_dual_bist.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 51 "oc8051_ram_64x32_dual_bist.v" 0
+
+`line 52 "oc8051_ram_64x32_dual_bist.v" 0
+ 
+
+`line 54 "oc8051_ram_64x32_dual_bist.v" 0
+ 
+`line 54 "oc8051_ram_64x32_dual_bist.v" 0
+`line 1 "oc8051_defines.v" 1
+ 
+`line 2 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_defines.v" 0
+ 
+
+
+
+`line 49 "oc8051_defines.v" 0
+ 
+
+`line 51 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 63 "oc8051_defines.v" 0
+ 
+
+`line 65 "oc8051_defines.v" 0
+ 
+
+
+
+`line 69 "oc8051_defines.v" 0
+ 
+
+`line 71 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_defines.v" 0
+ 
+
+`line 80 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 84 "oc8051_defines.v" 0
+ 
+
+
+
+`line 88 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 106 "oc8051_defines.v" 0
+ 
+
+
+`line 109 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 127 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 132 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+`line 137 "oc8051_defines.v" 0
+ 
+ 
+
+`line 140 "oc8051_defines.v" 0
+ 
+ 
+
+`line 143 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 147 "oc8051_defines.v" 0
+ 
+ 
+
+
+
+
+`line 153 "oc8051_defines.v" 0
+ 
+
+`line 155 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 170 "oc8051_defines.v" 0
+ 
+
+`line 172 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+`line 179 "oc8051_defines.v" 0
+ 
+
+
+`line 182 "oc8051_defines.v" 0
+ 
+ 
+ 
+
+`line 186 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 204 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 224 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 304 "oc8051_defines.v" 0
+ 
+
+`line 306 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 331 "oc8051_defines.v" 0
+ 
+ 
+
+`line 334 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 341 "oc8051_defines.v" 0
+ 
+
+`line 343 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 353 "oc8051_defines.v" 0
+ 
+
+`line 355 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 360 "oc8051_defines.v" 0
+ 
+
+
+`line 363 "oc8051_defines.v" 0
+ 
+
+`line 365 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 372 "oc8051_defines.v" 0
+ 
+
+`line 374 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 381 "oc8051_defines.v" 0
+ 
+
+
+`line 384 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 389 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+`line 394 "oc8051_defines.v" 0
+ 
+
+
+`line 397 "oc8051_defines.v" 0
+ 
+
+
+`line 400 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 410 "oc8051_defines.v" 0
+ 
+
+`line 412 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 423 "oc8051_defines.v" 0
+ 
+
+`line 425 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 433 "oc8051_defines.v" 0
+ 
+
+`line 435 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 439 "oc8051_defines.v" 0
+ 
+
+`line 441 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+`line 447 "oc8051_defines.v" 0
+ 
+
+`line 449 "oc8051_defines.v" 0
+ 
+ 
+
+`line 452 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 460 "oc8051_defines.v" 0
+ 
+
+`line 462 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 470 "oc8051_defines.v" 0
+ 
+
+
+`line 473 "oc8051_defines.v" 0
+ 
+
+
+`line 476 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+
+
+
+`line 483 "oc8051_defines.v" 0
+ 
+
+
+`line 486 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+`line 495 "oc8051_defines.v" 0
+ 
+
+
+`line 498 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 502 "oc8051_defines.v" 0
+ 
+
+`line 504 "oc8051_defines.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+`line 515 "oc8051_defines.v" 0
+ 
+
+
+`line 518 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 522 "oc8051_defines.v" 0
+ 
+
+`line 524 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 528 "oc8051_defines.v" 0
+ 
+
+
+`line 531 "oc8051_defines.v" 0
+ 
+ 
+
+
+`line 535 "oc8051_defines.v" 2
+`line 54 "oc8051_ram_64x32_dual_bist.v" 0
+
+
+
+`line 57 "oc8051_ram_64x32_dual_bist.v" 0
+ 
+
+`line 59 "oc8051_ram_64x32_dual_bist.v" 0
+module oc8051_ram_64x32_dual_bist (
+                     clk,
+                     rst,
+                     
+		     adr0,
+		     dat0_o,
+		     en0,
+		     
+		     adr1,
+		     dat1_i,
+		     dat1_o,
+		     en1,
+		     wr1
+ 
+	 
+         
+         
+         
+         
+         
+
+`line 80 "oc8051_ram_64x32_dual_bist.v" 0
+		     );
+
+`line 82 "oc8051_ram_64x32_dual_bist.v" 0
+parameter ADR_WIDTH = 6;
+
+`line 84 "oc8051_ram_64x32_dual_bist.v" 0
+input         clk, 
+              wr1, 
+	      rst,
+	      en0,
+	      en1;
+input  [31:0]  dat1_i;
+input  [ADR_WIDTH-1:0]  adr0,
+                        adr1;
+output [31:0]  dat0_o,
+               dat1_o;
+
+`line 95 "oc8051_ram_64x32_dual_bist.v" 0
+reg    [7:0]  rd_data;
+
+
+`line 98 "oc8051_ram_64x32_dual_bist.v" 0
+ 
+   
+   
+   
+  
+   
+
+
+
+`line 107 "oc8051_ram_64x32_dual_bist.v" 0
+ 
+   
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  
+  
+  
+  	  
+  	  
+
+
+
+`line 134 "oc8051_ram_64x32_dual_bist.v" 0
+   
+
+`line 136 "oc8051_ram_64x32_dual_bist.v" 0
+  
+
+`line 138 "oc8051_ram_64x32_dual_bist.v" 0
+     
+    
+         
+      	               
+      	               
+      	                
+      	                
+      	             
+      	              
+      
+      	               
+      	               
+      	                
+      	                 
+      	             
+      	              
+      
+    
+    
+
+`line 158 "oc8051_ram_64x32_dual_bist.v" 0
+      reg [31:0] dat1_o, 
+                 dat0_o;  
+      
+       
+      reg    [31:0]  buff [0:(1<<ADR_WIDTH) -1];
+
+`line 164 "oc8051_ram_64x32_dual_bist.v" 0
+      always @(posedge clk or posedge rst)
+      begin
+        if (rst)
+          dat1_o     <= #1 32'h0;
+        else if (wr1) begin
+          buff[adr1] <= #1 dat1_i;
+          dat1_o    <= #1 dat1_i;
+        end else
+          dat1_o <= #1 buff[adr1];
+      end
+      
+      always @(posedge clk or posedge rst)
+      begin
+        if (rst)
+          dat0_o <= #1 32'h0;
+        else if ((adr0==adr1) & wr1)
+          dat0_o <= #1 dat1_i;
+        else
+          dat0_o <= #1 buff[adr0];
+      end
+            
+       
+       
+       
+
+`line 189 "oc8051_ram_64x32_dual_bist.v" 0
+endmodule
+
+`line 191 "oc8051_ram_64x32_dual_bist.v" 2

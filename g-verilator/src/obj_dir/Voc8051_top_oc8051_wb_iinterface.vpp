@@ -1,0 +1,165 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_wb_iinterface.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 44 "oc8051_wb_iinterface.v" 0
+ 
+
+`line 46 "oc8051_wb_iinterface.v" 0
+ 
+ 
+ 
+
+`line 50 "oc8051_wb_iinterface.v" 0
+ 
+ 
+
+`line 53 "oc8051_wb_iinterface.v" 0
+ 
+ 
+
+`line 56 "oc8051_wb_iinterface.v" 0
+ 
+ 
+
+`line 59 "oc8051_wb_iinterface.v" 0
+ 
+ 
+
+
+
+
+`line 65 "oc8051_wb_iinterface.v" 0
+ 
+ 
+`line 66 "oc8051_wb_iinterface.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 66 "oc8051_wb_iinterface.v" 0
+
+`line 67 "oc8051_wb_iinterface.v" 0
+ 
+
+
+`line 70 "oc8051_wb_iinterface.v" 0
+module oc8051_wb_iinterface(rst, clk, 
+                  adr_i, dat_o, cyc_i, stb_i, ack_o,
+		  adr_o, dat_i, cyc_o, stb_o, ack_i
+		  );
+
+`line 75 "oc8051_wb_iinterface.v" 0
+ 
+ 
+input rst, clk;
+
+
+`line 80 "oc8051_wb_iinterface.v" 0
+ 
+
+`line 82 "oc8051_wb_iinterface.v" 0
+ 
+ 
+ 
+ 
+ 
+input         stb_i,
+              cyc_i;
+input  [15:0] adr_i;
+output        ack_o;
+output [31:0] dat_o;
+
+
+`line 94 "oc8051_wb_iinterface.v" 0
+ 
+
+`line 96 "oc8051_wb_iinterface.v" 0
+ 
+ 
+ 
+ 
+ 
+input         ack_i;
+input  [31:0] dat_i;
+output        stb_o,
+              cyc_o;
+output [15:0] adr_o;
+
+
+`line 108 "oc8051_wb_iinterface.v" 0
+ 
+
+`line 110 "oc8051_wb_iinterface.v" 0
+reg [15:0] adr_o;
+reg        stb_o;
+
+`line 113 "oc8051_wb_iinterface.v" 0
+assign ack_o = ack_i;
+assign dat_o = dat_i;
+ 
+assign cyc_o = stb_o;
+ 
+
+`line 119 "oc8051_wb_iinterface.v" 0
+always @(posedge clk or posedge rst)
+  if (rst) begin
+    stb_o <= #1 1'b0;
+    adr_o <= #1 16'h0000;
+  end else if (ack_i) begin
+    stb_o <= #1 stb_i;
+    adr_o <= #1 adr_i;
+  end else if (!stb_o & stb_i) begin
+    stb_o <= #1 1'b1;
+    adr_o <= #1 adr_i;
+  end
+
+`line 131 "oc8051_wb_iinterface.v" 0
+endmodule
+
+`line 133 "oc8051_wb_iinterface.v" 2

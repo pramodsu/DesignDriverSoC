@@ -1,0 +1,142 @@
+`begin_keywords "1800-2012"
+`line 1 "oc8051_multiply.v" 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+`line 45 "oc8051_multiply.v" 0
+ 
+
+`line 47 "oc8051_multiply.v" 0
+ 
+ 
+ 
+
+
+`line 52 "oc8051_multiply.v" 0
+ 
+ 
+ 
+
+`line 56 "oc8051_multiply.v" 0
+ 
+ 
+ 
+
+`line 60 "oc8051_multiply.v" 0
+ 
+ 
+`line 61 "oc8051_multiply.v" 0
+`line 1 "oc8051_timescale.v" 1
+
+`line 3 "oc8051_timescale.v" 0
+
+`line 3 "oc8051_timescale.v" 0
+`timescale 1ns/10ps
+
+`line 5 "oc8051_timescale.v" 2
+`line 61 "oc8051_multiply.v" 0
+
+`line 62 "oc8051_multiply.v" 0
+ 
+
+
+`line 65 "oc8051_multiply.v" 0
+module oc8051_multiply (clk, rst, enable, src1, src2, des1, des2, desOv);
+
+`line 67 "oc8051_multiply.v" 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+`line 78 "oc8051_multiply.v" 0
+input clk, rst, enable;
+input [7:0] src1, src2;
+output desOv;
+output [7:0] des1, des2;
+
+`line 83 "oc8051_multiply.v" 0
+ 
+wire [15:0] mul_result1, mul_result, shifted;
+
+`line 86 "oc8051_multiply.v" 0
+ 
+reg [1:0] cycle;
+reg [15:0] tmp_mul;
+
+`line 90 "oc8051_multiply.v" 0
+assign mul_result1 = src1 * (cycle == 2'h0 ? src2[7:6] 
+                           : cycle == 2'h1 ? src2[5:4]
+                           : cycle == 2'h2 ? src2[3:2]
+                           : src2[1:0]);
+
+`line 95 "oc8051_multiply.v" 0
+assign shifted = (cycle == 2'h0 ? 16'h0 : {tmp_mul[13:0], 2'b00});
+assign mul_result = mul_result1 + shifted;
+assign des1 = mul_result[15:8];
+assign des2 = mul_result[7:0];
+assign desOv = | des1;
+
+`line 101 "oc8051_multiply.v" 0
+always @(posedge clk or posedge rst)
+begin
+  if (rst) begin
+    cycle <= #1 2'b0;
+    tmp_mul <= #1 16'b0;
+  end else begin
+    if (enable) cycle <= #1 cycle + 2'b1;
+    tmp_mul <= #1 mul_result;
+  end
+end
+
+`line 112 "oc8051_multiply.v" 0
+endmodule
+
+`line 114 "oc8051_multiply.v" 2
