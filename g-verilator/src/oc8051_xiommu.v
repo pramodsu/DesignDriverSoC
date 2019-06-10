@@ -3,19 +3,19 @@
 // synopsys translate_on
 
 module oc8051_xiommu (
-    clk, 
+    clk,
     rst,
     proc1_wr,
-    proc1_addr, 
-    proc1_data_in, 
-    proc1_data_out, 
-    proc1_ack, 
+    proc1_addr,
+    proc1_data_in,
+    proc1_data_out,
+    proc1_ack,
     proc1_stb,
-    proc0_wr, 
-    proc0_addr, 
-    proc0_data_in, 
-    proc0_data_out, 
-    proc0_ack, 
+    proc0_wr,
+    proc0_addr,
+    proc0_data_in,
+    proc0_data_out,
+    proc0_ack,
     proc0_stb,
     aes_state,
     aes_step,
@@ -43,7 +43,7 @@ module oc8051_xiommu (
     dpc_ot0
 );
 
-input clk, rst; 
+input clk, rst;
 input proc1_wr, proc1_stb;
 input proc0_wr, proc0_stb;
 input priv_lvl1;
@@ -58,7 +58,7 @@ output [7:0] proc1_data_out;
 output [7:0] proc0_data_out;
 output proc1_ack;
 output proc0_ack;
-output [1:0] aes_state; 
+output [1:0] aes_state;
 output [2:0] sha_state;
 output [1:0] exp_state;
 output aes_step, sha_step, sha_core_assumps_valid, exp_step, exp_valid;
@@ -72,7 +72,7 @@ wire proc1_stb_xram, proc0_stb_xram, stb_aes, stb_sha, stb_exp, stb_memwr;
 wire aes_addr_range, sha_addr_range, exp_addr_range, memwr_addr_range;
 wire wr_en, rd_en, priv_lvl, pt_addr_range, ia_addr_range, stb_pt, ack_pt, stb_ia, ack_ia;
 
-wire [1:0] aes_state; 
+wire [1:0] aes_state;
 wire [2:0] sha_state;
 wire [1:0] exp_state;
 wire [1:0] memwr_state;
@@ -129,18 +129,18 @@ wire [7:0] data_out_memwr;
 wire [7:0] data_out_pt;
 wire [7:0] data_out_ia;
 
-assign proc1_data_out = stb_aes   ? data_out_aes   : 
+assign proc1_data_out = stb_aes   ? data_out_aes   :
                         stb_sha   ? data_out_sha   :
-                        stb_exp   ? data_out_exp   : 
-                        stb_memwr ? data_out_memwr : 
-                        stb_pt    ? data_out_pt    : 
+                        stb_exp   ? data_out_exp   :
+                        stb_memwr ? data_out_memwr :
+                        stb_pt    ? data_out_pt    :
                         stb_ia    ? data_out_ia    : proc1_arb_data;
 
-assign proc0_data_out = stb_aes   ? data_out_aes   : 
+assign proc0_data_out = stb_aes   ? data_out_aes   :
                         stb_sha   ? data_out_sha   :
-                        stb_exp   ? data_out_exp   : 
-                        stb_memwr ? data_out_memwr : 
-                        stb_pt    ? data_out_pt    : 
+                        stb_exp   ? data_out_exp   :
+                        stb_memwr ? data_out_memwr :
+                        stb_pt    ? data_out_pt    :
                         stb_ia    ? data_out_ia    : proc0_arb_data;
 
 // AES <=> XRAM signals
@@ -173,7 +173,7 @@ aes_top aes_top_i (
     .aes_len       ( aes_len           ) ,
     .aes_ctr       ( aes_ctr           ) ,
     .aes_key0      ( aes_key0          ) ,
-    .aes_key1      ( aes_key1          ) 
+    .aes_key1      ( aes_key1          )
 );
 
 // SHA <=> XRAM signals
@@ -205,7 +205,7 @@ sha_top sha_top_i (
     .sha_core_assumps_valid ( sha_core_assumps_valid ) ,
     .sha_rdaddr             ( sha_rdaddr             ) ,
     .sha_wraddr             ( sha_wraddr             ) ,
-    .sha_len                ( sha_len                ) 
+    .sha_len                ( sha_len                )
 );
 
 // RSA <=> XRAM signals
@@ -220,17 +220,17 @@ modexp_top modexp_top_i(
     .clk           (clk              ),
     .rst           (rst              ),
     .wr            (write_exp        ),
-    .addr          (proc_addr        ), 
-    .data_in       (proc_data_in     ), 
-    .data_out      (data_out_exp     ), 
-    .ack           (ack_exp          ), 
-    .stb           (stb_exp          ), 
+    .addr          (proc_addr        ),
+    .data_in       (proc_data_in     ),
+    .data_out      (data_out_exp     ),
+    .ack           (ack_exp          ),
+    .stb           (stb_exp          ),
     .in_addr_range (exp_addr_range   ),
     .xram_addr     (exp_xram_addr    ),
     .xram_data_out (exp_xram_data_out),
     .xram_data_in  (exp_xram_data_in ),
     .xram_ack      (exp_xram_ack     ),
-    .xram_stb      (exp_xram_stb     ),     
+    .xram_stb      (exp_xram_stb     ),
     .xram_wr       (exp_xram_wr      ),
     .exp_state     (exp_state        ),
     .exp_addr      (exp_addr         ),
@@ -275,7 +275,7 @@ oc8051_procarbiter oc8051_procarbiter_i (
     .clk           ( clk                ),
     .rst           ( rst                ),
     .selected_proc ( selected_proc      ),
-   
+
     .stb_A         ( proc1_stb_xram     ),
     .wr_A          ( write1_xram        ),
     .addr_A        ( proc1_addr         ),
@@ -299,7 +299,7 @@ oc8051_procarbiter oc8051_procarbiter_i (
     .data_in       ( proc_data_in       ),
     .data_out      ( proc_data_out      ),
     .priv_lvl      ( priv_lvl           ),
-    .dpc_ot        ( dpc_ot             ) 
+    .dpc_ot        ( dpc_ot             )
 );
 
 wire stb_out, ack_in, wr_out;
@@ -312,7 +312,7 @@ oc8051_memarbiter8 oc8051_memarbiter_i (
     .clk           ( clk                 ),
     .rst           ( rst                 ),
     .selected_port ( selected_port       ),
-   
+
     .stb_A         ( proc_stb            ),
     .ack_A         ( proc_ack            ),
     .wr_A          ( proc_wr             ),
@@ -353,7 +353,7 @@ oc8051_memarbiter8 oc8051_memarbiter_i (
     .wr            ( wr_out              ),
     .addr          ( addr_out            ),
     .data_in       ( memarbiter_data_in  ),
-    .data_out      ( memarbiter_data_out ) 
+    .data_out      ( memarbiter_data_out )
 );
 
 oc8051_xram oc8051_xram_i (
@@ -366,7 +366,7 @@ oc8051_xram oc8051_xram_i (
     .data_out ( memarbiter_data_out ),
     .ack      ( ack_in        ),
     .stb      ( stb_out       ),
-    .rd_en    ( rd_en         ) 
+    .rd_en    ( rd_en         )
 );
 
 oc8051_page_table oc8051_page_table_i (

@@ -91,7 +91,7 @@ module reg256byte(clk, rst, en, wr, addr, data_in, data_out, reg_out);
     begin
         if (rst) begin
 	  for(i=0;i<256;i=i+1)
-	    reg_save[i] <= 8'b0;
+	    reg_save[i] = 8'b0;
         end
         else if(wr) begin
             reg_save[addr] <= data_in;

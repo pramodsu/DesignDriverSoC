@@ -1,4 +1,4 @@
-verilator -cc --debug  -Wno-UNOPTFLAT -Wno-CASEINCOMPLETE -Wno-CASEX -Wno-WIDTH -Wno-PINMISSING   -Wno-STMTDLY -Wno-IMPLICIT -Wno-LITENDIAN    -Wno-INITIALDLY        \
+verilator -cc -Wno-UNOPTFLAT -Wno-CASEINCOMPLETE -Wno-CASEX -Wno-WIDTH -Wno-PINMISSING   -Wno-STMTDLY -Wno-IMPLICIT -Wno-LITENDIAN    -Wno-INITIALDLY        \
 oc8051_top.v			\
 oc8051_xram.v                   \
 oc8051_alu_src_sel.v            \
@@ -25,6 +25,7 @@ oc8051_icache.v                 \
 oc8051_wb_iinterface.v          \
 oc8051_sfr.v                    \
 oc8051_cxrom.v                  \
+oc8051_cxrom_copy.v             \
 oc8051_rom.v                    \
 oc8051_cache_ram.v              \
 oc8051_ram_256x8_two_bist.v     \

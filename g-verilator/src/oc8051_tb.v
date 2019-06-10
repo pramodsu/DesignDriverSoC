@@ -85,7 +85,6 @@
 // synopsys translate_off
 `include "oc8051_timescale.v"
 // synopsys translate_on
-
 `include "oc8051_defines.v"
 
 
@@ -266,27 +265,30 @@ wire ignore;
 //
 // external data ram
 //
-// oc8051_xram oc8051_xram1 (.clk(clk), .rst(rst), .wr(write_xram), .addr(ext_addr), .data_in(data_out), .data_out(data_out_xram), .ack(ack_xram), .stb(stb_o));
-oc8051_xiommu oc8051_xiommu1 (.clk(clk), .rst(rst), 
-  .proc1_wr(write_xram), 
-  .proc0_wr(1'b0), 
-  .proc1_addr(ext_addr), 
-  .proc0_addr(16'h0000), 
-  .proc1_data_in(data_out), 
-  .proc0_data_in(8'h00), 
-  .proc1_data_out(data_out_xram), 
-  .proc0_data_out(data_ignore), 
-  .proc1_ack(ack_xram), 
-  .proc0_ack(ignore), 
-  .proc1_stb(stb_o), 
-  .proc0_stb(1'b0), 
+//oc8051_xram oc8051_xram1 (.clk(clk), .rst(rst), .wr(write_xram), .addr(ext_addr), .data_in(data_out), .data_out(data_out_xram), .ack(ack_xram), .stb(stb_o));
+oc8051_xiommu oc8051_xiommu1 (.clk(clk), .rst(rst),
+  .proc1_wr(write_xram),
+  .proc0_wr(1'b0),
+  .proc1_addr(ext_addr),
+  .proc0_addr(16'h0000),
+  .proc1_data_in(data_out),
+  .proc0_data_in(8'h00),
+  .proc1_data_out(data_out_xram),
+  .proc0_data_out(data_ignore),
+  .proc1_ack(ack_xram),
+  .proc0_ack(ignore),
+  .proc1_stb(stb_o),
+  .proc0_stb(1'b0),
   .priv_lvl0(priv_lvl),
   .priv_lvl1(1'b0),
   .dpc_ot0(dpc_ot),
   .dpc_ot1(16'b0)
 );
-
-defparam oc8051_xiommu1.oc8051_xram_i.DELAY = 2;
+//defparam oc8051_xram1.DELAY = 2;
+//oc8051_xram oc8051_xram_i(.clk(clk), .rst(rst), .wr(write_xram), .addr(ext_addr), .data_in(data_out), .data_out(data_out_xram), .ack(ack_xram), .stb(stb_o), .DELAY(2));
+//defparam oc8051_xiommu1.oc8051_xram_i.DELAY = 2;
+//parameter temp = oc8051_xiommu1.oc8051_xram_i;
+//temp.DELAY = 2;
 
 `ifdef OC8051_SERIAL
 
@@ -407,7 +409,7 @@ module termination_fsm(clk, rst, pout, finished);
             state <= STATE_INIT;
         end
         else begin
-            case (state) 
+            case (state)
                 STATE_INIT      : state <= state_init_next;
                 STATE_DE_FOUND  : state <= state_de_next;
                 STATE_AD_FOUND  : state <= state_ad_next;
