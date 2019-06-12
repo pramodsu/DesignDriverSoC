@@ -334,29 +334,29 @@ assign int1 = p3_out[4];
 assign t2 = p3_out[5];
 assign t2ex = p3_out[2];
 
-initial begin
-  $dumpon;
-  $dumpfile("run.vcd");
-  $dumpvars(0,oc8051_tb);
-  rst= 1'b1;
-  p0_in = 8'h00;
-  p1_in = 8'h00;
-  p2_in = 8'hff;
-#2000
-  rst = 1'b0;
+//initial begin
+//  $dumpon;
+//  $dumpfile("run.vcd");
+//  $dumpvars(0,oc8051_tb);
+//  rst= 1'b1;
+//  p0_in = 8'h00;
+//  p1_in = 8'h00;
+//  p2_in = 8'hff;
+//#2000
+//  rst = 1'b0;
 
-#6400000
-  $display("time ",$time, "\n failure: end of time\n \n");
-  $display("");
-  $finish;
-end
+//#6400000
+//  $display("time ",$time, "\n failure: end of time\n \n");
+//  $display("");
+//  $finish;
+//end
 
 
-initial
-begin
-  clk = 0;
-  forever #DELAY clk <= ~clk;
-end
+//initial
+//begin
+//  clk = 0;
+//  forever #DELAY clk <= ~clk;
+//end
 
 
 /*

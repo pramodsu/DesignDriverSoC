@@ -1,4 +1,5 @@
 verilator -cc -Wno-UNOPTFLAT -Wno-CASEINCOMPLETE -Wno-CASEX -Wno-WIDTH -Wno-PINMISSING   -Wno-STMTDLY -Wno-IMPLICIT -Wno-LITENDIAN    -Wno-INITIALDLY        \
+oc8051_tb.v			\
 oc8051_top.v			\
 oc8051_xram.v                   \
 oc8051_alu_src_sel.v            \
@@ -49,4 +50,4 @@ sha_top.v                       \
 modmul.v                        \
 modexp.v                        \
 modexp_top.v                    \
-mem_wr.v   --top-module oc8051_top
+mem_wr.v   --top-module oc8051_tb

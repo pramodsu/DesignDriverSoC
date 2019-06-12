@@ -1,39 +1,59 @@
 #include <verilated.h>
 #include <iostream>
-#include "Voc8051_top.h"
+#include "Voc8051_tb.h"
 
-Voc8051_top *top;
+Voc8051_tb *top;
 vluint64_t main_time = 0;
-
+int clk = 0;
+int temp;
 double sc_time_stamp() { return main_time; }
 
-int main(int argc, char* argv[])
-{
-  Verilated::commandArgs(argc, argv);
-  top  = new Voc8051_top;
-  int temp=0;
-  while(! Verilated::gotFinish()) {
-
-    VL_OUT8(p0_o,7, 0);
-    VL_OUT8(p1_o,7, 0);
-    VL_OUT8(p2_o,7, 0);
-    VL_OUT8(p3_o,7, 0);
-    if (temp == 0)
-    {
-      temp = (int)p0_o;
-      std::cout << std::hex << "hello "<< p0_o << "-" << (int)p1_o << "-" << (int)p2_o << "-" << (int)p3_o <<std::endl;
+// introducing delay for each eval call
+int  wait(unsigned long delay, Voc8051_tb *top){
+  while(delay){
+    if(Verilated::gotFinish()){   // check if verilog code is finished
+      std::cout << "finished ";
+      return 1;
+      //std::cin >> temp;
     }
-    if (temp != p0_o){
-      std::cout << std::hex <<  p0_o << std::endl;
-      std::cin >> temp;
+    if (clk == 1){
+      clk =0;
+    }else {
+      clk = 1;
     }
-
-    std::cout << std::hex << "hello "<< p0_o << "-" << (int)p1_o << "-" << (int)p2_o << "-" << (int)p3_o <<std::endl;
+    top->oc8051_tb__DOT__clk = clk;
+    //if (main_time % 2 == 0){
+    //  clk++;
+    //  clk = clk % 2;
+    //  top->oc8051_tb__DOT__clk = clk;
+    //}
     top->eval();
-    //std::cout << "eval done " <<std::endl;
-    std::cin >> temp;
+    //std::cout << (unsigned long)main_time << std::endl;
+    std::cout << std::hex << "wait "<<(int) top->oc8051_tb__DOT__p0_out << "-" << (int)top->oc8051_tb__DOT__p1_out << "-" << (int)top->oc8051_tb__DOT__p2_out << "-" << (int)top->oc8051_tb__DOT__p3_out <<std::endl;
+    delay--;
     main_time++;
+    //std::cout << std::hex << "delay " << delay << top->oc8051_tb__DOT__rst << std::endl;
   }
-  std::cout << "eval done " <<std::endl;
+  return 0;
+}
+
+int main() {
+  top  = new Voc8051_tb;
+  top->oc8051_tb__DOT__rst = 1;
+  top->oc8051_tb__DOT__p0_in = 0x00;
+  top->oc8051_tb__DOT__p1_in = 0x00;
+  top->oc8051_tb__DOT__p2_in = 0xff;
+  if(wait(2000,top)){
+    delete top;
+    return 0;
+  }
+  top->oc8051_tb__DOT__rst = 0;
+  if(wait(6400000,top)){
+    delete top;
+    return 0;
+  }
+  main_time++;
+
   delete top;
+  return 0;
 }
