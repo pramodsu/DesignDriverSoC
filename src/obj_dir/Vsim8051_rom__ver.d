@@ -1,1 +1,0 @@
-obj_dir/Vsim8051_rom.cpp obj_dir/Vsim8051_rom.h obj_dir/Vsim8051_rom.mk obj_dir/Vsim8051_rom__Syms.cpp obj_dir/Vsim8051_rom__Syms.h obj_dir/Vsim8051_rom__ver.d obj_dir/Vsim8051_rom_classes.mk  : /usr/local/bin/verilator_bin   /usr/local/bin/verilator_bin sim8051_rom.v 

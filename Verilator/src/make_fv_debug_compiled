@@ -1,6 +1,0 @@
-iverilog -o oc8051_fv                           \
--D OC8051_SIMULATION                            \
-oc8051_fv_tb.v                                  \
-../synthesis/netlist/oc8051_fv_top_debug_flat.v \
-../synthesis/libs/sc12_soi12s0_base_svt_udp.v   \
-../synthesis/libs/sc12_soi12s0_base_svt.v

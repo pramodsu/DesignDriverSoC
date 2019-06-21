@@ -1,7 +1,7 @@
 /*
- * Page Table Module 
+ * Page Table Module
  * Contains page table registers and illegal access registers
- * 
+ *
  * Written by Samuel Miller
  */
 
@@ -15,16 +15,16 @@ module oc8051_page_table (clk, rst, dpc_ot,
 	pt_wr,
 	xram_wr,
 	xram_stb,
-	wr_en, 
-	rd_en, 
+	wr_en,
+	rd_en,
 	pt_addr_range,
-	ia_addr_range, 
+	ia_addr_range,
 	pt_stb,
 	pt_ack,
 	ia_stb,
 	ia_ack,
-	xram_addr, 
-	xram_data_in, 
+	xram_addr,
+	xram_data_in,
 	pt_data_out,
 	ia_data_out,
 	priv_lvl
@@ -98,8 +98,8 @@ always @(posedge clk)
 begin
     if (rst) begin
         for (i=0; i < 32; i+=1) begin
-            wr_enabled[i] <= 8'b0;
-            rd_enabled[i] <= 8'b0;
+            wr_enabled[i] <= 8'hff;
+            rd_enabled[i] <= 8'hff;
         end
     end
     else begin
@@ -133,8 +133,8 @@ wire [15:0] ia_reg_next = (illegal_wr || illegal_rd) ? xram_addr : ia_addr_reg;
 wire [2:0]  ia_src_next = (illegal_wr || illegal_rd) ? accesser  : illegal_src;
 
 assign ia_data_out = ia_addr_rwn ? {6'b000000, ia_rwn_reg} :
-					 ia_addr_lo  ? ia_addr_reg[7:0]        : 
-                 	 ia_addr_hi  ? ia_addr_reg[15:8]       : 
+					 ia_addr_lo  ? ia_addr_reg[7:0]        :
+                 	 ia_addr_hi  ? ia_addr_reg[15:8]       :
                    	 ia_addr_src ? {5'b00000, illegal_src} :
                    	 ia_pc_lo    ? pc_ia_reg[7:0]          : pc_ia_reg[15:8];
 
@@ -148,7 +148,7 @@ begin
         ia_rwn_reg           <= 2'b00;
         illegal_src          <= 3'b000;
         pc_ia_reg            <= 16'h0000;
-    end 
+    end
     else begin
         ia_addr_reg <= ia_reg_next;
         illegal_src <= ia_src_next;
@@ -161,7 +161,7 @@ begin
         // If illegal write, store 1. If illegal read, store 2.
      	if (illegal_wr) begin
      		ia_rwn_reg <= 2'b01;
-       	end 
+       	end
        	else if (illegal_rd) begin
        		ia_rwn_reg <= 2'b10;
        	end

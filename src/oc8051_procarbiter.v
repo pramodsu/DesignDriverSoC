@@ -17,6 +17,7 @@ module oc8051_procarbiter(
 	// proc A
 	stb_A,
 	wr_A,
+	ack_A,
 	addr_A,
 	data_in_A,
 	data_out_A,
@@ -24,6 +25,7 @@ module oc8051_procarbiter(
 	dpc_ot_A,
 	// proc B
 	stb_B,
+	ack_B,
 	wr_B,
 	addr_B,
 	data_in_B,
