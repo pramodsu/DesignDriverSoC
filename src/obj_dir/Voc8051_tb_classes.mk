@@ -7,8 +7,6 @@
 ### Switches...
 # Coverage output mode?  0/1 (from --coverage)
 VM_COVERAGE = 0
-# Threaded output mode?  0/1/N threads (from --threads)
-VM_THREADS = 0
 # Tracing output mode?  0/1 (from --trace)
 VM_TRACE = 0
 
@@ -16,8 +14,6 @@ VM_TRACE = 0
 # Generated module classes, fast-path, compile with highest optimization
 VM_CLASSES_FAST += \
 	Voc8051_tb \
-	Voc8051_tb_one_round \
-	Voc8051_tb_T \
 	Voc8051_tb_S \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
