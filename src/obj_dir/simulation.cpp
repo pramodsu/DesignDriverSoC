@@ -14,7 +14,7 @@ int clk = 0;
 int temp;
 double sc_time_stamp() { return main_time; }
 int p0,p1,p2,p3;
-int addr;
+int addr, count = 0;
 // introducing delay for each eval call
 int  wait(unsigned long delay, Voc8051_tb *top){
   while(delay || delay == -1){
@@ -35,10 +35,18 @@ int  wait(unsigned long delay, Voc8051_tb *top){
     //  top->oc8051_tb__DOT__clk = clk;
     //}
     top->eval();
-    std::cout <<std::dec << "pc  " << top->oc8051_tb__DOT__oc8051_top_1__DOT__pc << std::endl;
-    if (top->oc8051_tb__DOT__oc8051_top_1__DOT__pc == 382){
-      top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[381] = 0x80;
-      top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[382] = 0x02;
+    //std::cout <<std::dec << "pc  " << top->oc8051_tb__DOT__oc8051_top_1__DOT__pc << std::endl;
+    if (top->oc8051_tb__DOT__oc8051_top_1__DOT__pc == 407){
+      count++;
+      if(count>=2){
+        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[395] = 0x90;
+        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[396] = 0xe0;
+        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[397] = 0x0;
+        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[398] = 0x74;
+        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[399] = 0x1;
+        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[400] = 0xf0;
+      }
+
     }
 
     if (addr != top->oc8051_tb__DOT__oc8051_top_1__DOT__iadr_o){

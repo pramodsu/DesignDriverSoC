@@ -80,9 +80,9 @@ C:   00000062  s_CSEG
 C:   00000080  l_DSEG                          
 C:   000000F8  l_SSEG                          
 C:   00000100  l_IRAM                          
-C:   0000016A  l_CSEG                          
-C:   000001CC  s_CONST                         
-C:   000001CC  s_XINIT                         
+C:   0000017E  l_CSEG                          
+C:   000001E0  s_CONST                         
+C:   000001E0  s_XINIT                         
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
 Hexadecimal  [32-Bits]
@@ -340,13 +340,13 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-CSEG                                00000062    0000016A =         362. bytes (REL,CON,CODE)
+CSEG                                00000062    0000017E =         382. bytes (REL,CON,CODE)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
 C:   00000062  _quit                              aes_test
 C:   00000088  _main                              aes_test
-C:   000001C8  __sdcc_external_startup            _startup
+C:   000001DC  __sdcc_external_startup            _startup
 ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
 
 Files Linked                              [ module(s) ]

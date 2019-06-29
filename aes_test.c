@@ -52,6 +52,21 @@ void main() {
         data[i]=i;
     }
 
+    __asm;
+      nop;
+      nop;
+      nop;
+      nop;
+    __endasm;
+      data[0]=1;
+      __asm;
+        nop;
+        nop;
+        nop;
+        nop;
+      __endasm;
+
+
     // setup address, length, counter and key.
     aes_reg_addr = 0xE000;
     aes_reg_len = 32;
@@ -112,6 +127,7 @@ void main() {
         }
     }
     P0 = good;
+    P1 = data[0];
     // finish.
     quit();
 }

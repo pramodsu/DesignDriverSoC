@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.5.0 #9253 (Apr  3 2018) (Linux)
-                                      4 ; This file was generated Sat Jun 29 09:11:47 2019
+                                      4 ; This file was generated Sat Jun 29 10:23:46 2019
                                       5 ;--------------------------------------------------------
                                       6 	.module aes_test
                                       7 	.optsdcc -mmcs51 --model-small
@@ -477,196 +477,216 @@
       0000D3 64 80            [12]  477 	xrl	a,#0x80
       0000D5 94 80            [12]  478 	subb	a,#0x80
       0000D7 40 E5            [24]  479 	jc	00117$
-                                    480 ;	aes_test.c:56: aes_reg_addr = 0xE000;
-      0000D9 90 FF 02         [24]  481 	mov	dptr,#_aes_reg_addr
-      0000DC E4               [12]  482 	clr	a
-      0000DD F0               [24]  483 	movx	@dptr,a
-      0000DE 74 E0            [12]  484 	mov	a,#0xE0
-      0000E0 A3               [24]  485 	inc	dptr
-      0000E1 F0               [24]  486 	movx	@dptr,a
-                                    487 ;	aes_test.c:57: aes_reg_len = 32;
-      0000E2 90 FF 04         [24]  488 	mov	dptr,#_aes_reg_len
-      0000E5 74 20            [12]  489 	mov	a,#0x20
-      0000E7 F0               [24]  490 	movx	@dptr,a
-      0000E8 E4               [12]  491 	clr	a
-      0000E9 A3               [24]  492 	inc	dptr
-      0000EA F0               [24]  493 	movx	@dptr,a
-                                    494 ;	aes_test.c:58: for(i=0; i < 16; i++) { aes_reg_ctr[i] = i*i*i; }
-      0000EB 7C 00            [12]  495 	mov	r4,#0x00
-      0000ED 7D 00            [12]  496 	mov	r5,#0x00
-      0000EF                        497 00119$:
-      0000EF EC               [12]  498 	mov	a,r4
-      0000F0 24 10            [12]  499 	add	a,#_aes_reg_ctr
-      0000F2 F5 82            [12]  500 	mov	dpl,a
-      0000F4 ED               [12]  501 	mov	a,r5
-      0000F5 34 FF            [12]  502 	addc	a,#(_aes_reg_ctr >> 8)
-      0000F7 F5 83            [12]  503 	mov	dph,a
-      0000F9 8C 03            [24]  504 	mov	ar3,r4
-      0000FB EB               [12]  505 	mov	a,r3
-      0000FC F5 F0            [12]  506 	mov	b,a
-      0000FE A4               [48]  507 	mul	ab
-      0000FF 8B F0            [24]  508 	mov	b,r3
-      000101 A4               [48]  509 	mul	ab
-      000102 FB               [12]  510 	mov	r3,a
-      000103 F0               [24]  511 	movx	@dptr,a
-      000104 0C               [12]  512 	inc	r4
-      000105 BC 00 01         [24]  513 	cjne	r4,#0x00,00186$
-      000108 0D               [12]  514 	inc	r5
-      000109                        515 00186$:
-      000109 C3               [12]  516 	clr	c
-      00010A EC               [12]  517 	mov	a,r4
-      00010B 94 10            [12]  518 	subb	a,#0x10
-      00010D ED               [12]  519 	mov	a,r5
-      00010E 64 80            [12]  520 	xrl	a,#0x80
-      000110 94 80            [12]  521 	subb	a,#0x80
-      000112 40 DB            [24]  522 	jc	00119$
-                                    523 ;	aes_test.c:59: for(i=0; i < 16; i++) { aes_reg_key0[i] = i | (i << 4); }
-      000114 7C 00            [12]  524 	mov	r4,#0x00
-      000116 7D 00            [12]  525 	mov	r5,#0x00
-      000118                        526 00121$:
-      000118 EC               [12]  527 	mov	a,r4
-      000119 24 20            [12]  528 	add	a,#_aes_reg_key0
-      00011B F5 82            [12]  529 	mov	dpl,a
-      00011D ED               [12]  530 	mov	a,r5
-      00011E 34 FF            [12]  531 	addc	a,#(_aes_reg_key0 >> 8)
-      000120 F5 83            [12]  532 	mov	dph,a
-      000122 8C 03            [24]  533 	mov	ar3,r4
-      000124 EB               [12]  534 	mov	a,r3
-      000125 C4               [12]  535 	swap	a
-      000126 54 F0            [12]  536 	anl	a,#0xF0
-      000128 FB               [12]  537 	mov	r3,a
-      000129 33               [12]  538 	rlc	a
-      00012A 95 E0            [12]  539 	subb	a,acc
-      00012C FA               [12]  540 	mov	r2,a
-      00012D EC               [12]  541 	mov	a,r4
-      00012E 42 03            [12]  542 	orl	ar3,a
-      000130 ED               [12]  543 	mov	a,r5
-      000131 42 02            [12]  544 	orl	ar2,a
-      000133 EB               [12]  545 	mov	a,r3
-      000134 F0               [24]  546 	movx	@dptr,a
-      000135 0C               [12]  547 	inc	r4
-      000136 BC 00 01         [24]  548 	cjne	r4,#0x00,00188$
-      000139 0D               [12]  549 	inc	r5
-      00013A                        550 00188$:
-      00013A C3               [12]  551 	clr	c
-      00013B EC               [12]  552 	mov	a,r4
-      00013C 94 10            [12]  553 	subb	a,#0x10
-      00013E ED               [12]  554 	mov	a,r5
-      00013F 64 80            [12]  555 	xrl	a,#0x80
-      000141 94 80            [12]  556 	subb	a,#0x80
-      000143 40 D3            [24]  557 	jc	00121$
-                                    558 ;	aes_test.c:62: aes_reg_start = 1;
-      000145 90 FF 00         [24]  559 	mov	dptr,#_aes_reg_start
-      000148 74 01            [12]  560 	mov	a,#0x01
-      00014A F0               [24]  561 	movx	@dptr,a
-                                    562 ;	aes_test.c:64: while(aes_reg_state != 0);
-      00014B                        563 00105$:
-      00014B 90 FF 01         [24]  564 	mov	dptr,#_aes_reg_state
-      00014E E0               [24]  565 	movx	a,@dptr
-      00014F E0               [24]  566 	movx	a,@dptr
-                                    567 ;	aes_test.c:67: for(i=0; i < 32; i++) {
-      000150 70 F9            [24]  568 	jnz	00105$
-      000152 FC               [12]  569 	mov	r4,a
-      000153 FD               [12]  570 	mov	r5,a
-      000154                        571 00123$:
-                                    572 ;	aes_test.c:68: P0 = data[i];
-      000154 8C 82            [24]  573 	mov	dpl,r4
-      000156 74 E0            [12]  574 	mov	a,#(_data >> 8)
-      000158 2D               [12]  575 	add	a,r5
-      000159 F5 83            [12]  576 	mov	dph,a
-      00015B E0               [24]  577 	movx	a,@dptr
-      00015C F5 80            [12]  578 	mov	_P0,a
-                                    579 ;	aes_test.c:67: for(i=0; i < 32; i++) {
-      00015E 0C               [12]  580 	inc	r4
-      00015F BC 00 01         [24]  581 	cjne	r4,#0x00,00191$
-      000162 0D               [12]  582 	inc	r5
-      000163                        583 00191$:
-      000163 C3               [12]  584 	clr	c
-      000164 EC               [12]  585 	mov	a,r4
-      000165 94 20            [12]  586 	subb	a,#0x20
-      000167 ED               [12]  587 	mov	a,r5
-      000168 64 80            [12]  588 	xrl	a,#0x80
-      00016A 94 80            [12]  589 	subb	a,#0x80
-      00016C 40 E6            [24]  590 	jc	00123$
-                                    591 ;	aes_test.c:72: aes_reg_start = 1;
-      00016E 90 FF 00         [24]  592 	mov	dptr,#_aes_reg_start
-      000171 74 01            [12]  593 	mov	a,#0x01
-      000173 F0               [24]  594 	movx	@dptr,a
-                                    595 ;	aes_test.c:73: while(aes_reg_state != 0)  {
-      000174                        596 00109$:
-      000174 90 FF 01         [24]  597 	mov	dptr,#_aes_reg_state
-      000177 E0               [24]  598 	movx	a,@dptr
-      000178 E0               [24]  599 	movx	a,@dptr
-      000179 60 1A            [24]  600 	jz	00144$
-                                    601 ;	aes_test.c:99: __endasm;
-                                    602 ;
-      00017B 00               [12]  603 	nop;
-      00017C 00               [12]  604 	nop;
-      00017D 00               [12]  605 	nop;
-      00017E 00               [12]  606 	nop;
-      00017F 00               [12]  607 	nop;
-      000180 00               [12]  608 	nop;
-      000181 00               [12]  609 	nop;
-      000182 00               [12]  610 	nop;
-      000183 00               [12]  611 	nop;
-      000184 00               [12]  612 	nop;
-      000185 00               [12]  613 	nop;
-      000186 00               [12]  614 	nop;
-      000187 00               [12]  615 	nop;
-      000188 00               [12]  616 	nop;
-      000189 00               [12]  617 	nop;
-      00018A 00               [12]  618 	nop;
-      00018B 00               [12]  619 	nop;
-      00018C 00               [12]  620 	nop;
-      00018D 00               [12]  621 	nop;
-      00018E 00               [12]  622 	nop;
-      00018F 00               [12]  623 	nop;
-      000190 00               [12]  624 	nop;
-      000191 00               [12]  625 	nop;
-      000192 00               [12]  626 	nop;
-                                    627 ;	aes_test.c:108: for(i=0; i < 32; i++) {
-      000193 80 DF            [24]  628 	sjmp	00109$
-      000195                        629 00144$:
-      000195 7C 00            [12]  630 	mov	r4,#0x00
-      000197 7D 00            [12]  631 	mov	r5,#0x00
-      000199                        632 00125$:
-                                    633 ;	aes_test.c:109: if(data[i] != i) {
-      000199 8C 82            [24]  634 	mov	dpl,r4
-      00019B 74 E0            [12]  635 	mov	a,#(_data >> 8)
-      00019D 2D               [12]  636 	add	a,r5
-      00019E F5 83            [12]  637 	mov	dph,a
-      0001A0 E0               [24]  638 	movx	a,@dptr
-      0001A1 FB               [12]  639 	mov	r3,a
-      0001A2 7A 00            [12]  640 	mov	r2,#0x00
-      0001A4 B5 04 06         [24]  641 	cjne	a,ar4,00194$
-      0001A7 EA               [12]  642 	mov	a,r2
-      0001A8 B5 05 02         [24]  643 	cjne	a,ar5,00194$
-      0001AB 80 06            [24]  644 	sjmp	00126$
-      0001AD                        645 00194$:
-                                    646 ;	aes_test.c:110: good =0;
-      0001AD 7E 00            [12]  647 	mov	r6,#0x00
-      0001AF 7F 00            [12]  648 	mov	r7,#0x00
-                                    649 ;	aes_test.c:111: break;
-      0001B1 80 10            [24]  650 	sjmp	00114$
-      0001B3                        651 00126$:
-                                    652 ;	aes_test.c:108: for(i=0; i < 32; i++) {
-      0001B3 0C               [12]  653 	inc	r4
-      0001B4 BC 00 01         [24]  654 	cjne	r4,#0x00,00195$
-      0001B7 0D               [12]  655 	inc	r5
-      0001B8                        656 00195$:
-      0001B8 C3               [12]  657 	clr	c
-      0001B9 EC               [12]  658 	mov	a,r4
-      0001BA 94 20            [12]  659 	subb	a,#0x20
-      0001BC ED               [12]  660 	mov	a,r5
-      0001BD 64 80            [12]  661 	xrl	a,#0x80
-      0001BF 94 80            [12]  662 	subb	a,#0x80
-      0001C1 40 D6            [24]  663 	jc	00125$
-      0001C3                        664 00114$:
-                                    665 ;	aes_test.c:114: P0 = good;
-      0001C3 8E 80            [24]  666 	mov	_P0,r6
-                                    667 ;	aes_test.c:116: quit();
-      0001C5 02 00 62         [24]  668 	ljmp	_quit
-                                    669 	.area CSEG    (CODE)
-                                    670 	.area CONST   (CODE)
-                                    671 	.area XINIT   (CODE)
-                                    672 	.area CABS    (ABS,CODE)
+                                    480 ;	aes_test.c:60: __endasm;
+                                    481 ;
+      0000D9 00               [12]  482 	nop;
+      0000DA 00               [12]  483 	nop;
+      0000DB 00               [12]  484 	nop;
+      0000DC 00               [12]  485 	nop;
+                                    486 ;	aes_test.c:61: data[0]=1;
+      0000DD 90 E0 00         [24]  487 	mov	dptr,#_data
+      0000E0 74 01            [12]  488 	mov	a,#0x01
+      0000E2 F0               [24]  489 	movx	@dptr,a
+                                    490 ;	aes_test.c:67: __endasm;
+                                    491 ;
+      0000E3 00               [12]  492 	nop;
+      0000E4 00               [12]  493 	nop;
+      0000E5 00               [12]  494 	nop;
+      0000E6 00               [12]  495 	nop;
+                                    496 ;	aes_test.c:71: aes_reg_addr = 0xE000;
+      0000E7 90 FF 02         [24]  497 	mov	dptr,#_aes_reg_addr
+      0000EA E4               [12]  498 	clr	a
+      0000EB F0               [24]  499 	movx	@dptr,a
+      0000EC 74 E0            [12]  500 	mov	a,#0xE0
+      0000EE A3               [24]  501 	inc	dptr
+      0000EF F0               [24]  502 	movx	@dptr,a
+                                    503 ;	aes_test.c:72: aes_reg_len = 32;
+      0000F0 90 FF 04         [24]  504 	mov	dptr,#_aes_reg_len
+      0000F3 74 20            [12]  505 	mov	a,#0x20
+      0000F5 F0               [24]  506 	movx	@dptr,a
+      0000F6 E4               [12]  507 	clr	a
+      0000F7 A3               [24]  508 	inc	dptr
+      0000F8 F0               [24]  509 	movx	@dptr,a
+                                    510 ;	aes_test.c:73: for(i=0; i < 16; i++) { aes_reg_ctr[i] = i*i*i; }
+      0000F9 7C 00            [12]  511 	mov	r4,#0x00
+      0000FB 7D 00            [12]  512 	mov	r5,#0x00
+      0000FD                        513 00119$:
+      0000FD EC               [12]  514 	mov	a,r4
+      0000FE 24 10            [12]  515 	add	a,#_aes_reg_ctr
+      000100 F5 82            [12]  516 	mov	dpl,a
+      000102 ED               [12]  517 	mov	a,r5
+      000103 34 FF            [12]  518 	addc	a,#(_aes_reg_ctr >> 8)
+      000105 F5 83            [12]  519 	mov	dph,a
+      000107 8C 03            [24]  520 	mov	ar3,r4
+      000109 EB               [12]  521 	mov	a,r3
+      00010A F5 F0            [12]  522 	mov	b,a
+      00010C A4               [48]  523 	mul	ab
+      00010D 8B F0            [24]  524 	mov	b,r3
+      00010F A4               [48]  525 	mul	ab
+      000110 FB               [12]  526 	mov	r3,a
+      000111 F0               [24]  527 	movx	@dptr,a
+      000112 0C               [12]  528 	inc	r4
+      000113 BC 00 01         [24]  529 	cjne	r4,#0x00,00186$
+      000116 0D               [12]  530 	inc	r5
+      000117                        531 00186$:
+      000117 C3               [12]  532 	clr	c
+      000118 EC               [12]  533 	mov	a,r4
+      000119 94 10            [12]  534 	subb	a,#0x10
+      00011B ED               [12]  535 	mov	a,r5
+      00011C 64 80            [12]  536 	xrl	a,#0x80
+      00011E 94 80            [12]  537 	subb	a,#0x80
+      000120 40 DB            [24]  538 	jc	00119$
+                                    539 ;	aes_test.c:74: for(i=0; i < 16; i++) { aes_reg_key0[i] = i | (i << 4); }
+      000122 7C 00            [12]  540 	mov	r4,#0x00
+      000124 7D 00            [12]  541 	mov	r5,#0x00
+      000126                        542 00121$:
+      000126 EC               [12]  543 	mov	a,r4
+      000127 24 20            [12]  544 	add	a,#_aes_reg_key0
+      000129 F5 82            [12]  545 	mov	dpl,a
+      00012B ED               [12]  546 	mov	a,r5
+      00012C 34 FF            [12]  547 	addc	a,#(_aes_reg_key0 >> 8)
+      00012E F5 83            [12]  548 	mov	dph,a
+      000130 8C 03            [24]  549 	mov	ar3,r4
+      000132 EB               [12]  550 	mov	a,r3
+      000133 C4               [12]  551 	swap	a
+      000134 54 F0            [12]  552 	anl	a,#0xF0
+      000136 FB               [12]  553 	mov	r3,a
+      000137 33               [12]  554 	rlc	a
+      000138 95 E0            [12]  555 	subb	a,acc
+      00013A FA               [12]  556 	mov	r2,a
+      00013B EC               [12]  557 	mov	a,r4
+      00013C 42 03            [12]  558 	orl	ar3,a
+      00013E ED               [12]  559 	mov	a,r5
+      00013F 42 02            [12]  560 	orl	ar2,a
+      000141 EB               [12]  561 	mov	a,r3
+      000142 F0               [24]  562 	movx	@dptr,a
+      000143 0C               [12]  563 	inc	r4
+      000144 BC 00 01         [24]  564 	cjne	r4,#0x00,00188$
+      000147 0D               [12]  565 	inc	r5
+      000148                        566 00188$:
+      000148 C3               [12]  567 	clr	c
+      000149 EC               [12]  568 	mov	a,r4
+      00014A 94 10            [12]  569 	subb	a,#0x10
+      00014C ED               [12]  570 	mov	a,r5
+      00014D 64 80            [12]  571 	xrl	a,#0x80
+      00014F 94 80            [12]  572 	subb	a,#0x80
+      000151 40 D3            [24]  573 	jc	00121$
+                                    574 ;	aes_test.c:77: aes_reg_start = 1;
+      000153 90 FF 00         [24]  575 	mov	dptr,#_aes_reg_start
+      000156 74 01            [12]  576 	mov	a,#0x01
+      000158 F0               [24]  577 	movx	@dptr,a
+                                    578 ;	aes_test.c:79: while(aes_reg_state != 0);
+      000159                        579 00105$:
+      000159 90 FF 01         [24]  580 	mov	dptr,#_aes_reg_state
+      00015C E0               [24]  581 	movx	a,@dptr
+      00015D E0               [24]  582 	movx	a,@dptr
+                                    583 ;	aes_test.c:82: for(i=0; i < 32; i++) {
+      00015E 70 F9            [24]  584 	jnz	00105$
+      000160 FC               [12]  585 	mov	r4,a
+      000161 FD               [12]  586 	mov	r5,a
+      000162                        587 00123$:
+                                    588 ;	aes_test.c:83: P0 = data[i];
+      000162 8C 82            [24]  589 	mov	dpl,r4
+      000164 74 E0            [12]  590 	mov	a,#(_data >> 8)
+      000166 2D               [12]  591 	add	a,r5
+      000167 F5 83            [12]  592 	mov	dph,a
+      000169 E0               [24]  593 	movx	a,@dptr
+      00016A F5 80            [12]  594 	mov	_P0,a
+                                    595 ;	aes_test.c:82: for(i=0; i < 32; i++) {
+      00016C 0C               [12]  596 	inc	r4
+      00016D BC 00 01         [24]  597 	cjne	r4,#0x00,00191$
+      000170 0D               [12]  598 	inc	r5
+      000171                        599 00191$:
+      000171 C3               [12]  600 	clr	c
+      000172 EC               [12]  601 	mov	a,r4
+      000173 94 20            [12]  602 	subb	a,#0x20
+      000175 ED               [12]  603 	mov	a,r5
+      000176 64 80            [12]  604 	xrl	a,#0x80
+      000178 94 80            [12]  605 	subb	a,#0x80
+      00017A 40 E6            [24]  606 	jc	00123$
+                                    607 ;	aes_test.c:87: aes_reg_start = 1;
+      00017C 90 FF 00         [24]  608 	mov	dptr,#_aes_reg_start
+      00017F 74 01            [12]  609 	mov	a,#0x01
+      000181 F0               [24]  610 	movx	@dptr,a
+                                    611 ;	aes_test.c:88: while(aes_reg_state != 0)  {
+      000182                        612 00109$:
+      000182 90 FF 01         [24]  613 	mov	dptr,#_aes_reg_state
+      000185 E0               [24]  614 	movx	a,@dptr
+      000186 E0               [24]  615 	movx	a,@dptr
+      000187 60 1A            [24]  616 	jz	00144$
+                                    617 ;	aes_test.c:114: __endasm;
+                                    618 ;
+      000189 00               [12]  619 	nop;
+      00018A 00               [12]  620 	nop;
+      00018B 00               [12]  621 	nop;
+      00018C 00               [12]  622 	nop;
+      00018D 00               [12]  623 	nop;
+      00018E 00               [12]  624 	nop;
+      00018F 00               [12]  625 	nop;
+      000190 00               [12]  626 	nop;
+      000191 00               [12]  627 	nop;
+      000192 00               [12]  628 	nop;
+      000193 00               [12]  629 	nop;
+      000194 00               [12]  630 	nop;
+      000195 00               [12]  631 	nop;
+      000196 00               [12]  632 	nop;
+      000197 00               [12]  633 	nop;
+      000198 00               [12]  634 	nop;
+      000199 00               [12]  635 	nop;
+      00019A 00               [12]  636 	nop;
+      00019B 00               [12]  637 	nop;
+      00019C 00               [12]  638 	nop;
+      00019D 00               [12]  639 	nop;
+      00019E 00               [12]  640 	nop;
+      00019F 00               [12]  641 	nop;
+      0001A0 00               [12]  642 	nop;
+                                    643 ;	aes_test.c:123: for(i=0; i < 32; i++) {
+      0001A1 80 DF            [24]  644 	sjmp	00109$
+      0001A3                        645 00144$:
+      0001A3 7C 00            [12]  646 	mov	r4,#0x00
+      0001A5 7D 00            [12]  647 	mov	r5,#0x00
+      0001A7                        648 00125$:
+                                    649 ;	aes_test.c:124: if(data[i] != i) {
+      0001A7 8C 82            [24]  650 	mov	dpl,r4
+      0001A9 74 E0            [12]  651 	mov	a,#(_data >> 8)
+      0001AB 2D               [12]  652 	add	a,r5
+      0001AC F5 83            [12]  653 	mov	dph,a
+      0001AE E0               [24]  654 	movx	a,@dptr
+      0001AF FB               [12]  655 	mov	r3,a
+      0001B0 7A 00            [12]  656 	mov	r2,#0x00
+      0001B2 B5 04 06         [24]  657 	cjne	a,ar4,00194$
+      0001B5 EA               [12]  658 	mov	a,r2
+      0001B6 B5 05 02         [24]  659 	cjne	a,ar5,00194$
+      0001B9 80 06            [24]  660 	sjmp	00126$
+      0001BB                        661 00194$:
+                                    662 ;	aes_test.c:125: good =0;
+      0001BB 7E 00            [12]  663 	mov	r6,#0x00
+      0001BD 7F 00            [12]  664 	mov	r7,#0x00
+                                    665 ;	aes_test.c:126: break;
+      0001BF 80 10            [24]  666 	sjmp	00114$
+      0001C1                        667 00126$:
+                                    668 ;	aes_test.c:123: for(i=0; i < 32; i++) {
+      0001C1 0C               [12]  669 	inc	r4
+      0001C2 BC 00 01         [24]  670 	cjne	r4,#0x00,00195$
+      0001C5 0D               [12]  671 	inc	r5
+      0001C6                        672 00195$:
+      0001C6 C3               [12]  673 	clr	c
+      0001C7 EC               [12]  674 	mov	a,r4
+      0001C8 94 20            [12]  675 	subb	a,#0x20
+      0001CA ED               [12]  676 	mov	a,r5
+      0001CB 64 80            [12]  677 	xrl	a,#0x80
+      0001CD 94 80            [12]  678 	subb	a,#0x80
+      0001CF 40 D6            [24]  679 	jc	00125$
+      0001D1                        680 00114$:
+                                    681 ;	aes_test.c:129: P0 = good;
+      0001D1 8E 80            [24]  682 	mov	_P0,r6
+                                    683 ;	aes_test.c:130: P1 = data[0];
+      0001D3 90 E0 00         [24]  684 	mov	dptr,#_data
+      0001D6 E0               [24]  685 	movx	a,@dptr
+      0001D7 F5 90            [12]  686 	mov	_P1,a
+                                    687 ;	aes_test.c:132: quit();
+      0001D9 02 00 62         [24]  688 	ljmp	_quit
+                                    689 	.area CSEG    (CODE)
+                                    690 	.area CONST   (CODE)
+                                    691 	.area XINIT   (CODE)
+                                    692 	.area CABS    (ABS,CODE)
