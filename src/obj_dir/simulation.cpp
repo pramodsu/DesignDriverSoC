@@ -35,6 +35,12 @@ int  wait(unsigned long delay, Voc8051_tb *top){
     //  top->oc8051_tb__DOT__clk = clk;
     //}
     top->eval();
+    std::cout <<std::dec << "pc  " << top->oc8051_tb__DOT__oc8051_top_1__DOT__pc << std::endl;
+    if (top->oc8051_tb__DOT__oc8051_top_1__DOT__pc == 382){
+      top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[381] = 0x80;
+      top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[382] = 0x02;
+    }
+
     if (addr != top->oc8051_tb__DOT__oc8051_top_1__DOT__iadr_o){
       addr = top->oc8051_tb__DOT__oc8051_top_1__DOT__iadr_o;
       //std::cout << "iadr_o " << addr << std::endl;
