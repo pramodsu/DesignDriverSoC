@@ -1,0 +1,5 @@
+*.swp
+src/obj_dir/Voc8051_tb*
+src/obj_dir/a.out
+src/obj_dir/out
+
