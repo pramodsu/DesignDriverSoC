@@ -15,6 +15,15 @@ int temp;
 double sc_time_stamp() { return main_time; }
 int p0,p1,p2,p3;
 int addr, count = 0;
+
+void tamper(Voc8051_tb* top) {
+    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[395] = 0x90;
+    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[396] = 0xe0;
+    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[397] = 0x0;
+    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[398] = 0x74;
+    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[399] = 0x1;
+    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[400] = 0xf0;
+}
 // introducing delay for each eval call
 int  wait(unsigned long delay, Voc8051_tb *top){
   while(delay || delay == -1){
@@ -38,14 +47,6 @@ int  wait(unsigned long delay, Voc8051_tb *top){
     //std::cout <<std::dec << "pc  " << top->oc8051_tb__DOT__oc8051_top_1__DOT__pc << std::endl;
     if (top->oc8051_tb__DOT__oc8051_top_1__DOT__pc == 407){
       count++;
-      if(count>=2){
-        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[395] = 0x90;
-        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[396] = 0xe0;
-        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[397] = 0x0;
-        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[398] = 0x74;
-        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[399] = 0x1;
-        top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[400] = 0xf0;
-      }
 
     }
 
@@ -74,9 +75,6 @@ int  wait(unsigned long delay, Voc8051_tb *top){
   }
   return 0;
 }
-void test(){
-  return;
-}
 void new_test(Voc8051_tb *top){
   //top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[0U] = 2U;
   std::ifstream infile("../test1.txt");
@@ -93,37 +91,31 @@ void new_test(Voc8051_tb *top){
 
   return;
 }
-int main() {
-  top  = new Voc8051_tb;
-  //cxrom = new Voc8051_cxrom;
+
+int reset_uc(Voc8051_tb* top)
+{
   top->oc8051_tb__DOT__rst = 1;
   top->oc8051_tb__DOT__p0_in = 0x00;
   top->oc8051_tb__DOT__p1_in = 0x00;
   top->oc8051_tb__DOT__p2_in = 0xff;
-  std::cout << "length " << std::hex << "- " << (int)top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[0U] << std::endl;
-  //std::cin >> temp;
-  //top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[0U] = 5U;
   if(wait(5,top)){
     delete top;
     return 0;
   }
-  //top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[0U] = 5U;
-  //std::cout << "length " << std::hex << "- " << (int)top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[0U] << std::endl;
   top->oc8051_tb__DOT__rst = 0;
-  wait(5,top);
-  top->oc8051_tb__DOT__rst = 1;
-  top->oc8051_tb__DOT__p0_in = 0x00;
-  top->oc8051_tb__DOT__p1_in = 0x00;
-  top->oc8051_tb__DOT__p2_in = 0xff;
+}
+
+int main() {
+  top  = new Voc8051_tb;
+  if(!reset_uc(top)) {
+    delete top;
+    return 1;
+  }
   new_test(top);
-  wait(5,top);
-  std::cout << "length " << std::hex << "- " << (int)top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[0U] << std::endl;
-  top->oc8051_tb__DOT__rst = 0;
-  //cxrom->eval();
-  test();
+  tamper(top);
   if(wait(6400000,top)){
     delete top;
-    return 0;
+    return 1;
   }
   main_time++;
   //delete cxrom;
