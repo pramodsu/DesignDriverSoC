@@ -62,3 +62,7 @@ Voc8051_tb.mk: ../rtl/*.v
 	${RTL_DIR}/modexp_top.v                    \
 	${RTL_DIR}/mem_wr.v   --top-module oc8051_tb
 
+.PHONY: clean
+
+clean:
+	rm -f sim Voc8051_*

@@ -1,5 +1,12 @@
 *.swp
-src/obj_dir/Voc8051_tb*
-src/obj_dir/a.out
-src/obj_dir/out
-
+fw/*.asm
+fw/*.ihx
+fw/*.lk
+fw/*.lst
+fw/*.map
+fw/*.mem
+fw/*.rel
+fw/*.rst
+fw/*.sym
+sim/Voc8051_tb*
+sim/sim

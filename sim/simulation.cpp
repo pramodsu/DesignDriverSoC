@@ -94,7 +94,7 @@ void load_test(Voc8051_tb *top, const char* filename){
     assert (addr == i);
     top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[addr] = data;
   }
-  for (;num_buff<10000;num_buff++){
+  for (;num_buff<65535;num_buff++){
     top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[num_buff] = 0U;
   }
 

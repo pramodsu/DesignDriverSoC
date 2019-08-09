@@ -14,7 +14,7 @@ module oc8051_cxrom(clk, rst, cxrom_addr, cxrom_data_out);
     wire [15:0] addr;
     wire [31:0] cxrom_data_out;
 
-    reg [7:0] buff [9999:0];
+    reg [7:0] buff [65535:0];
     wire [15:0] addr0 = addr;
     wire [15:0] addr1 = addr+1;
     wire [15:0] addr2 = addr+2;
