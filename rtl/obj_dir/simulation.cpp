@@ -1,9 +1,12 @@
 #include <verilated.h>
 #include <iostream>
-#include "Voc8051_tb.h"
-#include <array>
 #include <fstream>
+#include <iomanip>
+#include <array>
+
+#include "Voc8051_tb.h"
 #include "Voc8051_tb__Syms.h"
+
 using namespace std;
 
 //#include "Voc8051_cxrom.h"
@@ -55,12 +58,18 @@ int  wait(unsigned long delay, Voc8051_tb *top){
       //std::cout << "iadr_o " << addr << std::endl;
     }
     if (0 || p0 != top->oc8051_tb__DOT__p0_out ||
-          p1 != top->oc8051_tb__DOT__p1_out ||
-          p2 != top->oc8051_tb__DOT__p2_out ||
-          p3 != top->oc8051_tb__DOT__p3_out)
+             p1 != top->oc8051_tb__DOT__p1_out ||
+             p2 != top->oc8051_tb__DOT__p2_out ||
+             p3 != top->oc8051_tb__DOT__p3_out)
     {
-      std::cout << "wait @ " << main_time << " " << std::hex << ": "<< p0 << "-"<< p1 << "-" << p2 << "-" << p3 << std::endl;
-      std::cout << "length " << std::hex << "- " << (int)top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[0U] << std::endl;
+      std::cout << "wait @ " << 
+                std::dec << std::setw(7) << main_time << " " << 
+                std::hex << ": " <<
+                std::setw(2) << p0 << "-" << 
+                std::setw(2) << p1 << "-" << 
+                std::setw(2) << p2 << "-" << 
+                std::setw(2) << p3 << std::endl;
+
       p0 = top->oc8051_tb__DOT__p0_out;
       p1 = top->oc8051_tb__DOT__p1_out;
       p2 = top->oc8051_tb__DOT__p2_out;
@@ -105,13 +114,15 @@ int reset_uc(Voc8051_tb* top)
   top->oc8051_tb__DOT__rst = 0;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
   top  = new Voc8051_tb;
   if(!reset_uc(top)) {
     delete top;
     return 1;
   }
-  load_test(top);
+  load_test(top, argv[1]);
+  wait(-1, top);
+
   delete top;
   return 0;
 }

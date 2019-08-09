@@ -55,6 +55,3 @@ mem_wr.v   --top-module oc8051_tb
 cd obj_dir
 make -f Voc8051_tb.mk
 g++ -I/usr/share/verilator/include/ /usr/share/verilator/include/verilated.cpp simulation.cpp Voc8051_tb__ALL.a
-rm out
-./a.out > out
-date
