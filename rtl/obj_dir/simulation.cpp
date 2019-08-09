@@ -75,15 +75,15 @@ int  wait(unsigned long delay, Voc8051_tb *top){
   }
   return 0;
 }
-void new_test(Voc8051_tb *top){
+void load_test(Voc8051_tb *top, const char* filename){
   //top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[0U] = 2U;
-  std::ifstream infile("../test1.txt");
-  int counter = 0 ;
-  int num_buff,a,b;
+  std::ifstream infile(filename);
+  unsigned num_buff, addr, data;
   infile >> num_buff;
-  for (int i=0; i<num_buff; i++){
-    infile >> a;
-    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[i] = (unsigned int)a;
+  for (unsigned i=0; i != num_buff; i++){
+    infile >> addr >> data;
+    assert (addr == i);
+    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[addr] = data;
   }
   for (;num_buff<10000;num_buff++){
     top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[num_buff] = 0U;
@@ -111,14 +111,7 @@ int main() {
     delete top;
     return 1;
   }
-  new_test(top);
-  tamper(top);
-  if(wait(6400000,top)){
-    delete top;
-    return 1;
-  }
-  main_time++;
-  //delete cxrom;
+  load_test(top);
   delete top;
   return 0;
 }
