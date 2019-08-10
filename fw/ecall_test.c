@@ -40,6 +40,7 @@ loop:
     INC     R0
     RETI
 out:
+    MOV P0, R0
     __endasm;
 
     quit();

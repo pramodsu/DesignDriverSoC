@@ -144,8 +144,8 @@
 `define OC8051_SFR_TH2 8'hcd // timer 2 high
 `define OC8051_SFR_TL2 8'hcc // timer 2 low
 
-`define OC8051_SFR_ETR_HI 8'h8f // upper bit of etr
-`define OC8051_SFR_ETR_LO 8'h8e // lower bit of etr
+`define OC8051_SFR_ETR_HI 8'h8f // upper byte of etr
+`define OC8051_SFR_ETR_LO 8'h8e // lower byte of etr
 
 
 
