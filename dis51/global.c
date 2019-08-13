@@ -204,7 +204,7 @@ const char mnemonic[256][20] = {
 	"MOV C, %s",
 	"INC DPTR",
 	"MUL AB",
-	"ECALL %s",               /* undefined opcode */
+	"ECALL", /* newly-defined opcode */
 	"MOV @R0, %s",
 	"MOV @R1, %s",
 	"MOV R0, %s",
@@ -378,7 +378,7 @@ const char sfrname[128][5] = {
 /* 80 */
 	"P0", "SP", "DPL", "DPH", "84h", "85h", "86h", "PCON",
 /* 88 */
-	"TCON", "TMOD", "TL0", "TL1", "TH0", "TH1", "8Eh", "8Fh",
+	"TCON", "TMOD", "TL0", "TL1", "TH0", "TH1", "ETRL" /* 0x8E */, "ETRH" /* 0x8F */,
 /* 90 */
 	"P1", "91h", "92h", "93h", "94h", "95h", "96h", "97h",
 /* 98 */

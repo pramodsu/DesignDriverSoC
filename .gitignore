@@ -10,3 +10,5 @@ fw/*.rst
 fw/*.sym
 sim/Voc8051_tb*
 sim/sim
+dis51/dis51
+dis51/*.o
