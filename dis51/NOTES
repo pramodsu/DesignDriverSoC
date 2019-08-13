@@ -1,0 +1,42 @@
+9/4/01
+
+My initial idea for the disassembler was to do everything in one pass, but
+I've decided to change to a two-pass approach.  One pass would require lots
+of extra memory to store everything I want to output.
+
+Keep track of flags for every address.  Possible values are EMPTY, CODE,
+DATA, and LABELLED.  Everything starts out as EMPTY.  Everything loaded from
+the hex file is DATA by default.
+
+Pass 1: Start at entry point 0000.  Follow code through all branches.  Note
+any change to interrupt vectors.  Decode interrupt vector entry points as
+well if necessary.
+
+As I go, mark all decoded addresses as CODE.  Mark all jump destinations as
+LABELLED.  Give them a label number.
+
+Pass 2: Start at address 0000.  Output "CSEG AT 0000h".  Increment through
+"memory" to address 65535.  Everything marked as LABELLED gets a label
+looked up from a label table.  Everything marked as CODE gets decoded and
+output.  Everything marked as DATA gets a DB command.  If EMPTY is
+encountered, the next non-EMPTY code or data is preceded by at CSEG AT
+address.
+
+Output "END" at the end.
+
+9/12/01
+
+The pass1/pass2 thing worked well.  The one "issue" the program has is with
+indirect jumps (JMP @A+DPTR).  There is no way to "follow" the code with an
+indirect jump.  It also seems that at least one 8051 C compiler (Keil
+uVision 1) generates a number of these indirect jumps.  My program will take
+multiple entry points on the command line, so someone could examine the
+assembly output by hand, and make an educated guess about where the jump
+table begins, and then re-disassemble the program with the additional entry
+points.
+
+I decode SFR addresses, both in byte- and bit-addressed memory, into their
+symbolic names.  This helps make the assembly output a bit more readable.  I
+think the only feature to add is one that examines writes to the interrupt
+registers and makes a guess about which interrupt vectors are being used.
+

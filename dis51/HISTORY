@@ -1,0 +1,24 @@
+Dis51-0.5, written and maintained by Dave Sullins (djs@naspa.net).
+
+21 Nov 2003: Version 0.5
+Applied patch from Peter Peres (plp@actcom.co.il).  Adds "-l" command-line
+argument to output in list format.  Includes decoded ASCII characters from
+DB directives as comments.  Nice feature, thanks Peter!
+
+3 Nov 2003: Version 0.4
+The same code as version 0.3, but things are packaged a little more neatly
+into the tarball and documentation has been updated to reflect the version
+change.  Also, this time I remembered to add a link from my Dis51 page to
+the tarball.
+
+15 Feb 2003: Version 0.3
+Updated to work with new libhexfile.  This version was "released" in that it
+was placed on a publically available website, but I failed to add a public
+link to it.  So this version, if you have it, is a collector's item.
+
+7 Dec 2002: Version 0.2
+This is the first numbered version.  Any unnumbered version is 0.1.  I don't
+know if I released the program multiple times, so there may be different
+0.1 versions out there.  The only difference in 0.2 is the new libhexfile
+library, which really shouldn't affect the program since 32-bit addresses
+are not used in any 8051 variant I've heard of.
