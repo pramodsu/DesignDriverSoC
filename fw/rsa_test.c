@@ -1,4 +1,4 @@
-#include <reg51.h>
+#include <8051.h>
 
 /*
  * Copyright (c) 1999-2001 Tony Givargis.  Permission to copy is granted
@@ -14,11 +14,26 @@
 #define K1 16
 #define K2 16
 
+__xdata __at(0xFF80) unsigned char pt_wren[32];
+__xdata __at(0xFFA0) unsigned char pt_rden[32];
+
+__xdata __at(0xF9F0) unsigned char memwr_reg_start;
+__xdata __at(0xF9F1) unsigned char memwr_reg_state;
+__xdata __at(0xF9F2) unsigned int memwr_reg_rd_addr;
+__xdata __at(0xF9F4) unsigned int memwr_reg_wr_addr;
+__xdata __at(0xF9F6) unsigned int memwr_reg_len;
+
+__xdata __at(0x5000) unsigned char boot[0x2000];
+
 __xdata __at(0xFE00) unsigned char sha_reg_start;
 __xdata __at(0xFE01) unsigned char sha_reg_state;
 __xdata __at(0xFE02) unsigned int sha_reg_rd_addr;
 __xdata __at(0xFE04) unsigned int sha_reg_wr_addr;
 __xdata __at(0xFE06) unsigned int sha_reg_len;
+
+__xdata __at(0xC000) unsigned char sha_in[0x2080];
+__xdata __at(0xE080) unsigned char sha_out[20];
+__xdata __at(0xE100) unsigned char rsa_out[N];
 
 __xdata __at(0xFD00) unsigned char exp_reg_start;
 __xdata __at(0xFD01) unsigned char exp_reg_state;
@@ -26,20 +41,6 @@ __xdata __at(0xFD02) unsigned int  exp_reg_opaddr;
 __xdata __at(0xFC00) unsigned char exp_reg_n[N];
 __xdata __at(0xFB00) unsigned char exp_reg_exp[N];
 __xdata __at(0xFA00) struct RSAmsg exp_reg_m;
-
-__xdata __at(0xFE40) unsigned char memwr_reg_start;
-__xdata __at(0xFE41) unsigned char memwr_reg_state;
-__xdata __at(0xFE42) unsigned int memwr_reg_rd_addr;
-__xdata __at(0xFE44) unsigned int memwr_reg_wr_addr;
-__xdata __at(0xFE46) unsigned int memwr_reg_len;
-
-__xdata __at(0xC000) unsigned char sha_in[0x2080];
-__xdata __at(0xE080) unsigned char sha_out[20];
-__xdata __at(0xE100) unsigned char rsa_out[N];
-__xdata __at(0x5000) unsigned char boot[0x2000];
-
-__xdata __at(0xFF80) unsigned char pt_wren[32];
-__xdata __at(0xFFA0) unsigned char pt_rden[32];
 
 // state of PRG for R and G in OAEP
 __xdata __at(0xFD10) unsigned char rprg[20];
@@ -79,7 +80,7 @@ void encrypt(unsigned char* msg, unsigned int len);
 int decrypt(unsigned char* msg);
 // sign message, put signature in exp_reg_opaddr
 void sign(unsigned char* message, unsigned int len);
-// verify that msg matches sign, ret 1 if match, 0 if not 
+// verify that msg matches sign, ret 1 if match, 0 if not
 unsigned char verifySignature(unsigned char* msg,unsigned int len, unsigned char* sign);
 
 void pad(unsigned int len);
@@ -118,7 +119,7 @@ void RSAinit()
 void pad(unsigned int len)
 {
     unsigned int i;
-    
+
     exp_reg_m.m[len] = 1;
     for(i=len+1; i < sizeof(exp_reg_m.m); i++)
 	exp_reg_m.m[i] = 0;
@@ -148,8 +149,8 @@ void sha1(unsigned char *m, unsigned int len)
     // setup data
     mlen = ((len+4) & 0xFFC0) + 64; // round len+5 up to multiple of 64
     sha_reg_len = mlen;
-        
-    
+
+
     if((unsigned int)m != sha_reg_rd_addr) // don't copy if already in right address
 	load(m, len, sha_reg_rd_addr, 0); // copy m
 
@@ -172,7 +173,7 @@ void sha1(unsigned char *m, unsigned int len)
 void HMAC(unsigned char *key, unsigned int klen, unsigned char *message, unsigned int mlen)
 {
     unsigned int i;
-    
+
     // inner hash
     for(i=0; i<klen; i++)
 	data[i] = key[i] ^ 0x36;
@@ -256,7 +257,7 @@ const unsigned char Hseed[] = {
     0xEB, 0xC0, 0x4F, 0x3A,
     0x0D, 0x2F, 0x8F, 0x0A*/
 };
-    
+
 void OAEP()
 {
     unsigned int i,j;
@@ -332,9 +333,12 @@ void encrypt(unsigned char* msg, unsigned int len){
 
     if(msg != exp_reg_m.m)
 	for (i=0; i<len; i++)
+      {
+            P0 = 0xa3;
 	    exp_reg_m.m[i] = msg[i];
+      }
     pad(len);
-    OAEP();
+    //OAEP();
 
     exp_reg_start = 1;  // start encryption
     while(exp_reg_state != 0);  // wait for encryption to finish
@@ -351,13 +355,13 @@ int decrypt(unsigned char* msg){
     // decrypt
     exp_reg_start = 1;
     while(exp_reg_state != 0);
-    
+
     // check pad byte
     if(decrypted->padbyte != 1) return 0;
 
-    if(!removeOAEP())
+    /*if(!removeOAEP())
 	return -1;
-
+*/
     return unpad();
 }
 const unsigned char SIGNSEED[] = {
@@ -372,7 +376,9 @@ const unsigned char SIGNSEED[] = {
 };
 
 void sign(unsigned char* message, unsigned int len){
+P0 = 5;
     sha1(message, len);
+
     //HMAC(SIGNSEED, 32, message, len);
     encrypt(hash,20);
 }
@@ -430,10 +436,12 @@ void main() {
 
     // set SHA read and write addresses
     sha_reg_rd_addr = (unsigned int)&sha_in;
+
     sha_reg_wr_addr = (unsigned int)&sha_out;
 
     // set up RSA
     exp_reg_opaddr = (unsigned int)&rsa_out;  // set up address to write to
+
     RSAinit();
 
     // set signature modulus
@@ -443,25 +451,30 @@ void main() {
     // set signature key
     for(i=0; i<N; i++)
 	exp_reg_exp[i] = im->exp[i];
-/*
-    // verify signature
-    if(!verifySignature(im->exp, size, im->sig))
-    {
-	P0 = 0;
-	quit();
-    }
-*/
+
+          // verify signature
+          /*if(!verifySignature(im->exp, size, im->sig))
+          {
+      	P0 = 0;
+            P1 = 0x55;
+      	quit();
+          }*/
+
 
     // sign header
-    PRGinit(rseed, 20, rprg);
+    //PRGinit(rseed, 20, rprg);
+
     sign(im->exp, size);
+
 
     // check for signature match
     for(i=0; i<N; i++)
     {
-	P0 = ((unsigned char*)decrypted)[i];
+	//P0 = ((unsigned char*)decrypted)[i];
 	if(((unsigned char*)decrypted)[i] != im->sig[i])
 	{
+            P1 = ((unsigned char*)decrypted)[i];
+            P2 = im->sig[i];
 	    good = 0;
 	    break;
 	}
@@ -470,7 +483,3 @@ void main() {
     P0 = good;
     quit();
 }
-
-
-
-

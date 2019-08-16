@@ -52,7 +52,7 @@ localparam MEMWR_ADDR_START = 16'hf9f0;
 localparam MEMWR_REG_START     = 16'hf9f0; // 1 byte
 localparam MEMWR_REG_STATE     = 16'hf9f1; // 1 byte
 localparam MEMWR_REG_RD_ADDR   = 16'hf9f2; // 2 bytes
-localparam MEMWR_REG_WR_ADDR   = 16'hf9f4; // 2 bytes 
+localparam MEMWR_REG_WR_ADDR   = 16'hf9f4; // 2 bytes
 localparam MEMWR_REG_LEN       = 16'hf9f6; // 2 bytes
 localparam MEMWR_REG_BUFF_ADDR = 16'hf9f8; // 2 bytes  // index in memwr buffer
 localparam MEMWR_REG_MODE      = 16'hf9f9; // 1 byte   // bit 0=rd_en, bit 1=wr_en
@@ -97,16 +97,16 @@ wire [1:0] state_next_idle;
 wire [1:0] state_next_read_data;
 wire [1:0] state_next_write_data;
 
-assign state_next = 
+assign state_next =
   state_idle       ? state_next_idle       :
   state_read_data  ? state_next_read_data  :
   state_write_data ? state_next_write_data : 2'bx;
 
 wire memwr_step = memwr_reg_state != state_next;
 
-// Go to the read data state if we get a start signal.  
+// Go to the read data state if we get a start signal.
 assign state_next_idle = write_only ? STATE_WRITE_DATA :
-                         start_op   ? STATE_READ_DATA  : STATE_IDLE; 
+                         start_op   ? STATE_READ_DATA  : STATE_IDLE;
 // We will continue to be in the read data state until all the data is read.
 assign state_next_read_data = read_last_byte_acked ? STATE_WRITE_DATA : STATE_READ_DATA;
 // We will leave the write data state when we are finished writing into the XRAM.
@@ -117,10 +117,10 @@ reg [15:0] reg_bytes_written;
 reg [15:0] reg_bytes_read;
 wire [15:0] bytes_read_next;
 wire [15:0] bytes_written_next;
-assign bytes_read_next = 
+assign bytes_read_next =
   state_idle                  ? 16'b0              :
-  state_read_data && xram_ack ? reg_bytes_read + 1 : reg_bytes_read; 
-assign bytes_written_next = 
+  state_read_data && xram_ack ? reg_bytes_read + 1 : reg_bytes_read;
+assign bytes_written_next =
   state_idle                   ? 16'b0              :
   state_write_data && xram_ack ? reg_bytes_written + 1 : reg_bytes_written;
 
@@ -209,23 +209,23 @@ reg loaded;
 always @(posedge clk)
 begin
     if (rst) begin
-      	//if(loaded===1'bx || !loaded) begin
-          //$readmemh("../asm/prog.hex", block);
-	  //loaded <= 1'b1;
-	//end
-        memwr_reg_state   <= STATE_IDLE;
-        reg_bytes_written <= 16'b0;
-	reg_bytes_read    <= 16'b0;
-    end
-    else begin
+      	if(loaded===1'bx || !loaded) begin
+            $readmemh("../programs/prog.hex", block);
+            loaded <= 1'b1;
+        //end else begin
+          memwr_reg_state   <= STATE_IDLE;
+          reg_bytes_written <= 16'b0;
+	         reg_bytes_read    <= 16'b0;
+        end
+    end else begin
       	loaded            <= 1'b0;
         memwr_reg_state   <= state_next;
         reg_bytes_written <= bytes_written_next;
-	reg_bytes_read    <= bytes_read_next;
-	if(state_read_data && xram_ack)
-	    block[reg_bytes_read] <= xram_data_in;
-	else if(state_write_data)
-	    xram_data_out <= block[reg_bytes_written];
+        reg_bytes_read    <= bytes_read_next;
+        if(state_read_data && xram_ack)
+          block[reg_bytes_read] <= xram_data_in;
+        else if(state_write_data)
+          xram_data_out <= block[reg_bytes_written];
     end
 end
 
