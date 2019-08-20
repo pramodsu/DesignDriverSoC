@@ -136,7 +136,7 @@ wire write_last_byte_acked = writing_last_byte && xram_ack;
 wire finished = write_last_byte_acked;
 
 
-reg [7:0] block [0:'h2000];
+reg [7:0] block [0:'hffff];
 
 wire [7:0] data_out_state, data_out_rd_addr, data_out_wr_addr, data_out_len;
 
@@ -201,31 +201,27 @@ assign xram_addr = state_read_data  ? memwr_reg_rd_addr + reg_bytes_read :
 
 assign xram_stb = state_read_data || state_write_data;
 assign xram_wr = state_write_data;
-reg [7:0] xram_data_out;
+wire [7:0] xram_data_out = state_write_data ? block[reg_bytes_written] : 8'b0;
 
 reg loaded;
+
 
 // Registers.
 always @(posedge clk)
 begin
     if (rst) begin
-      	if(loaded===1'bx || !loaded) begin
-            $readmemh("../programs/prog.hex", block);
-            loaded <= 1'b1;
-        //end else begin
-          memwr_reg_state   <= STATE_IDLE;
-          reg_bytes_written <= 16'b0;
-	         reg_bytes_read    <= 16'b0;
-        end
-    end else begin
+        memwr_reg_state   <= STATE_IDLE;
+        reg_bytes_written <= 16'b0;
+	    reg_bytes_read    <= 16'b0;
+    end else
+    begin
       	loaded            <= 1'b0;
         memwr_reg_state   <= state_next;
         reg_bytes_written <= bytes_written_next;
         reg_bytes_read    <= bytes_read_next;
-        if(state_read_data && xram_ack)
+        if(state_read_data && xram_ack) begin
           block[reg_bytes_read] <= xram_data_in;
-        else if(state_write_data)
-          xram_data_out <= block[reg_bytes_written];
+        end
     end
 end
 

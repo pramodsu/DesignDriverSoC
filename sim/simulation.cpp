@@ -1,4 +1,5 @@
 #include <verilated.h>
+#include <verilated_vcd_c.h>
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -9,9 +10,8 @@
 
 using namespace std;
 
-//#include "Voc8051_cxrom.h"
-//Voc8051_cxrom *cxrom;
-Voc8051_tb *top;
+Voc8051_tb *top = NULL;
+VerilatedVcdC* tfp = NULL;
 vluint64_t main_time = 0;
 int clk = 0;
 int temp;
@@ -19,21 +19,13 @@ double sc_time_stamp() { return main_time; }
 int p0,p1,p2,p3;
 int addr, count = 0;
 
-void tamper(Voc8051_tb* top) {
-    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[395] = 0x90;
-    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[396] = 0xe0;
-    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[397] = 0x0;
-    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[398] = 0x74;
-    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[399] = 0x1;
-    top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[400] = 0xf0;
-}
 // introducing delay for each eval call
 int  wait(unsigned long delay, Voc8051_tb *top){
-  while(delay || delay == -1){
+  while(delay){
+    main_time++;
     if(Verilated::gotFinish()){   // check if verilog code is finished
       std::cout << "finished ";
       return 1;
-      //std::cin >> temp;
     }
     if (clk == 1){
       clk =0;
@@ -41,21 +33,13 @@ int  wait(unsigned long delay, Voc8051_tb *top){
       clk = 1;
     }
     top->oc8051_tb__DOT__clk = clk;
-    //if (main_time % 2 == 0){
-    //  clk++;
-    //  clk = clk % 2;
-    //  top->oc8051_tb__DOT__clk = clk;
-    //}
     top->eval();
-    //std::cout <<std::dec << "pc  " << top->oc8051_tb__DOT__oc8051_top_1__DOT__pc << std::endl;
-    if (top->oc8051_tb__DOT__oc8051_top_1__DOT__pc == 407){
-      count++;
-
+    if (tfp) {
+      tfp->dump(main_time);
     }
 
     if (addr != top->oc8051_tb__DOT__oc8051_top_1__DOT__iadr_o){
       addr = top->oc8051_tb__DOT__oc8051_top_1__DOT__iadr_o;
-      //std::cout << "iadr_o " << addr << std::endl;
     }
     if (0 || p0 != top->oc8051_tb__DOT__p0_out ||
              p1 != top->oc8051_tb__DOT__p1_out ||
@@ -76,16 +60,11 @@ int  wait(unsigned long delay, Voc8051_tb *top){
       p3 = top->oc8051_tb__DOT__p3_out;
     }
 
-    //std::cout << (unsigned long)main_time << std::endl;
-    //std::cout << std::hex << "wait "<<(int) top->oc8051_tb__DOT__p0_out << "-" << (int)top->oc8051_tb__DOT__p1_out << "-" << (int)top->oc8051_tb__DOT__p2_out << "-" << (int)top->oc8051_tb__DOT__p3_out <<std::endl;
     delay--;
-    main_time++;
-    //std::cout << std::hex << "delay " << delay << top->oc8051_tb__DOT__rst << std::endl;
   }
   return 0;
 }
 void load_test(Voc8051_tb *top, const char* filename){
-  //top->oc8051_tb__DOT__oc8051_cxrom1__DOT__buff[0U] = 2U;
   std::ifstream infile(filename);
   unsigned num_buff, addr, data;
   infile >> num_buff;
@@ -115,6 +94,12 @@ int reset_uc(Voc8051_tb* top)
 }
 
 int main(int argc, char* argv[]) {
+  //Verilated::traceEverOn(true);
+  //tfp = new VerilatedVcdC;
+  top = new Voc8051_tb;
+  //top->trace(tfp, 99);  // Trace 99 levels of hierarchy
+
+  if(tfp) tfp->open("sim.vcd");
   top  = new Voc8051_tb;
   if(!reset_uc(top)) {
     delete top;
@@ -123,6 +108,10 @@ int main(int argc, char* argv[]) {
   load_test(top, argv[1]);
   wait(-1, top);
 
+  if(tfp) {
+    tfp->close();
+    delete tfp;
+  }
   delete top;
   return 0;
 }
