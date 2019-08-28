@@ -1,7 +1,7 @@
 # securebootUctrl8051
 steps to follow
 
-cd script
+cd script/
 
 ./run_sim
 
