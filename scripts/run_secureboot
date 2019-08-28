@@ -6,6 +6,6 @@ sdcc -c rsa.c
 sdcc secureboot.c rsa.rel
 python3 ../scripts/gen_text.py secureboot.ihx ../rom/secureboot.dat
 sdcc aes_test.c
-python bootgen.py aes_test.ihx
+python ../scripts/bootgen.py aes_test.ihx
 cd ../sim
 ./sim ../rom/secureboot.dat
