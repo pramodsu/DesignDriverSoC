@@ -75,10 +75,10 @@ enum status{
 };
 
 //public key hash
-CODE unsigned char pkhash[20] = {0x37, 0x34, 0xA6, 0x83, 
-				   0x5F, 0xFC, 0xE0, 0x2B, 
-				   0xC6, 0xEE, 0xCB, 0x81, 
-				   0x6C, 0x92, 0x6C, 0x7C, 
+CODE unsigned char pkhash[20] = {0x37, 0x34, 0xA6, 0x83,
+				   0x5F, 0xFC, 0xE0, 0x2B,
+				   0xC6, 0xEE, 0xCB, 0x81,
+				   0x6C, 0x92, 0x6C, 0x7C,
 				   0xBA, 0x79, 0xCB, 0x8F};
 
 #ifndef C
@@ -174,7 +174,7 @@ void main() {
 	return;
     }
 
-    // STAGE 1: read image into RAM  
+    // STAGE 1: read image into RAM
     unlock(pages[BOOT], boot, boot+MAX_IM_SIZE);
 #ifndef CBMC  // for CBMC just use initialized values
     load(0, MAX_IM_SIZE, boot, 1);
@@ -307,10 +307,10 @@ void main() {
 #ifdef CBMC
 	if(ldaddr < ldaddr2+size2 && ldaddr2 < ldaddr+size)
 	    addr_val = 0;
-#endif 
+#endif
 	// load data
 	if(size != 0){
-	    load(moddata, size, program+ldaddr, 0);	
+	    load(moddata, size, program+ldaddr, 0);
 	}
 	// update to next module
 	moddata += size;
@@ -361,7 +361,7 @@ void main() {
 #ifndef CBMC
     // check that program loaded correctly, for testing only
     for(i=0; i<moddata-(unsigned char*)block; i++){
-	P0 = program[i];
+	//P0 = program[i];
 	if(program[i] != *((unsigned char*)block + i)){
 	    pass = FAIL;  // FAIL
 	    fail("load is wrong");

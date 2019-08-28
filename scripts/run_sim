@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+cd ../sim
+make
+cd ../fw
+sdcc -c rsa.c
+sdcc secureboot.c rsa.rel
+python3 ../scripts/gen_text.py secureboot.ihx secureboot
+sdcc aes_test.c
+python bootgen.py aes_test.ihx
+cd ../sim
+./sim ../fw/secureboot
