@@ -36,6 +36,7 @@ if all steps are verified the print 2 at port P0. 1 if it fails any check, 0 if 
 
 # Compilation and execution instructions
 execute run_sim script which compiles and executes the system.
+
 cd script/
 
 ./run_sim
