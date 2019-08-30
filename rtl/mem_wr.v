@@ -203,7 +203,6 @@ assign xram_stb = state_read_data || state_write_data;
 assign xram_wr = state_write_data;
 wire [7:0] xram_data_out = state_write_data ? block[reg_bytes_written] : 8'b0;
 
-reg loaded;
 
 
 // Registers.
@@ -229,17 +228,12 @@ reg loaded;
 always @(posedge clk)
 begin
      if (rst) begin
-     if (loaded != 1'b1) begin
-      $readmemh("../fw/prog.hex", block);
-      loaded <= 1'b1;
-      end
        memwr_reg_state   <= STATE_IDLE;
        reg_bytes_written <= 16'b0;
        reg_bytes_read    <= 16'b0;
      end
 
     else begin
-      	loaded            <= 1'b0;
         memwr_reg_state   <= state_next;
         reg_bytes_written <= bytes_written_next;
 	reg_bytes_read    <= bytes_read_next;

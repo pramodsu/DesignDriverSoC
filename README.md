@@ -1,48 +1,69 @@
-# Directory info #
-## dis51 ##
-Dis51 is a simple 8051 disassembler for Unix-like systems.
-## fw ##
-contains all the firmwares and test cases to be run on the SOC.
-## rom ##
-Instruction data of the programs in directory fw which is loaded on ROM in SOC.
-## rtl ##
-Verilog code of the system.
-## scripts ##
-scripts to generate different test data for the system, script to run test on the system.
-## sim ##
-contains Makefile and c code for simulating verilated version of SOC.
+# DeltaSigmaSoC #
 
-# Firmware Programs #
-## aes_test.c ##
-program uses accelerators provided in rtl to test aes encryption and decryption. what it does is, writes some data in memory, encrylpts it and writes it in memory, decrypts it and compares it with data stored in memory. if the data and decrypted data are same then it results in giving value 1 at port 0 (P0) otherwise 0.
+This repository contains a simple SoC design consisting of a microcontroller
+and several cryptographic accelerators for AES, SHA-1 and modular
+exponentiation.
 
-## sha_test.c ##
-Stores data at in variable d1 and passes its length and address to sha accelerator. Which then calculates its hash and writes to variable hash. which is printed at port P0 and verified with hash calculated using other methods (python or online).
+## Dependencies ##
 
-## rsa_test.c ##
-it loads the hex, generated using bootgen.py in scripts directory, in memory at location designeted by boot. it then loads the mod and exp used for rsa signature verification in the rsa accelerator.
-
-This test is done by either verifying the signature of the hex file loaded or by reencrypting the hash of the data.
-When verifying the signature of the hex public key is loaded in the hex file. and for reencrypting private key is loaded and signature is calculated, which is verified with the signature of the data. private or public key can be loaded by chnging the bootgen.py.
-It tests both encryptition and decryption function of the accelerator.
-
-## secureboot.c ##
-it loads the boot file(data of prog.hex) at location boot. typecast the data to image data struct. encryption essentials such as pubkey, register addresses etc..
-step 1: verify the signature of the hash (sha1) of data.
-step 2: load data of each module.
-step 3: verify the hash(sha1) of each module.
-if all steps are verified the print 2 at port P0. 1 if it fails any check, 0 if undetermined behaviour.
+1. [SDCC](http://sdcc.sourceforge.net/)
+2. [Verilator](https://www.veripool.org/wiki/verilator)
+3. Python 2.7 and 3
+4. OPTIONAL: [iverilog](http://iverilog.icarus.com/) may be useful in case you need to debug the RTL.
 
 
-# Compilation and execution instructions
-execute run_sim script which compiles and executes the system.
+## Directory Structure ##
 
-cd script/
+* dis51: Dis51 is a simple 8051 disassembler for Unix-like systems.
+* fw: contains the firmware tests.
+* rom: compiler firmware images.
+* rtl: verilog implementation of the SoC.
+* scripts: various helper scripts.
+* sim: verilator based simulation framework for SoC.
 
-./run_sim
+## Firmware Programs ##
 
-Possible errors:
-1. prog.hex file should be there in fw directory.
-2. correct data file in rom directory should be passed to sim executable in sim directory. (e.g.  ./sim ../rom/<filename>.dat)
+* aes_test.c: small program to test the encryption and decryption using the AES accelerator.
+* sha_test.c: small program to test the SHA-1 accelerator.
+* rsa_test.c: small program to test RSA signature verification.
+* secureboot.c:  implementation of an authenticated loader that uses RSA-based signature verification in combination with message authentication using the SHA-1 algorithm.
 
-prerequisites : sdcc, verilator, python3, gcc.
+# Compilation and Execution Instructions
+
+First, compile the RTL into the Verilator-generated C++ simulator.
+
+    $ cd sim
+    $ make
+    $ cd ..
+
+Next compile a firmware program using sdcc. For example:
+
+    $ cd fw/
+    $ sdcc aes_test.c
+    $ cd ..
+    
+The above will produce a hex file (aes_test.ihx). To convert this into
+a format accepted by our simulator, use scripts/gen_text.py
+
+    $ python3 scripts/gen_text.py fw/aes_test.ihx rom/aes_test.dat
+
+The above command will read in fw/aes_test.ihx and output the rom image rom/aes_test.dat.
+
+To simulate the SoC using this ROM image, run ./sim/sim. For example:
+
+    $ ./sim/sim rom/aes_test.dat
+
+The program sim takes one required and one optional command line argument.
+The first is the image that must be loaded into the ROM (rom/aes_test.dat) in the above example. The second argument is the image that must be loaded into the flash.
+
+### Running Secureboot ###
+
+Running secure boot involves generating a signed boot image and then
+loading this into the flash. We have provided a utility script that does
+all of these operations.
+
+To run this script, do the following
+
+    $ cd script/
+    $ ./run_secureboot
+

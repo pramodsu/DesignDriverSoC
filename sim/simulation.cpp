@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <memory>
 #include <array>
 
 #include "Voc8051_tb.h"
@@ -93,7 +94,33 @@ int reset_uc(Voc8051_tb* top)
   top->oc8051_tb__DOT__rst = 0;
 }
 
+int load_flash(Voc8051_tb* top, const char* filename)
+{
+    FILE* fp = fopen(filename, "rt");
+    if (fp != NULL) {
+        int i = 0;
+        while (!feof(fp)) {
+            int v = 0;
+            fscanf(fp, "%x", &v);
+            assert(v >= 0 && v <= 0xff);
+            top->oc8051_tb__DOT__oc8051_xiommu1__DOT__memwr_i__DOT__block[i] = v;
+            if (i == 65535) break;
+            i++;
+        }
+        fclose(fp);
+    }
+}
+
 int main(int argc, char* argv[]) {
+  if (argc < 2) {
+      std::cerr << "Syntax error. Usage: " << std::endl;
+      std::cerr << argv[0] << " ROM-file [flash-file]" << std::endl;
+      std::cerr << std::endl;
+      std::cerr << "        ROM-file    is the file contain the instruction ROM." << std::endl;
+      std::cerr << "        flash-file  is the file contain the data to be loaded in the flash." << std::endl;
+      std::cerr << std::endl;
+      return 1;
+  }
   //Verilated::traceEverOn(true);
   //tfp = new VerilatedVcdC;
   top = new Voc8051_tb;
@@ -106,6 +133,9 @@ int main(int argc, char* argv[]) {
     return 1;
   }
   load_test(top, argv[1]);
+  if (argc == 3) {
+      load_flash(top, argv[2]);
+  }
   wait(-1, top);
 
   if(tfp) {
