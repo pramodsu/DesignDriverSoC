@@ -1,4 +1,4 @@
-# DeltaSigmaSoC #
+# DesignDriverSoC #
 
 This repository contains a simple SoC design consisting of a microcontroller
 and several cryptographic accelerators for AES, SHA-1 and modular
