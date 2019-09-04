@@ -67,3 +67,6 @@ To run this script, do the following
     $ cd script/
     $ ./run_secureboot
 
+# Acknowledgements #
+
+The 8051 core in the SoC was originally taken from OpenCores.org. Several bugfixes to the core weremade by Pramod Subramanyan. Features including privilege separation and a system call instruction were add to the core by Samuel Miller with contributions from Pramod Subramanyan. The AES core was also taken from OpenCores.org, while the SHA-1 core is from the GitHub repository maintained by Joachim Strömbergson.  The RSA modular exponentiation code was developed by Elaine Chou with contributions from Pramod Subramanyan. The flash-like input device was developed by Elaine Chou.  The MMU was developed by Samuel Miller.  Glue logic connecting the various accelerator cores to the 8051 was developed by Pramod Subramanyan.  The initial SecureBoot firmware was developed by Elaine Chou.  Bugfixes to various parts of the SoC, the SecureBoot firmware and the development of the Verilator-based simulation infrastructure for the SoC were done by Gourav Takhar.
